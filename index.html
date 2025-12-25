@@ -1,105 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- BASIC -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
-  <title>Cheap Flights & Travel Routes Worldwide | Ryokome</title>
-  <meta name="description" content="Compare cheap flights, explore popular routes, and plan smarter travel worldwide with Ryokome.">
-  <link rel="canonical" href="https://ryokome.com/">
-
-  <!-- SOCIAL -->
-  <meta property="og:title" content="Cheap Flights & Travel Routes | Ryokome">
-  <meta property="og:description" content="Search flights, explore routes, and book smarter travel worldwide.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ryokome.com/">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-
-  <!-- SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Ryokome",
-    "url": "https://ryokome.com/"
-  }
-  </script>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO -->
+    <title>Ryokome | Compare Cheap Flights & Travel Deals Worldwide</title>
+    <meta name="description" content="Find and compare cheap flights, hotels, car rentals, and travel deals worldwide. Plan your perfect trip with Ryokome's smart travel search.">
+    <meta name="keywords" content="cheap flights, travel deals, compare flights, hotel bookings, car rental, travel search">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ryokome.com/">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Ryokome | Compare Cheap Flights & Travel Deals Worldwide">
+    <meta property="og:description" content="Find and compare cheap flights, hotels, car rentals, and travel deals worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ryokome.com/">
+    <meta property="og:image" content="https://ryokome.com/assets/images/hero/desktop-homepage-hero.webp">
+    <meta property="og:site_name" content="Ryokome">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ryokome | Compare Cheap Flights & Travel Deals Worldwide">
+    <meta name="twitter:description" content="Find and compare cheap flights, hotels, car rentals, and travel deals worldwide.">
+    <meta name="twitter:image" content="https://ryokome.com/assets/images/hero/desktop-homepage-hero.webp">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Ryokome",
+        "url": "https://ryokome.com/",
+        "logo": "https://ryokome.com/assets/images/brand/logo.svg",
+        "description": "Compare cheap flights, hotels, car rentals and travel deals worldwide.",
+        "sameAs": [],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/brand/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-inner">
-    <div class="logo">
-      <a href="/">Ryokome</a>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
     </div>
-    <nav class="nav">
-      <a href="/flights.html">Flights</a>
-      <a href="/blog/">Guides</a>
-      <a href="/about.html">About</a>
-    </nav>
-  </div>
-</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay">
-    <div class="container hero-content">
-      <h1>Find Cheap Flights & Explore Popular Travel Routes</h1>
-      <p>
-        Compare airfare prices, discover top routes, and plan smarter trips worldwide.
-      </p>
+    <!-- Header -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <i class="fas fa-plane-departure"></i>
+                    <span>Ryokome</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/flights.html" class="nav-link">
+                            <i class="fas fa-plane"></i>
+                            <span>Flights</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/hotels.html" class="nav-link">
+                            <i class="fas fa-hotel"></i>
+                            <span>Hotels</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/cars.html" class="nav-link">
+                            <i class="fas fa-car"></i>
+                            <span>Cars</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-compass"></i>
+                            <span>Resources</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/travel-checklist.html">Travel Checklist</a></li>
+                            <li><a href="/blog/">Travel Guides</a></li>
+                            <li><a href="/about.html">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link">
+                            <i class="fas fa-blog"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-      <!-- FLIGHT SEARCH -->
-      <div class="flight-search">
-        <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=false&powered_by=false&locale=en_us&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100" charset="utf-8"></script>
-      </div>
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav">
+            <li><a href="/flights.html"><i class="fas fa-plane"></i> Flights</a></li>
+            <li><a href="/hotels.html"><i class="fas fa-hotel"></i> Hotels</a></li>
+            <li><a href="/cars.html"><i class="fas fa-car"></i> Cars</a></li>
+            <li><a href="/travel-checklist.html"><i class="fas fa-list-check"></i> Travel Checklist</a></li>
+            <li><a href="/blog/"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="/about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
     </div>
-  </div>
-</section>
 
-<!-- CORE LINKS -->
-<section class="section">
-  <div class="container">
-    <h2>Travel Planning Made Simple</h2>
-    <ul class="grid">
-      <li><a href="/flights.html">Search Flights</a></li>
-      <li><a href="/routes/">Popular Flight Routes</a></li>
-      <li><a href="/blog/">Travel Guides & Tips</a></li>
-    </ul>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <!-- Background Image with Overlay -->
+            <div class="hero-image" style="background-image: url('/assets/images/hero/desktop-homepage-hero.webp');"></div>
+            <div class="hero-overlay"></div>
+            
+            <!-- Animated Background Elements -->
+            <div class="hero-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <!-- Main Heading -->
+                <h1 class="hero-title">
+                    <span class="title-line">Find Cheap Flights &</span>
+                    <span class="title-line">Travel Deals Worldwide</span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="hero-subtitle">
+                    Compare prices across hundreds of airlines, hotels, and car rental companies. 
+                    Plan your perfect trip with confidence.
+                </p>
+                
+                <!-- Search Tabs -->
+                <div class="search-tabs">
+                    <button class="search-tab active" data-tab="flights">
+                        <i class="fas fa-plane"></i>
+                        <span>Flights</span>
+                    </button>
+                    <button class="search-tab" data-tab="hotels">
+                        <i class="fas fa-hotel"></i>
+                        <span>Hotels</span>
+                    </button>
+                    <button class="search-tab" data-tab="cars">
+                        <i class="fas fa-car"></i>
+                        <span>Cars</span>
+                    </button>
+                </div>
+                
+                <!-- Search Form -->
+                <div class="search-form-container">
+                    <!-- Flight Search (Active by Default) -->
+                    <div class="search-form active" id="flightsSearch">
+                        <div class="flight-search-widget">
+                            <!-- Your Aviasales Widget Script -->
+                            <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=false&powered_by=false&locale=en_us&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+                        </div>
+                    </div>
+                    
+                    <!-- Hotel Search (Hidden by Default) -->
+                    <div class="search-form" id="hotelsSearch">
+                        <div class="coming-soon">
+                            <i class="fas fa-tools"></i>
+                            <h3>Hotel Search Coming Soon</h3>
+                            <p>We're working hard to bring you the best hotel deals. Stay tuned!</p>
+                            <a href="/hotels.html" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Car Search (Hidden by Default) -->
+                    <div class="search-form" id="carsSearch">
+                        <div class="coming-soon">
+                            <i class="fas fa-car"></i>
+                            <h3>Car Rental Search Coming Soon</h3>
+                            <p>Find the best car rental deals across the globe. Launching soon!</p>
+                            <a href="/cars.html" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Booking</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-star"></i>
+                        <span>Best Price Guarantee</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-<!-- ROUTE HUBS -->
-<section class="section light">
-  <div class="container">
-    <h2>Explore Flights by Region</h2>
-    <ul class="grid">
-      <li><a href="/routes/usa/">Flights Within the USA</a></li>
-      <li><a href="/routes/europe/">Flights Across Europe</a></li>
-      <li><a href="/routes/asia/">Flights in Asia</a></li>
-      <li><a href="/routes/middle-east/">Flights to the Middle East</a></li>
-    </ul>
-  </div>
-</section>
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Ryokome?</h2>
+                <p>We make travel planning simple, smart, and stress-free.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Compare Prices</h3>
+                    <p>Compare flights, hotels, and cars across hundreds of providers to find the best deals.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Popular Routes</h3>
+                    <p>Explore thousands of popular flight routes with detailed guides and price trends.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Smart Tips</h3>
+                    <p>Get expert travel advice, packing checklists, and destination guides.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Safe & Secure</h3>
+                    <p>Your bookings are secure with our trusted partners and encrypted transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <nav>
-      <a href="/about.html">About</a>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/terms-of-service.html">Terms</a>
-      <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-    </nav>
-    <p>© 2025 Ryokome. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- Popular Destinations Section -->
+    <section class="destinations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Flight Routes</h2>
+                <p>Explore our most searched flight routes with detailed guides and tips.</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <a href="/routes/usa/nyc-to-lax.html" class="destination-card">
+                    <div class="destination-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="destination-content">
+                            <h3>New York to Los Angeles</h3>
+                            <p>Compare prices across 50+ airlines</p>
+                            <span class="btn btn-small">View Route <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/routes/usa/sfo-to-dxb.html" class="destination-card">
+                    <div class="destination-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="destination-content">
+                            <h3>San Francisco to Dubai</h3>
+                            <p>International long-haul deals</p>
+                            <span class="btn btn-small">View Route <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/routes/usa/mia-to-lhr.html" class="destination-card">
+                    <div class="destination-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="destination-content">
+                            <h3>Miami to London</h3>
+                            <p>Transatlantic flight comparisons</p>
+                            <span class="btn btn-small">View Route <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/routes/usa/ord-to-cdg.html" class="destination-card">
+                    <div class="destination-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="destination-content">
+                            <h3>Chicago to Paris</h3>
+                            <p>European adventure starts here</p>
+                            <span class="btn btn-small">View Route <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center">
+                <a href="/routes/" class="btn btn-secondary">
+                    <i class="fas fa-compass"></i>
+                    Explore All Routes
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Blog Preview Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Travel Guides & Tips</h2>
+                <p>Expert advice to make your travels smarter and more enjoyable.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <a href="/blog/how-to-find-cheap-flights.html">
+                        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="blog-content">
+                            <span class="blog-category">Flights</span>
+                            <h3>How to Find Cheap Flights: 10 Proven Strategies</h3>
+                            <p>Learn the insider tips and tricks to save money on your next flight booking.</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/blog/best-time-to-book-flights.html">
+                        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="blog-content">
+                            <span class="blog-category">Booking Tips</span>
+                            <h3>When is the Best Time to Book International Flights?</h3>
+                            <p>Timing is everything. Discover the optimal booking windows for maximum savings.</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/blog/packing-checklist.html">
+                        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="blog-content">
+                            <span class="blog-category">Packing</span>
+                            <h3>The Ultimate Travel Packing Checklist</h3>
+                            <p>Never forget an essential item again with our comprehensive packing guide.</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            
+            <div class="text-center">
+                <a href="/blog/" class="btn btn-outline">
+                    <i class="fas fa-book-open"></i>
+                    Read All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Compare thousands of flights, find the best deals, and travel smarter with Ryokome.</p>
+                <div class="cta-buttons">
+                    <a href="/flights.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-search"></i>
+                        Search Flights Now
+                    </a>
+                    <a href="/travel-checklist.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-list-check"></i>
+                        Travel Checklist
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <a href="/" class="footer-logo">
+                        <i class="fas fa-plane-departure"></i>
+                        <span>Ryokome</span>
+                    </a>
+                    <p class="footer-description">
+                        Your trusted companion for finding and comparing travel deals worldwide.
+                        We make travel planning simple, smart, and affordable.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Travel Links -->
+                <div class="footer-col">
+                    <h3>Travel</h3>
+                    <ul class="footer-links">
+                        <li><a href="/flights.html">Flights</a></li>
+                        <li><a href="/hotels.html">Hotels</a></li>
+                        <li><a href="/cars.html">Car Rentals</a></li>
+                        <li><a href="/travel-checklist.html">Travel Checklist</a></li>
+                        <li><a href="/routes/">Popular Routes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="/blog/">Travel Blog</a></li>
+                        <li><a href="/blog/how-to-find-cheap-flights.html">Flight Tips</a></li>
+                        <li><a href="/blog/packing-checklist.html">Packing Guide</a></li>
+                        <li><a href="/about.html">About Ryokome</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Ryokome. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-bottom-links">
+                    <a href="/sitemap.xml">Sitemap</a>
+                    <a href="/robots.txt">Robots.txt</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+    
+    <!-- Analytics (Example - replace with your own) -->
+    <script>
+        // Simple page load tracking
+        window.addEventListener('load', function() {
+            const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+            console.log(`Page loaded in ${loadTime}ms`);
+            
+            // Hide loading spinner
+            document.getElementById('loadingSpinner').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
