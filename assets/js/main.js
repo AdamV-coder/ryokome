@@ -1,5 +1,5 @@
-// Ryokome Travel - Main JavaScript
-// Handles interactive features for all pages
+// Ryokome - Main JavaScript
+// For affiliate/content-first travel platform
 
 document.addEventListener('DOMContentLoaded', function() {
     // ===== MOBILE MENU TOGGLE =====
@@ -32,30 +32,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== SEARCH TABS =====
-    const searchTabs = document.querySelectorAll('.search-tab');
-    const searchForms = document.querySelectorAll('.search-form');
-    
-    if (searchTabs.length > 0) {
-        searchTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const tabId = this.getAttribute('data-tab');
-                
-                // Remove active class from all tabs
-                searchTabs.forEach(t => t.classList.remove('active'));
-                searchForms.forEach(f => f.classList.remove('active'));
-                
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // Show corresponding form
-                const targetForm = document.getElementById(tabId + 'Search');
-                if (targetForm) {
-                    targetForm.classList.add('active');
+    // ===== SET ACTIVE NAVIGATION LINK =====
+    function setActiveNavLink() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+        
+        // Reset all links
+        navLinks.forEach(link => link.classList.remove('active'));
+        mobileNavLinks.forEach(link => link.classList.remove('active'));
+        
+        // Handle home page
+        if (currentPath === '/' || currentPath === '/index.html' || currentPath === '') {
+            document.querySelector('.nav-link[href="/"]')?.classList.add('active');
+            document.querySelector('.mobile-nav a[href="/"]')?.classList.add('active');
+        } else {
+            // Handle other pages - exact match first
+            let activeLink = null;
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    activeLink = link;
                 }
             });
-        });
+            
+            // If no exact match, check for partial match (for nested pages)
+            if (!activeLink) {
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href !== '/' && currentPath.startsWith(href)) {
+                        activeLink = link;
+                    }
+                });
+            }
+            
+            if (activeLink) {
+                activeLink.classList.add('active');
+                const mobileLink = document.querySelector(`.mobile-nav a[href="${activeLink.getAttribute('href')}"]`);
+                if (mobileLink) mobileLink.classList.add('active');
+            }
+        }
     }
+    
+    // Call on page load
+    setActiveNavLink();
     
     // ===== BACK TO TOP BUTTON =====
     const backToTopBtn = document.getElementById('backToTop');
@@ -90,41 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== DROPDOWN MENUS =====
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        const menu = dropdown.querySelector('.dropdown-menu');
-        
-        if (toggle && menu) {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                // Close all other dropdowns
-                dropdowns.forEach(d => {
-                    if (d !== dropdown) {
-                        d.classList.remove('open');
-                    }
-                });
-                
-                // Toggle current dropdown
-                dropdown.classList.toggle('open');
-            });
-        }
-    });
-    
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function() {
-        dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('open');
-        });
-    });
-    
     // ===== ANIMATE ELEMENTS ON SCROLL =====
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.feature-card, .destination-card, .blog-card');
+        const elements = document.querySelectorAll('.step, .route-card, .guide-card, .feature');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -138,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Set initial state for animated elements
-    const animatedElements = document.querySelectorAll('.feature-card, .destination-card, .blog-card');
+    const animatedElements = document.querySelectorAll('.step, .route-card, .guide-card, .feature');
     animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
@@ -149,98 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
     
-    // ===== FORM VALIDATION =====
-    const forms = document.querySelectorAll('form');
-    
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const requiredFields = this.querySelectorAll('[required]');
-            let isValid = true;
-            
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.style.borderColor = 'var(--danger)';
-                    
-                    // Add error message if not exists
-                    if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('error-message')) {
-                        const errorMsg = document.createElement('div');
-                        errorMsg.className = 'error-message';
-                        errorMsg.style.color = 'var(--danger)';
-                        errorMsg.style.fontSize = '0.875rem';
-                        errorMsg.style.marginTop = '0.25rem';
-                        errorMsg.textContent = 'This field is required';
-                        field.parentNode.appendChild(errorMsg);
-                    }
-                } else {
-                    field.style.borderColor = '';
-                    
-                    // Remove error message if exists
-                    const errorMsg = field.nextElementSibling;
-                    if (errorMsg && errorMsg.classList.contains('error-message')) {
-                        errorMsg.remove();
-                    }
-                }
-            });
-            
-            if (!isValid) {
-                e.preventDefault();
-            }
-        });
-    });
-    
-    // ===== IMAGE LAZY LOADING =====
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    const src = img.getAttribute('data-src');
-                    
-                    if (src) {
-                        img.src = src;
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                }
-            });
-        });
-        
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
-    }
-    
-    // ===== TRUST BADGES ANIMATION =====
-    const trustBadges = document.querySelectorAll('.badge');
-    
-    if (trustBadges.length > 0) {
-        trustBadges.forEach((badge, index) => {
-            badge.style.animationDelay = `${index * 0.1}s`;
-        });
-    }
-    
-    // ===== SCROLL INDICATOR =====
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    
-    if (scrollIndicator) {
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 100) {
-                scrollIndicator.style.opacity = '0';
-                scrollIndicator.style.visibility = 'hidden';
-            } else {
-                scrollIndicator.style.opacity = '1';
-                scrollIndicator.style.visibility = 'visible';
-            }
-        });
-        
-        scrollIndicator.addEventListener('click', function() {
-            const featuresSection = document.querySelector('.features-section');
-            if (featuresSection) {
-                featuresSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+    // ===== UPDATE CURRENT YEAR IN FOOTER =====
+    const yearElements = document.querySelectorAll('.current-year');
+    if (yearElements.length > 0) {
+        const currentYear = new Date().getFullYear();
+        yearElements.forEach(element => {
+            element.textContent = currentYear;
         });
     }
     
@@ -259,6 +160,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 300);
             }, 500);
         });
+        
+        // Fallback: hide spinner after 3 seconds max
+        setTimeout(() => {
+            if (loadingSpinner.style.display !== 'none') {
+                loadingSpinner.style.opacity = '0';
+                loadingSpinner.style.visibility = 'hidden';
+                setTimeout(() => {
+                    loadingSpinner.style.display = 'none';
+                }, 300);
+            }
+        }, 3000);
     }
     
     // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
@@ -286,18 +198,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== CURRENT YEAR IN FOOTER =====
-    const yearElements = document.querySelectorAll('.current-year');
-    
-    if (yearElements.length > 0) {
-        const currentYear = new Date().getFullYear();
-        yearElements.forEach(element => {
-            element.textContent = currentYear;
-        });
-    }
-    
     // ===== CONSOLE GREETING =====
-    console.log('%c✈️ Welcome to Ryokome Travel! %c\nFind the best travel deals worldwide.', 
-        'color: #2563eb; font-size: 16px; font-weight: bold;', 
+    console.log('%c✈️ Ryokome - Travel Comparison Platform %c\nHelping travelers find the best flights through comprehensive research and comparisons.',
+        'color: #2563eb; font-size: 16px; font-weight: bold;',
         'color: #6b7280; font-size: 14px;');
+    
+    // ===== AFFILIATE LINK TRACKING =====
+    document.querySelectorAll('a[href*="aviasales"], a[href*="booking.com"], a[href*="partner"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // You can add affiliate click tracking here
+            console.log('Affiliate link clicked:', this.href);
+            // Optional: Send to analytics
+            // ga('send', 'event', 'Affiliate', 'click', this.href);
+        });
+    });
 });
