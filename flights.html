@@ -3,29 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Cheap Flights | Compare Airfares Worldwide | Ryokome</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="description" content="Search and compare cheap flights worldwide. Find the best flight deals from 900+ airlines and travel sites.">
+    <title>Find Cheap Flights | Compare Flight Prices | Ryokome</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="canonical" href="https://ryokome.com/flights.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Flight Search",
+        "description": "Search and compare cheap flights worldwide",
+        "url": "https://ryokome.com/flights.html",
+        "mainEntity": {
+            "@type": "SearchAction",
+            "target": "https://ryokome.com/routes/{origin}-to-{destination}.html",
+            "query-input": "required name=origin required name=destination"
+        }
+    }
+    </script>
 </head>
 <body>
-    <!-- Reuse header from index.html -->
-    <!-- Flight-specific content -->
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Find Cheap Flights Worldwide</h1>
-                <p>Compare prices across 500+ airlines and booking sites</p>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Ryokome</a>
+            <div class="nav-links">
+                <a href="/" class="active">Flights</a>
+                <a href="cars.html">Cars</a>
+                <a href="travel-checklist.html">Travel Checklist</a>
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Find Cheap Flights Worldwide</h1>
+        
+        <section class="search-section">
+            <div class="widget-container full-width">
+                <div id="flight-search-main">
+                    <!-- Flight Search Widget -->
+                </div>
             </div>
         </section>
-        
-        <section class="page-content">
-            <div class="container">
-                <!-- Flight search widget and content -->
-                <h2>Your Flight Search Results Will Appear Here</h2>
+
+        <section class="section">
+            <h2>Flight Schedule & Timetables</h2>
+            <div class="widget-container">
+                <div id="schedule-main">
+                    <!-- Schedule Widget -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Popular Flight Routes</h2>
+            <div class="widget-container">
+                <div id="popular-routes-main">
+                    <!-- Popular Routes Widget -->
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>How to Find Cheap Flights</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>📅 Be Flexible with Dates</h3>
+                    <p>Traveling mid-week or during off-peak seasons can save you up to 40% on flights.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🌍 Compare Nearby Airports</h3>
+                    <p>Check flights to/from alternative airports within reasonable distance.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🔍 Use Price Alerts</h3>
+                    <p>Set up alerts for your desired routes to get notified when prices drop.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🎫 Book in Advance</h3>
+                    <p>For international flights, book 2-3 months in advance for best prices.</p>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ryokome. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Widget Scripts -->
+    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=true&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230014FFff&color_button=%237B27F4ff&color_icons=%237B27F4FF&dark=%231C1C1Cff&light=%23EFEFEFff&secondary=%23CC25CCff&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100" charset="utf-8"></script>
     
-    <!-- Reuse footer from index.html -->
-    <script src="/assets/js/main.js"></script>
+    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&color_button=%23FF0000&target_host=www.aviasales.com%2Fsearch&locale=en&powered_by=false&origin=LON&destination=BKK&with_fallback=false&non_direct_flights=true&min_lines=5&border_radius=15&color_background=%23FFFFFF&color_text=%23000000&color_border=%23FFFFFF&promo_id=2811&campaign_id=100" charset="utf-8"></script>
+    
+    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=false&primary=%230085FF&promo_id=4044&campaign_id=100" charset="utf-8"></script>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
