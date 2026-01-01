@@ -3,108 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Search and compare cheap flights worldwide. Find the best flight deals from 900+ airlines and travel sites.">
-    <title>Find Cheap Flights | Compare Flight Prices | Ryokome</title>
+    <meta name="description" content="Compare flight prices from hundreds of airlines. Find cheap flights and book your next trip with Ryokome.">
+    <title>Compare Cheap Flights - Ryokome</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="canonical" href="https://ryokome.com/flights.html">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Flight Search",
-        "description": "Search and compare cheap flights worldwide",
-        "url": "https://ryokome.com/flights.html",
-        "mainEntity": {
-            "@type": "SearchAction",
-            "target": "https://ryokome.com/routes/{origin}-to-{destination}.html",
-            "query-input": "required name=origin required name=destination"
-        }
-    }
-    </script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="/" class="logo">Ryokome</a>
-            <div class="nav-links">
-                <a href="/" class="active">Flights</a>
-                <a href="cars.html">Cars</a>
-                <a href="travel-checklist.html">Travel Checklist</a>
-                <a href="about.html">About</a>
-            </div>
-        </nav>
+    <header class="header header-solid">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Ryokome</a>
+                <ul class="nav-menu">
+                    <li><a href="flights.html" class="active">Flights</a></li>
+                    <li><a href="cars.html">Car Rentals</a></li>
+                    <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <h1 class="page-title">Find Cheap Flights Worldwide</h1>
-        
-        <section class="search-section">
-            <div class="widget-container full-width">
-                <div id="flight-search-main">
-                    <!-- Flight Search Widget -->
-                </div>
-            </div>
-        </section>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Compare Flight Prices</h1>
+            <p>Search hundreds of airlines to find the best deals on flights worldwide</p>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Flight Schedule & Timetables</h2>
+    <section class="flight-search">
+        <div class="container">
             <div class="widget-container">
-                <div id="schedule-main">
-                    <!-- Schedule Widget -->
-                </div>
+                <div id="tp-flight-search-widget"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Popular Flight Routes</h2>
-            <div class="widget-container">
-                <div id="popular-routes-main">
-                    <!-- Popular Routes Widget -->
-                </div>
+    <section class="content-section">
+        <div class="container">
+            <div class="content-narrow">
+                <h2>Why Compare Flights with Ryokome?</h2>
+                <p>Finding the right flight at the best price shouldn't be complicated. Ryokome compares prices from hundreds of airlines and travel agencies in seconds, helping you save time and money on every booking.</p>
+                
+                <h3>How Flight Comparison Works</h3>
+                <p>Our flight search tool instantly checks prices across multiple booking platforms and airlines. You'll see all available options side by side, making it easy to choose the flight that fits your schedule and budget. Whether you're planning a quick weekend trip or a long international journey, we help you find the best deal.</p>
+                
+                <h3>Book with Confidence</h3>
+                <p>We work with trusted airlines and travel partners to ensure you get reliable service. Compare direct flights, connecting routes, budget carriers, and premium airlines all in one place. Filter by price, duration, departure time, or number of stops to find exactly what you need.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="content-section">
-            <h2>How to Find Cheap Flights</h2>
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <h3>📅 Be Flexible with Dates</h3>
-                    <p>Traveling mid-week or during off-peak seasons can save you up to 40% on flights.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>🌍 Compare Nearby Airports</h3>
-                    <p>Check flights to/from alternative airports within reasonable distance.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>🔍 Use Price Alerts</h3>
-                    <p>Set up alerts for your desired routes to get notified when prices drop.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>🎫 Book in Advance</h3>
-                    <p>For international flights, book 2-3 months in advance for best prices.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="schedule-section">
+        <div class="container">
+            <h2>Flight Schedules</h2>
+            <p class="section-subtitle">Check departure times and frequencies for popular routes</p>
+            <div id="tp-schedule-widget"></div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Ryokome. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ryokome</h3>
+                    <p>Your trusted travel comparison platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="flights.html">Flights</a></li>
+                        <li><a href="cars.html">Car Rentals</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ryokome. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Widget Scripts -->
-    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=true&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230014FFff&color_button=%237B27F4ff&color_icons=%237B27F4FF&dark=%231C1C1Cff&light=%23EFEFEFff&secondary=%23CC25CCff&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100" charset="utf-8"></script>
-    
-    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&color_button=%23FF0000&target_host=www.aviasales.com%2Fsearch&locale=en&powered_by=false&origin=LON&destination=BKK&with_fallback=false&non_direct_flights=true&min_lines=5&border_radius=15&color_background=%23FFFFFF&color_text=%23000000&color_border=%23FFFFFF&promo_id=2811&campaign_id=100" charset="utf-8"></script>
-    
-    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=false&primary=%230085FF&promo_id=4044&campaign_id=100" charset="utf-8"></script>
-
     <script src="assets/js/main.js"></script>
+    <script src="//www.travelpayouts.com/widgets/b0ad858d2bb4c4a23d4def9571e6dfaf.js" async></script>
 </body>
 </html>
