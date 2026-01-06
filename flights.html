@@ -8,36 +8,42 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header class="header header-solid">
+    <header class="header-solid">
         <div class="container">
             <nav class="nav">
-                <a href="index.html" class="logo">Ryokome</a>
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L3 9L16 16L29 9L16 2Z" fill="currentColor" opacity="0.6"/>
+                        <path d="M3 23L16 30L29 23V9L16 16L3 9V23Z" fill="currentColor"/>
+                    </svg>
+                    <span>Ryokome</span>
+                </a>
                 <ul class="nav-menu">
                     <li><a href="flights.html" class="active">Flights</a></li>
-                    <li><a href="cars.html">Car Rentals</a></li>
-                    <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="airport-transfers.html">Transfers</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="page-hero">
+    <section class="page-hero-modern">
         <div class="container">
             <h1>Compare Flight Prices</h1>
-            <p>Search hundreds of airlines to find the best deals on flights worldwide</p>
+            <p>Search hundreds of airlines and travel sites to find the best deals on flights worldwide</p>
         </div>
     </section>
 
-    <section class="flight-search">
+    <section class="widget-section-modern">
         <div class="container">
-            <div class="widget-container">
-                <div id="tp-flight-search-widget"></div>
+            <div class="widget-card-modern">
+                <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=true&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230014FFff&color_button=%237B27F4ff&color_icons=%237B27F4FF&dark=%231C1C1Cff&light=%23EFEFEFff&secondary=%23CC25CCff&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100" charset="utf-8"></script>
             </div>
         </div>
     </section>
 
-    <section class="content-section">
+    <section class="content-modern">
         <div class="container">
             <div class="content-narrow">
                 <h2>Why Compare Flights with Ryokome?</h2>
@@ -52,45 +58,63 @@
         </div>
     </section>
 
-    <section class="schedule-section">
+    <section class="widget-section-modern">
         <div class="container">
-            <h2>Flight Schedules</h2>
-            <p class="section-subtitle">Check departure times and frequencies for popular routes</p>
-            <div id="tp-schedule-widget"></div>
+            <div class="section-header-modern">
+                <h2>Flight Schedules</h2>
+                <p>Check departure times and frequencies for popular routes</p>
+            </div>
+            <div class="widget-container-modern">
+                <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&color_button=%23FF0000&target_host=www.aviasales.com%2Fsearch&locale=en&powered_by=false&origin=LON&destination=BKK&with_fallback=false&non_direct_flights=true&min_lines=5&border_radius=15&color_background=%23FFFFFF&color_text=%23000000&color_border=%23FFFFFF&promo_id=2811&campaign_id=100" charset="utf-8"></script>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <section class="cta-section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ryokome</h3>
+            <div class="cta-content">
+                <h2>Ready to Fly?</h2>
+                <p>Start comparing prices and find your perfect flight today</p>
+                <a href="#top" class="cta-button">Search Flights</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L3 9L16 16L29 9L16 2Z" fill="currentColor" opacity="0.6"/>
+                            <path d="M3 23L16 30L29 23V9L16 16L3 9V23Z" fill="currentColor"/>
+                        </svg>
+                        <span>Ryokome</span>
+                    </div>
                     <p>Your trusted travel comparison platform</p>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-links">
                     <h4>Services</h4>
-                    <ul>
-                        <li><a href="flights.html">Flights</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                    </ul>
+                    <a href="flights.html">Flights</a>
+                    <a href="cars.html">Car Rentals</a>
+                    <a href="airport-transfers.html">Transfers</a>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-links">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                    </ul>
+                    <a href="about.html">About</a>
+                    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-links">
                     <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                    </ul>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Ryokome. All rights reserved.</p>
             </div>
@@ -98,6 +122,5 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script src="//www.travelpayouts.com/widgets/b0ad858d2bb4c4a23d4def9571e6dfaf.js" async></script>
 </body>
 </html>

@@ -8,36 +8,45 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header class="header header-solid">
+    <header class="header-solid">
         <div class="container">
             <nav class="nav">
-                <a href="index.html" class="logo">Ryokome</a>
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L3 9L16 16L29 9L16 2Z" fill="currentColor" opacity="0.6"/>
+                        <path d="M3 23L16 30L29 23V9L16 16L3 9V23Z" fill="currentColor"/>
+                    </svg>
+                    <span>Ryokome</span>
+                </a>
                 <ul class="nav-menu">
                     <li><a href="flights.html">Flights</a></li>
-                    <li><a href="cars.html">Car Rentals</a></li>
-                    <li><a href="airport-transfers.html" class="active">Airport Transfers</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="airport-transfers.html" class="active">Transfers</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="page-hero">
+    <section class="page-hero-modern">
         <div class="container">
             <h1>Airport Transfers</h1>
-            <p>Reliable rides with fixed prices and professional drivers</p>
+            <p>Book reliable rides with fixed prices and professional drivers. Door-to-door service you can trust.</p>
         </div>
     </section>
 
-    <section class="transfer-search">
+    <section class="widget-section-modern">
         <div class="container">
-            <div class="widget-container">
-                <div id="tp-transfer-widget"></div>
+            <div class="widget-card-modern">
+                <!-- Add your transfer widget script here when available -->
+                <div style="min-height: 400px; display: flex; align-items: center; justify-content: center; background: #f9fafb; border-radius: 12px;">
+                    <p style="color: #9CA3AF; text-align: center;">Transfer widget - Add your Travelpayouts transfer widget script here</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="content-section">
+    <section class="content-modern">
         <div class="container">
             <div class="content-narrow">
                 <h2>Why Book an Airport Transfer?</h2>
@@ -58,37 +67,51 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <section class="cta-section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ryokome</h3>
+            <div class="cta-content">
+                <h2>Travel Stress-Free</h2>
+                <p>Book your airport transfer and arrive relaxed</p>
+                <a href="#top" class="cta-button">Book Transfer</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L3 9L16 16L29 9L16 2Z" fill="currentColor" opacity="0.6"/>
+                            <path d="M3 23L16 30L29 23V9L16 16L3 9V23Z" fill="currentColor"/>
+                        </svg>
+                        <span>Ryokome</span>
+                    </div>
                     <p>Your trusted travel comparison platform</p>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-links">
                     <h4>Services</h4>
-                    <ul>
-                        <li><a href="flights.html">Flights</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                    </ul>
+                    <a href="flights.html">Flights</a>
+                    <a href="cars.html">Car Rentals</a>
+                    <a href="airport-transfers.html">Transfers</a>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-links">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                    </ul>
+                    <a href="about.html">About</a>
+                    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-links">
                     <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                    </ul>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Ryokome. All rights reserved.</p>
             </div>
@@ -96,6 +119,5 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script src="//www.travelpayouts.com/widgets/b0ad858d2bb4c4a23d4def9571e6dfaf.js" async></script>
 </body>
 </html>

@@ -2,8 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ryokome.com/sitemap.xml
-
-# Disallow admin pages (if any)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /tmp/
