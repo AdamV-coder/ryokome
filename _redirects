@@ -1,0 +1,12 @@
+# Cloudflare Pages Redirects
+
+# Ensure trailing slashes redirect properly
+/flights /flights.html 301
+/cars /cars.html 301
+/airport-transfers /airport-transfers.html 301
+/travel-checklist /travel-checklist.html 301
+/about /about.html 301
+/privacy-policy /privacy-policy.html 301
+/terms-of-service /terms-of-service.html 301
+/cookie-policy /cookie-policy.html 301
+/affiliate-disclosure /affiliate-disclosure.html 301

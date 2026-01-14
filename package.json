@@ -1,0 +1,12 @@
+{
+  "name": "ryokome",
+  "version": "1.0.0",
+  "description": "Ryokome - Static travel comparison website",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build required - this is a static HTML site' && exit 0"
+  },
+  "keywords": ["travel", "flights", "static"],
+  "author": "Ryokome",
+  "license": "UNLICENSED"
+}
