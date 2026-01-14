@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://ryokome.com/sitemap.xml
+Sitemap: https://ryokome.com/sitemap-main.xml
+Sitemap: https://ryokome.com/sitemap-routes-1.xml
+
+# Crawl delay (optional, adjust as needed)
+Crawl-delay: 1
