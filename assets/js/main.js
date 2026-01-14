@@ -1,7 +1,7 @@
-// Ryokome - Main JavaScript
+// Ryokome - Modern JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Smooth scroll for anchor links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -18,18 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Header scroll effect
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header-transparent');
-        if (header) {
-            if (window.scrollY > 100) {
-                header.classList.remove('header-transparent');
-                header.classList.add('header-solid');
+    // Header background on scroll
+    const header = document.querySelector('.header-modern');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 24px rgba(123, 39, 244, 0.12)';
             } else {
-                header.classList.remove('header-solid');
-                header.classList.add('header-transparent');
+                header.style.background = 'rgba(255, 255, 255, 0.8)';
+                header.style.boxShadow = '0 2px 20px rgba(123, 39, 244, 0.08)';
             }
-        }
-    });
+        });
+    }
 });

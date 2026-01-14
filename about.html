@@ -8,31 +8,47 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header class="header-solid">
+    <header class="header-modern">
         <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M16 2L3 9L16 16L29 9L16 2Z" fill="currentColor" opacity="0.6"/>
-                        <path d="M3 23L16 30L29 23V9L16 16L3 9V23Z" fill="currentColor"/>
-                    </svg>
-                    <span>Ryokome</span>
+            <nav class="nav-modern">
+                <a href="index.html" class="logo-modern">
+                    <div class="logo-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="12" fill="#7B27F4"/>
+                            <path d="M20 10L12 16L20 22L28 16L20 10Z" fill="white" opacity="0.8"/>
+                            <path d="M12 28L20 34L28 28V16L20 22L12 16V28Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Ryokome</span>
                 </a>
-                <ul class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="flights.html">Flights</a></li>
                     <li><a href="cars.html">Cars</a></li>
                     <li><a href="airport-transfers.html">Transfers</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                 </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn-login">Login</a>
+                    <a href="#" class="btn-signup">Sign Up</a>
+                </div>
             </nav>
         </div>
     </header>
 
-    <section class="legal-page-modern">
+    <section class="page-header-modern">
         <div class="container">
-            <div class="content-narrow">
-                <h1>About Ryokome</h1>
-                
+            <div class="page-header-content">
+                <div class="page-badge">ℹ️ About Us</div>
+                <h1>About <span class="gradient-text">Ryokome</span></h1>
+                <p>Your trusted travel comparison platform</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-text-section">
+        <div class="container">
+            <div class="text-content-box">
                 <p>Ryokome is a travel comparison platform designed to help you find the best deals on flights, car rentals, and airport transfers. We make travel planning simple by bringing together options from multiple providers in one place.</p>
                 
                 <h2>Our Mission</h2>
@@ -45,7 +61,7 @@
                 <p>We partner with established travel service providers and aggregators to bring you comprehensive search results. When you search on Ryokome, we query multiple sources simultaneously and present the results in an easy-to-compare format. You can then book directly with your chosen provider.</p>
                 
                 <h2>Transparency</h2>
-                <p>As a comparison platform, we may earn commissions when you book through our partner links. This helps us maintain and improve our service at no extra cost to you. For full details on how we earn revenue, please see our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+                <p>As a comparison platform, we may earn commissions when you book through our partner links. This helps us maintain and improve our service at no extra cost to you. For full details on how we earn revenue, please see our <a href="affiliate-disclosure.html" style="color: var(--purple-primary); text-decoration: none; font-weight: 600;">Affiliate Disclosure</a>.</p>
                 
                 <h2>Contact</h2>
                 <p>We're continuously working to improve Ryokome. If you have questions, feedback, or suggestions, we'd love to hear from you.</p>
@@ -53,34 +69,37 @@
         </div>
     </section>
 
-    <footer class="footer-modern">
+    <footer class="footer-playful">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 2L3 9L16 16L29 9L16 2Z" fill="currentColor" opacity="0.6"/>
-                            <path d="M3 23L16 30L29 23V9L16 16L3 9V23Z" fill="currentColor"/>
-                        </svg>
-                        <span>Ryokome</span>
+            <div class="footer-grid-modern">
+                <div class="footer-brand-modern">
+                    <div class="logo-modern">
+                        <div class="logo-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="12" fill="#7B27F4"/>
+                                <path d="M20 10L12 16L20 22L28 16L20 10Z" fill="white" opacity="0.8"/>
+                                <path d="M12 28L20 34L28 28V16L20 22L12 16V28Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Ryokome</span>
                     </div>
-                    <p>Your trusted travel comparison platform</p>
+                    <p>Your trusted travel comparison platform for the best deals worldwide.</p>
                 </div>
                 
-                <div class="footer-links">
+                <div class="footer-col">
                     <h4>Services</h4>
                     <a href="flights.html">Flights</a>
                     <a href="cars.html">Car Rentals</a>
                     <a href="airport-transfers.html">Transfers</a>
                 </div>
                 
-                <div class="footer-links">
+                <div class="footer-col">
                     <h4>Company</h4>
-                    <a href="about.html">About</a>
+                    <a href="about.html">About Us</a>
                     <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
                 </div>
                 
-                <div class="footer-links">
+                <div class="footer-col">
                     <h4>Legal</h4>
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="terms-of-service.html">Terms of Service</a>
@@ -88,7 +107,7 @@
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div class="footer-bottom-modern">
                 <p>&copy; 2025 Ryokome. All rights reserved.</p>
             </div>
         </div>
