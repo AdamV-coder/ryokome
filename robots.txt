@@ -1,11 +1,71 @@
-# Robots.txt for Ryokome
-# Allow all search engines to crawl the site
+# Ryokome Robots.txt
+# Last updated: December 2023
 
 User-agent: *
 Allow: /
+Allow: /assets/
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Disallow admin/private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# SEO: Allow all main content pages
+Allow: /flights.html
+Allow: /cars.html
+Allow: /airport-transfers.html
+Allow: /travel-checklist.html
+Allow: /about.html
+
+# Legal pages (important for E-E-A-T)
+Allow: /affiliate-disclosure.html
+Allow: /privacy-policy.html
+Allow: /cookie-policy.html
+Allow: /terms-of-service.html
+
+# Crawl delay for respectful crawling
+Crawl-delay: 2
 
 # Sitemap location
 Sitemap: https://ryokome.com/sitemap.xml
 
-# Crawl-delay (optional, adjust if needed)
-# Crawl-delay: 1
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
+# Block AI crawlers that don't respect robots.txt
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# Block scrapers and bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SEMrushBot
+Crawl-delay: 10

@@ -1,14 +1,43 @@
-# Cloudflare Pages Redirects File
-# Format: source destination [status_code]
+# Cloudflare Pages Redirects
+# Format: from    to    status
 
-# Redirect www to non-www (or vice versa)
-https://www.ryokome.com/* https://ryokome.com/:splat 301
+# Ensure index.html is served at root
+/index.html    /    301
 
-# Redirect old URLs if any (examples - adjust as needed)
-# /old-page.html /new-page.html 301
+# Redirect common variations
+/home    /    301
+/home.html    /    301
+/main    /    301
 
-# Custom 404 page (optional - create 404.html if needed)
-# /* /404.html 404
+# Redirect old paths (if migrating from previous site)
+/blog/*    /travel-checklist.html    301
+/guides/*    /travel-checklist.html    301
 
-# Force HTTPS (Cloudflare handles this by default, but you can be explicit)
-http://ryokome.com/* https://ryokome.com/:splat 301
+# Redirect with parameters cleanly
+/*?utm_*    /    301
+/*?ref=*    /    301
+/*?source=*    /    301
+
+# Handle common typos
+/flight    /flights.html    301
+/car    /cars.html    301
+/transfer    /airport-transfers.html    301
+/checklist    /travel-checklist.html    301
+
+# Country/language redirects (if expanding)
+/en/*    /    301
+/us/*    /    301
+
+# API endpoints (if adding later)
+/api/*    https://api.ryokome.com/:splat    200
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  200
+
+# Custom 404 page
+/*    /404.html    404

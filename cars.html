@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find the best car rental deals for your trip. Learn when renting makes sense and how to choose the right vehicle for your needs.">
-    <meta name="keywords" content="car rental, rent a car, car hire, travel car rental, cheap car rentals">
-    <title>Car Rentals - Compare Prices and Book Your Vehicle | Ryokome</title>
+    <meta name="description" content="Complete guide to renting cars: when it makes sense, how to get the best deals, and avoiding common pitfalls.">
+    <title>Car Rentals Guide - Ryokome Travel Advice</title>
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+    <!-- Google Analytics placeholder -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">Ryokome</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu">
                 <li><a href="flights.html">Flights</a></li>
-                <li><a href="cars.html" class="active">Car Rentals</a></li>
+                <li><a href="cars.html">Cars</a></li>
                 <li><a href="airport-transfers.html">Airport Transfers</a></li>
                 <li><a href="travel-checklist.html">Travel Checklist</a></li>
                 <li><a href="about.html">About</a></li>
@@ -28,212 +34,267 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1>Car Rentals: Freedom to Explore on Your Terms</h1>
-            <p>Discover when renting a car makes sense, how to find the best deals, and what to consider before you book.</p>
-        </div>
-    </header>
+    <main class="container">
+        <header class="page-header">
+            <h1>Car Rentals: A Practical Guide</h1>
+            <p class="page-subtitle">When renting a car makes sense, how to avoid hidden fees, and getting the right vehicle for your trip.</p>
+        </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container content-layout">
-            <article class="main-content">
-                <!-- Car Rental Widget -->
-                <section class="content-section">
-                    <h2>Search for Car Rentals</h2>
-                    <p>Compare prices from major car rental companies and local providers. Enter your pickup location, dates, and preferences to see available vehicles and rates.</p>
-                    
-                    <div class="widget-container">
-                        <script async src="https://tpwgts.com/content?trs=482158&shmarker=691366&locale=en&powered_by=false&campaign_id=172&promo_id=4850" charset="utf-8"></script>
+        <!-- Car Rental Widget -->
+        <section class="section">
+            <div class="widget-container">
+                <h2>Compare Car Rental Prices</h2>
+                <div id="car-widget">
+                    <script async src="https://tpwgts.com/content?trs=482158&shmarker=691366&locale=en&powered_by=false&campaign_id=172&promo_id=4850" charset="utf-8"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="content-section">
+            <h2>When Renting a Car Makes Sense</h2>
+            <p>Renting a car isn't always the best option. Here's when it typically makes the most sense:</p>
+            
+            <div class="scenario-grid">
+                <div class="scenario-card">
+                    <h3>Rural Exploration</h3>
+                    <p>If you're visiting countryside areas, national parks, or small towns with limited public transportation, a car is essential.</p>
+                </div>
+                <div class="scenario-card">
+                    <h3>Group Travel</h3>
+                    <p>For families or groups of 3+, a rental car often costs less per person than multiple train or taxi fares.</p>
+                </div>
+                <div class="scenario-card">
+                    <h3>Flexible Itineraries</h3>
+                    <p>If you want to explore at your own pace, stop at random viewpoints, or change plans spontaneously.</p>
+                </div>
+                <div class="scenario-card">
+                    <h3>Multiple Destinations</h3>
+                    <p>When visiting several cities or attractions far from each other without convenient train connections.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>When to Consider Alternatives</h2>
+            
+            <div class="comparison-section">
+                <h3>Car Rental vs. Public Transport</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <h4>✅ Choose Public Transport When:</h4>
+                        <ul>
+                            <li>Visiting a major city with excellent metro/bus systems (London, Tokyo, New York)</li>
+                            <li>Staying in a walkable historic center with limited parking</li>
+                            <li>Taking day trips via train to popular tourist destinations</li>
+                            <li>Traveling solo or as a couple on a tight budget</li>
+                        </ul>
                     </div>
-                </section>
+                    <div class="comparison-item">
+                        <h4>✅ Choose Car Rental When:</h4>
+                        <ul>
+                            <li>Exploring rural areas, national parks, or coastal roads</li>
+                            <li>Traveling with children or lots of luggage</li>
+                            <li>Visiting multiple destinations in one trip</li>
+                            <li>Traveling during off-season when public transport is limited</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <h3>Car Rental vs. Rideshares/Taxis</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <h4>📱 Rideshares/Taxis Better For:</h4>
+                        <ul>
+                            <li>Short trips within a city</li>
+                            <li>Airport transfers when you don't need a car for the whole trip</li>
+                            <li>Late night travel when you might drink</li>
+                            <li>One-way trips where drop fees would be expensive</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>🚗 Car Rental Better For:</h4>
+                        <ul>
+                            <li>Full-day exploration beyond city centers</li>
+                            <li>Trips spanning several days</li>
+                            <li>When you need trunk space for luggage/shopping</li>
+                            <li>When traveling to areas with limited rideshare availability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- When to Rent -->
-                <section class="content-section">
-                    <h2>When Does Renting a Car Make Sense?</h2>
-                    <p>Car rentals aren't necessary for every trip, but they're invaluable in certain situations. Understanding when to rent helps you make smarter travel decisions and avoid unnecessary expenses.</p>
-                    
-                    <h3>Exploring Regional Destinations</h3>
-                    <p>If you're visiting areas where attractions are spread out—think national parks, wine regions, or small coastal towns—a rental car offers freedom that public transportation can't match. You can set your own schedule, take scenic detours, and visit places that aren't on main transit routes.</p>
-                    
-                    <p>Road trips through regions like the American Southwest, Tuscany, or New Zealand's South Island are practically built for car travel. The journey itself becomes part of the experience when you're not tied to bus schedules or train timetables.</p>
-                    
-                    <h3>Family and Group Travel</h3>
-                    <p>Traveling with kids or in a group makes rental cars economically sensible. Once you factor in the cost of multiple taxi rides or train tickets for several people, renting a car often costs less and provides more convenience. You have space for luggage, snacks, and everything else families need, plus the flexibility to handle nap schedules and spontaneous stops.</p>
-                    
-                    <h3>Business Travel Flexibility</h3>
-                    <p>For business travelers visiting multiple locations or attending meetings across a city, rental cars eliminate the stress of coordinating rideshares. You control your schedule completely and don't waste time waiting for drivers or public transportation connections.</p>
-                    
-                    <h3>When You Probably Don't Need a Car</h3>
-                    <p>Big cities with excellent public transport—New York, London, Tokyo, Paris—usually don't require rental cars. Parking is expensive and difficult, traffic is frustrating, and metro systems get you around faster. For city-focused trips, save money and skip the rental.</p>
-                    
-                    <p>Similarly, if you're staying at a resort or cruise port with everything walkable or provided, a car just sits unused in a parking lot while you pay daily rental fees.</p>
-                </section>
+        <section class="content-section">
+            <h2>Understanding Rental Costs</h2>
+            <p>The advertised price is rarely the final price. Here's what to budget for:</p>
+            
+            <div class="cost-breakdown">
+                <div class="cost-item">
+                    <h3>Base Rental Rate</h3>
+                    <p>Daily or weekly rate for the vehicle class</p>
+                </div>
+                <div class="cost-item">
+                    <h3>Insurance</h3>
+                    <p>Collision Damage Waiver (CDW), Theft Protection, Third Party Liability</p>
+                </div>
+                <div class="cost-item">
+                    <h3>Taxes & Fees</h3>
+                    <p>Airport surcharges, local taxes, tourism fees</p>
+                </div>
+                <div class="cost-item">
+                    <h3>Extras</h3>
+                    <p>Additional driver fee, young driver fee (under 25), GPS, child seats</p>
+                </div>
+                <div class="cost-item">
+                    <h3>Fuel</h3>
+                    <p>Either pre-purchase a full tank or refuel before return</p>
+                </div>
+                <div class="cost-item">
+                    <h3>Tolls</h3>
+                    <p>Electronic toll passes or cash tolls depending on location</p>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h3>💰 Money-Saving Tip</h3>
+                <p><strong>Check your existing coverage:</strong> Many credit cards and personal auto insurance policies include rental car coverage. Don't double-pay for insurance you already have!</p>
+            </div>
+        </section>
 
-                <!-- Rental vs Other Options -->
-                <section class="content-section">
-                    <h2>Car Rentals vs. Other Transportation Options</h2>
-                    
-                    <h3>Rental Cars vs. Rideshare Services</h3>
-                    <p>Rideshare apps like Uber and Lyft work great for occasional trips in cities, but costs add up quickly with multiple daily rides. Run the math: if you're taking four or five rides per day over several days, a rental might be cheaper even with parking fees factored in.</p>
-                    
-                    <p>Rental cars also give you guaranteed availability—you're not hoping a driver is nearby when you need one. In rural or less-populated areas, rideshare options might be limited or nonexistent, making rental cars the reliable choice.</p>
-                    
-                    <h3>Rental Cars vs. Taxis</h3>
-                    <p>Traditional taxis are convenient for point-to-point travel but get expensive for full-day use. If your itinerary involves multiple stops or full days of sightseeing, the meter runs continuously. With a rental, you pay one daily rate regardless of how much you drive.</p>
-                    
-                    <h3>Rental Cars vs. Public Transportation</h3>
-                    <p>Public transit is economical and often efficient in urban centers. But it's constrained by routes and schedules. If your destinations are all along metro lines and you don't mind working around timetables, public transport is hard to beat for value.</p>
-                    
-                    <p>However, once you venture into suburbs or countryside, bus routes become sparse and infrequent. A rental car transforms three-hour public transit journeys into 45-minute direct drives.</p>
-                    
-                    <h3>When Airport Transfers Are Better</h3>
-                    <p>For simple airport-to-hotel transportation without planned exploration, pre-booked airport transfers are often more practical than renting a car just for that ride. See our <a href="airport-transfers.html">airport transfers page</a> for more information on this option.</p>
-                </section>
+        <section class="content-section">
+            <h2>Choosing the Right Vehicle</h2>
+            
+            <div class="vehicle-grid">
+                <div class="vehicle-card">
+                    <h3>Economy/Compact</h3>
+                    <p><strong>Best for:</strong> City driving, solo travelers or couples, tight parking situations</p>
+                    <p><strong>Consider:</strong> Limited trunk space, may struggle on steep hills</p>
+                </div>
+                <div class="vehicle-card">
+                    <h3>Midsize/Standard</h3>
+                    <p><strong>Best for:</strong> Most families (2 adults, 2 children), road trips with luggage</p>
+                    <p><strong>Consider:</strong> Most common category, good balance of space and fuel efficiency</p>
+                </div>
+                <div class="vehicle-card">
+                    <h3>SUV/Crossover</h3>
+                    <p><strong>Best for:</strong> Rough roads, snowy conditions, groups of 5+, lots of luggage</p>
+                    <p><strong>Consider:</strong> Higher fuel costs, may be difficult in European old towns</p>
+                </div>
+                <div class="vehicle-card">
+                    <h3>Minivan</h3>
+                    <p><strong>Best for:</strong> Large families (6+ people), groups with lots of gear</p>
+                    <p><strong>Consider:</strong> Parking challenges, higher rental costs</p>
+                </div>
+            </div>
+        </section>
 
-                <!-- Choosing the Right Vehicle -->
-                <section class="content-section">
-                    <h2>Choosing the Right Vehicle</h2>
-                    
-                    <h3>Size and Passenger Capacity</h3>
-                    <p>Book a vehicle that comfortably fits your group and luggage. "Fits four people" often means four people with minimal luggage. If you're traveling with full suitcases, consider sizing up. The extra cost for a larger car is worth the comfort and space.</p>
-                    
-                    <h3>Fuel Efficiency</h3>
-                    <p>If you're planning significant driving, fuel costs matter. Smaller, more fuel-efficient cars save money at the pump, especially in countries with high fuel prices. Calculate expected driving distance and fuel efficiency to estimate total fuel costs when comparing vehicle options.</p>
-                    
-                    <h3>Transmission Type</h3>
-                    <p>Outside North America, manual transmissions are standard and automatic cars cost more. If you can't drive stick shift confidently, make sure to specifically book an automatic—it'll be listed as a special requirement and priced higher, but it's essential if you're not comfortable with manual.</p>
-                    
-                    <h3>Insurance and Protection</h3>
-                    <p>Car rental insurance can be confusing with multiple tiers and options. At minimum, you need liability coverage (usually included). Beyond that, consider collision damage waiver (CDW) which limits your financial responsibility if the car is damaged.</p>
-                    
-                    <p>Check if your credit card or personal auto insurance already covers rental cars. Many travel credit cards include rental car insurance as a benefit, potentially saving you the daily insurance fee from the rental company. Verify coverage details and any exclusions before declining the rental company's insurance.</p>
-                </section>
-
-                <!-- Booking Tips -->
-                <section class="content-section">
-                    <h2>Smart Booking Strategies</h2>
-                    
-                    <h3>Book in Advance</h3>
-                    <p>Rental car prices increase as availability decreases. Booking weeks or months ahead typically yields better rates than last-minute reservations. Most rental companies allow free cancellation up to 24-48 hours before pickup, so book early and monitor for price drops.</p>
-                    
-                    <h3>Airport vs. Downtown Locations</h3>
-                    <p>Airport rental locations charge convenience fees and taxes that downtown locations might not. However, off-airport locations might require shuttle rides or navigating unfamiliar public transit with luggage. Compare total costs and convenience before deciding.</p>
-                    
-                    <h3>Rental Duration</h3>
-                    <p>Weekly rates are often significantly cheaper per day than daily rates. If you need a car for five or six days, check if the weekly rate is actually less than the daily rate multiplied by your trip length. Sometimes extending a rental by a day to qualify for the weekly rate saves money overall.</p>
-                    
-                    <h3>Read the Fine Print</h3>
-                    <p>Rental agreements include mileage limits, fuel policies, additional driver fees, and young driver surcharges. Understanding these terms prevents surprise charges at return. Unlimited mileage is standard in many locations but not everywhere—verify this if you're planning long drives.</p>
-                    
-                    <h3>Fuel Policies</h3>
-                    <p>Most rental companies use "full-to-full" policies: you pick up the car with a full tank and return it full. This is fair and transparent. Avoid "pre-purchase fuel" options where you pay for a full tank upfront—you rarely use exactly a full tank, and you're paying convenience markup on the fuel price.</p>
-                </section>
-
-                <!-- International Considerations -->
-                <section class="content-section">
-                    <h2>Renting Cars Internationally</h2>
-                    
-                    <h3>Driver's License Requirements</h3>
-                    <p>Many countries accept your home driver's license for short-term rentals, but some require an International Driving Permit (IDP) in addition to your regular license. Check requirements for your destination and obtain an IDP from your home country's automobile association if needed—you can't get one after you've left home.</p>
-                    
-                    <h3>Driving on the "Wrong" Side</h3>
-                    <p>If you're from a right-hand drive country visiting a left-hand drive country (or vice versa), give yourself time to adjust. The first few drives will feel strange. Take it slow, stay aware of your positioning, and be extra careful at intersections and roundabouts until the muscle memory develops.</p>
-                    
-                    <h3>Navigation and Tolls</h3>
-                    <p>GPS navigation is essential in unfamiliar areas. Most rental companies offer GPS units for a daily fee, or you can use your smartphone with offline maps. Download maps for your destination before you arrive to avoid international data charges.</p>
-                    
-                    <p>Research toll road systems in your destination. Some countries use automatic toll collection requiring special tags or transponders. Understand how tolls work and how they'll be charged to your rental to avoid unexpected fees weeks after your trip.</p>
-                    
-                    <h3>Parking Considerations</h3>
-                    <p>European cities often have narrow streets and limited parking. A smaller car makes parking easier and less stressful. Factor parking costs into your budget—city center parking can be surprisingly expensive. Many hotels charge extra for parking, so ask about this when booking accommodation.</p>
-                </section>
-
-                <!-- At Pickup and Return -->
-                <section class="content-section">
-                    <h2>At Pickup and Return</h2>
-                    
-                    <h3>Inspecting the Vehicle</h3>
-                    <p>Before driving off, thoroughly inspect the car for existing damage. Take photos or video of the entire exterior, noting any scratches, dents, or issues. Check tire condition and make sure the spare tire and jack are present. Document the fuel level.</p>
-                    
-                    <p>Inside, verify that all controls work—lights, wipers, AC, windows. Adjust mirrors and seats before leaving the lot. This documentation protects you from being charged for pre-existing damage.</p>
-                    
-                    <h3>Understanding the Dashboard</h3>
-                    <p>Cars vary in their controls and displays. Don't leave the lot until you know how to operate headlights, windshield wipers, turn signals, and emergency lights. Make sure you understand any dashboard warning lights and what they mean.</p>
-                    
-                    <h3>Returning the Car</h3>
-                    <p>Return the car with a full fuel tank to avoid inflated refueling charges. Keep the last fuel receipt as proof. Return during staffed hours if possible so you can get a walk-around inspection confirming no damage claims. Take photos of the returned car showing its condition and fuel level.</p>
-                </section>
-
-                <!-- Final Tips -->
-                <section class="content-section">
-                    <h2>Final Thoughts on Car Rentals</h2>
-                    <p>Renting a car opens up travel possibilities that fixed transportation routes can't offer. The key is matching the rental to your specific needs. Not every trip requires a car, but when it does, the freedom and flexibility make it worthwhile.</p>
-                    
-                    <p>Do your homework on rates, insurance, and rental terms before booking. Understand what you're paying for and what's included. A little research upfront prevents hassles during your trip and ensures your rental car enhances your travel experience rather than complicating it.</p>
-                </section>
-            </article>
-
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-card">
-                    <h3>Quick Links</h3>
-                    <ul class="sidebar-links">
-                        <li><a href="flights.html">Cheap Flights →</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers →</a></li>
-                        <li><a href="travel-checklist.html">Travel Checklist →</a></li>
+        <section class="content-section">
+            <h2>International Driving Tips</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>Documents Required</h3>
+                    <ul>
+                        <li>Valid driver's license from home country</li>
+                        <li>International Driving Permit (IDP) for many countries</li>
+                        <li>Passport and credit card in driver's name</li>
+                        <li>Rental voucher/reservation</li>
                     </ul>
                 </div>
+                <div class="tip-card">
+                    <h3>Before You Drive Off</h3>
+                    <ul>
+                        <li>Inspect the car thoroughly (document any damage with photos/video)</li>
+                        <li>Understand fuel policy (full-to-full vs. pre-purchase)</li>
+                        <li>Test lights, wipers, air conditioning</li>
+                        <li>Note emergency contact numbers</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>Driving Differences</h3>
+                    <ul>
+                        <li>Left vs. right side driving</li>
+                        <li>Roundabout rules vary by country</li>
+                        <li>Speed limits in km/h vs. mph</li>
+                        <li>Different road signage systems</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>Return Checklist</h3>
+                    <ul>
+                        <li>Refuel to required level</li>
+                        <li>Remove all personal belongings</li>
+                        <li>Return during business hours if possible</li>
+                        <li>Get a receipt confirming no new damage</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Country-Specific Considerations</h2>
+            
+            <div class="country-tips">
+                <h3>United States</h3>
+                <p>Automatic transmission is standard. Insurance requirements vary by state. Unlimited mileage common. Watch for one-way drop fees crossing state lines.</p>
                 
-                <div class="sidebar-card">
-                    <h3>Helpful Resources</h3>
-                    <ul class="sidebar-links">
-                        <li><a href="https://www.aaa.com/vacation/idpf.html" target="_blank" rel="noopener">International Driving Permits</a></li>
-                        <li><a href="https://www.state.gov/travelers/" target="_blank" rel="noopener">U.S. Travel Advisories</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
+                <h3>Europe</h3>
+                <p>Manual transmission common (specify automatic if needed). Smaller cars recommended for narrow streets. Check for emission zone restrictions in cities.</p>
+                
+                <h3>Australia/New Zealand</h3>
+                <p>Long distances between destinations. Consider rental relocation deals (cheap rates for moving cars between cities). Watch for wildlife on rural roads.</p>
+                
+                <h3>Asia</h3>
+                <p>International chains plus local companies. Traffic patterns can be challenging for new visitors. Consider hiring a driver for congested cities.</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Still Unsure About Transportation?</h2>
+            <p>For airport pickups or single transfers, <a href="airport-transfers.html">airport transfer services</a> might be more convenient and cost-effective.</p>
+            <p>For comprehensive trip planning, don't miss our <a href="travel-checklist.html">Travel Checklist</a> to ensure you have all necessary documents and preparations.</p>
+            <a href="index.html" class="btn-primary">← Back to Homepage</a>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Ryokome</h4>
-                    <p>Your trusted partner for finding affordable flights, car rentals, and airport transfers.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="flights.html">Flights</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                    </ul>
-                </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Ryokome</h3>
+                <p>Helping travelers make informed decisions since 2023.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ryokome. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="cars.html">Car Rentals</a></li>
+                    <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                    <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Ryokome. All rights reserved.</p>
+            <p>Ryokome is an independent travel affiliate website. We may earn a commission when you book through our links, at no extra cost to you.</p>
         </div>
     </footer>
 

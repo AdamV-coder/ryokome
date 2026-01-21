@@ -3,333 +3,942 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Complete travel checklist covering documents, packing, health, money, and more. Never forget important items for your trip again.">
-    <meta name="keywords" content="travel checklist, packing list, travel preparation, travel documents, travel essentials">
-    <title>Complete Travel Checklist - Never Forget Essentials Again | Ryokome</title>
+    <meta name="description" content="Comprehensive travel checklist with essential items, documents, and preparations for stress-free travel.">
+    <title>Complete Travel Checklist - Ryokome Travel Preparation</title>
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
+    <!-- Google Analytics placeholder -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">Ryokome</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu">
                 <li><a href="flights.html">Flights</a></li>
-                <li><a href="cars.html">Car Rentals</a></li>
+                <li><a href="cars.html">Cars</a></li>
                 <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                <li><a href="travel-checklist.html" class="active">Travel Checklist</a></li>
+                <li><a href="travel-checklist.html">Travel Checklist</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
+    <main class="container checklist-container">
+        <header class="page-header">
             <h1>The Complete Travel Checklist</h1>
-            <p>Everything you need to prepare for your trip, from critical documents to helpful extras. Organized, comprehensive, and tested by real travelers.</p>
-        </div>
-    </header>
+            <p class="page-subtitle">Everything you need to prepare for a smooth, stress-free trip. Created by experienced travelers, updated regularly.</p>
+            <div class="checklist-actions">
+                <button id="print-checklist" class="btn-secondary">Print This Checklist</button>
+                <button id="save-checklist" class="btn-secondary">Save as PDF</button>
+            </div>
+        </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container content-layout">
-            <article class="main-content">
-                <!-- Introduction -->
-                <section class="content-section">
-                    <h2>Why This Checklist Matters</h2>
-                    <p>We've all experienced that sinking feeling—you're at the airport and realize you forgot something important. Maybe it's phone chargers, prescription medication, or travel insurance documents. This comprehensive checklist helps you avoid those moments by systematically covering everything you might need.</p>
-                    
-                    <p>This isn't a generic list copied from elsewhere. It's built from years of travel experience, refined through mistakes, and organized in a way that matches how you actually prepare for a trip. Some items are essential for everyone, others depend on your destination and trip type. Use this as your foundation, then customize based on your specific needs.</p>
-                </section>
+        <!-- Checklist Introduction -->
+        <section class="checklist-intro">
+            <div class="intro-box">
+                <h2>How to Use This Checklist</h2>
+                <p>This comprehensive checklist covers everything from documents to packing. Use it in stages:</p>
+                <ol>
+                    <li><strong>4+ weeks before travel:</strong> Review Sections 1-3 (Documents, Health, Money)</li>
+                    <li><strong>1-2 weeks before:</strong> Complete Section 4 (Home Preparation)</li>
+                    <li><strong>2-3 days before:</strong> Pack using Section 5 (Packing List)</li>
+                    <li><strong>Day of travel:</strong> Use Section 6 (Last-Minute Checks)</li>
+                </ol>
+                <p>Check items as you complete them. The checklist will save your progress automatically.</p>
+            </div>
+        </section>
 
-                <!-- Documents Section -->
-                <section class="content-section">
-                    <h2>Essential Travel Documents</h2>
-                    <p>These documents are non-negotiable. Missing any of these can prevent you from traveling or cause serious problems during your trip.</p>
-                    
-                    <h3>Passport and Visas</h3>
-                    <p><strong>Passport:</strong> Check expiration date now, not the day before departure. Many countries require passports valid for six months beyond your travel dates. If your passport expires within a year, consider renewing it before booking international travel. Processing times vary—allow at least three months for routine service, or pay for expedited processing if you're pressed for time. The <a href="https://travel.state.gov/content/travel/en/passports.html" target="_blank" rel="noopener">U.S. Department of State</a> website has current processing times and renewal information.</p>
-                    
-                    <p><strong>Visas:</strong> Research visa requirements for your destination country at least two months before departure. Some countries offer visa-on-arrival or visa-free entry for certain nationalities, while others require advance application. Processing times vary from days to months. The <a href="https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages.html" target="_blank" rel="noopener">U.S. State Department's country pages</a> provide visa requirements, and destination country embassy websites have application procedures.</p>
-                    
-                    <p><strong>Passport Photos:</strong> Bring extra passport photos for visa applications, replacement documents, or permits you might need during travel. Digital backups on your phone work in some situations, but physical copies are more universally accepted.</p>
-                    
-                    <h3>Identification and Copies</h3>
-                    <p><strong>Driver's License:</strong> Essential if you're renting a car. For international rentals, some countries require an International Driving Permit (IDP) in addition to your regular license. Get an IDP from AAA or the automobile association in your country before departure—you can't obtain one while abroad.</p>
-                    
-                    <p><strong>Backup ID:</strong> Carry a second form of photo ID separate from your passport. If your passport is lost or stolen, having backup identification speeds up the replacement process at your embassy or consulate.</p>
-                    
-                    <p><strong>Document Copies:</strong> Make photocopies or scan all important documents—passport information pages, visas, driver's license, credit cards, and insurance policies. Store physical copies separate from originals, and email digital copies to yourself or save them in cloud storage. If documents are lost or stolen, copies speed up replacement and verify your identity.</p>
-                    
-                    <h3>Flight and Accommodation Confirmations</h3>
-                    <p>Download boarding passes before heading to the airport, even if you prefer not checking in online. Airport Wi-Fi can be unreliable, and having passes ready eliminates stress. Similarly, save hotel confirmations and transportation vouchers offline on your phone. Paper printouts serve as backup if your phone dies.</p>
-                    
-                    <h3>Travel Insurance</h3>
-                    <p>If you purchased travel insurance, keep policy documents and emergency contact numbers easily accessible. Know what's covered and how to file claims. Save both physical copies and digital backups. Most importantly, understand how to contact your insurance provider in emergencies—some situations require pre-approval before seeking medical care.</p>
-                    
-                    <h3>Health Documentation</h3>
-                    <p><strong>Vaccination Records:</strong> Some countries require proof of specific vaccinations for entry. Yellow fever vaccination certificates are mandatory for travel to certain African and South American countries. COVID-19 requirements continue to evolve; check current entry requirements for your destination before departure.</p>
-                    
-                    <p><strong>Prescriptions:</strong> Carry documentation from your doctor listing prescription medications you're traveling with. This helps if medications are questioned at customs and assists foreign doctors if you need medical care abroad. Keep medications in original labeled containers.</p>
-                </section>
+        <!-- Section 1: Essential Documents -->
+        <section class="checklist-section" id="section-documents">
+            <h2>📄 Section 1: Essential Documents</h2>
+            <p class="section-description">These items should be kept both digitally and physically. Consider using a travel document organizer.</p>
+            
+            <div class="checklist-category">
+                <h3>Passports & Identification</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Passport (valid for at least 6 months beyond return date)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Photocopies of passport photo page (2 copies)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Passport photos (2 recent, for visas/replacements)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Driver's license (if planning to drive)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">International Driving Permit (if required)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Student ID (if applicable, for discounts)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="checklist-category">
+                <h3>Visas & Entry Requirements</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Required visas (applied for and received)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">ESTA/ETA/eTA (for US/Canada/Australia if required)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Proof of onward travel (return/continuing ticket)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Proof of sufficient funds (bank statement/credit card)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Vaccination certificates (if required)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="checklist-category">
+                <h3>Travel Documents</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Flight tickets/itinerary (printed and digital)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Hotel/accommodation confirmations</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Car rental confirmation</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Travel insurance policy (with emergency numbers)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Tour/activity reservations</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Emergency contact list (family, embassy, insurance)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="resource-box">
+                <h4>Useful Resources:</h4>
+                <ul>
+                    <li><a href="https://travel.state.gov" target="_blank" rel="noopener">U.S. Department of State Traveler's Checklist</a> - Official travel advice</li>
+                    <li><a href="https://www.gov.uk/foreign-travel-advice" target="_blank" rel="noopener">UK Foreign Travel Advice</a> - Country-specific guidance</li>
+                    <li><a href="https://www.iatatravelcentre.com" target="_blank" rel="noopener">IATA Travel Centre</a> - Passport/visa requirements</li>
+                </ul>
+            </div>
+        </section>
 
-                <!-- Packing Section -->
-                <section class="content-section">
-                    <h2>Smart Packing Essentials</h2>
-                    <p>Packing efficiently means bringing what you'll actually use without overloading yourself with "just in case" items that stay in your bag.</p>
-                    
-                    <h3>Luggage Selection</h3>
-                    <p>Choose luggage appropriate for your trip type. Check your airline's baggage size and weight limits before packing—fees for oversized or overweight bags add up quickly. For short trips, carry-on only saves time at baggage claim and reduces risk of lost luggage.</p>
-                    
-                    <p>Label luggage clearly with name and contact information, both outside and inside the bag. If the external tag is lost, inside identification helps reunite you with lost luggage.</p>
-                    
-                    <h3>Clothing Strategy</h3>
-                    <p><strong>Weather-Appropriate Clothes:</strong> Check weather forecasts for your destination, but also research typical seasonal weather patterns. Current forecasts only cover about 10 days, so for longer trips, understand what conditions to expect throughout your stay.</p>
-                    
-                    <p><strong>Versatile Items:</strong> Pack clothing that works in multiple contexts. Neutral colors mix and match easily. One pair of nice pants or a dress can be dressed up or down. Layering pieces adapt to temperature changes better than bulky single-purpose items.</p>
-                    
-                    <p><strong>Laundry Planning:</strong> For trips longer than a week, plan to do laundry or bring items you can hand wash and quick-dry. Packing fewer clothes and washing mid-trip is smarter than overpacking.</p>
-                    
-                    <p><strong>Shoes:</strong> Limit yourself to three pairs maximum: comfortable walking shoes you've already broken in, dressier shoes if needed, and flip-flops or sandals for casual wear. Shoes take up significant luggage space, so each pair should earn its place.</p>
-                    
-                    <h3>Technology and Electronics</h3>
-                    <p><strong>Phone and Charger:</strong> Your phone is your camera, map, translator, and communication device. Bring your charging cable and adapter. Consider a portable battery pack for long days sightseeing when outlets aren't accessible.</p>
-                    
-                    <p><strong>Power Adapters:</strong> International travel requires outlet adapters for your destination's plug type. Universal adapters work in multiple countries but are bulkier. Research your specific destination's plug type and voltage—some devices need voltage converters, not just plug adapters.</p>
-                    
-                    <p><strong>Laptop or Tablet:</strong> Only bring if you'll genuinely use it. Tablets are lighter alternatives if you mainly need to check emails or watch entertainment. Consider whether your phone can handle everything you need.</p>
-                    
-                    <p><strong>Camera:</strong> Smartphone cameras now rival dedicated cameras for casual photography. If you're a serious photographer, you already know what gear you need. For most travelers, relying on a phone camera reduces weight and complexity.</p>
-                    
-                    <p><strong>E-Readers:</strong> If you read on vacation, e-readers hold thousands of books without weight. Download books before departure—international data costs make in-trip downloads expensive.</p>
-                    
-                    <h3>Toiletries and Personal Care</h3>
-                    <p><strong>TSA-Compliant Sizes:</strong> If carrying on, toiletries must be 3.4 ounces (100ml) or less and fit in a single quart-sized bag. Transfer products into travel-sized containers or buy travel sizes. Alternatively, check a bag or plan to purchase toiletries at your destination.</p>
-                    
-                    <p><strong>Medications:</strong> Bring enough prescription medications for your entire trip plus a few extra days in case of travel delays. Keep medications in carry-on luggage in original containers. Pack a basic first aid kit with pain relievers, bandages, antihistamines, and any over-the-counter medications you use regularly.</p>
-                    
-                    <p><strong>Glasses and Contacts:</strong> Bring backup glasses if you wear contacts. Carry contact lens solution in checked luggage or buy at your destination to avoid TSA liquid restrictions.</p>
-                    
-                    <h3>Comfort and Convenience Items</h3>
-                    <p><strong>Reusable Water Bottle:</strong> Save money and reduce plastic waste. Empty before airport security, refill after. Many airports now have water bottle filling stations.</p>
-                    
-                    <p><strong>Travel Pillow and Blanket:</strong> Long flights become more bearable with comfort items. Compact inflatable or compressible options don't take much space.</p>
-                    
-                    <p><strong>Earplugs and Eye Mask:</strong> Essential for sleeping on planes, noisy hotels, or accommodations with bright early morning light.</p>
-                    
-                    <p><strong>Snacks:</strong> Bring non-perishable snacks for flights and long travel days. Airport and airplane food is expensive and often unappetizing. Just check customs regulations—some countries prohibit bringing food items across borders.</p>
-                </section>
+        <!-- Section 2: Health & Safety -->
+        <section class="checklist-section" id="section-health">
+            <h2>🏥 Section 2: Health & Safety</h2>
+            <p class="section-description">Health preparations should begin 4-8 weeks before travel for vaccinations.</p>
+            
+            <div class="checklist-category">
+                <h3>Medical Preparation</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Travel insurance with medical coverage (verify COVID coverage)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Required vaccinations (check CDC/WHO recommendations)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Prescription medications (original containers, extra supply)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Doctor's note for medications/syringes</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Copy of prescriptions (generic names included)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Basic first aid kit</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Personal medications (allergy, pain, motion sickness, etc.)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="checklist-category">
+                <h3>Health Items</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Insect repellent (DEET or picaridin based)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Sunscreen (SPF 30+, reef-safe if swimming)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Hand sanitizer</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Face masks (if required/desired)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Water purification tablets/filter (if needed)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Travel health guide/book</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="resource-box">
+                <h4>Useful Resources:</h4>
+                <ul>
+                    <li><a href="https://wwwnc.cdc.gov/travel" target="_blank" rel="noopener">CDC Travel Health</a> - Vaccination requirements and health alerts</li>
+                    <li><a href="https://www.who.int/ith" target="_blank" rel="noopener">WHO International Travel and Health</a> - Global health guidance</li>
+                    <li><a href="https://www.fitfortravel.nhs.uk" target="_blank" rel="noopener">NHS Fit for Travel</a> - UK-based travel health advice</li>
+                </ul>
+            </div>
+        </section>
 
-                <!-- Money and Cards Section -->
-                <section class="content-section">
-                    <h2>Money, Cards, and Financial Preparation</h2>
-                    
-                    <h3>Credit and Debit Cards</h3>
-                    <p>Notify your bank and credit card companies about travel dates and destinations before departure. This prevents fraud alerts that block your cards in foreign countries. Have your card company's international phone number saved—the 1-800 number on the back of your card won't work from overseas.</p>
-                    
-                    <p>Bring at least two different credit or debit cards, ideally from different banks. If one card has issues or is lost, you have backup. Store cards in different locations—one in your wallet, another in your hotel safe or separate bag compartment.</p>
-                    
-                    <p>Choose cards without foreign transaction fees for international travel. These fees add 2-3% to every purchase, which adds up quickly over a trip.</p>
-                    
-                    <h3>Cash</h3>
-                    <p>Despite digital payments, cash remains necessary in most destinations. ATMs generally offer better exchange rates than airport currency exchanges. Withdraw local currency from ATMs at your destination rather than exchanging money at home.</p>
-                    
-                    <p>Bring some U.S. dollars as emergency backup—dollars are widely recognized and can be exchanged almost anywhere globally.</p>
-                    
-                    <p>Spread cash across multiple locations: some in your wallet, some in your hotel safe, some in a hidden pocket or money belt. If you're pickpocketed or lose your wallet, you're not completely without funds.</p>
-                    
-                    <h3>Payment Apps and Digital Wallets</h3>
-                    <p>Set up mobile payment apps (Apple Pay, Google Pay) before your trip. Many international locations now accept contactless payments, which is faster and more secure than card insertion.</p>
-                    
-                    <p>Research whether payment apps popular in your destination (like WeChat Pay in China or Paytm in India) are available to foreign tourists. Sometimes setting these up in advance saves hassle during your trip.</p>
-                </section>
+        <!-- Section 3: Money & Finance -->
+        <section class="checklist-section" id="section-money">
+            <h2>💰 Section 3: Money & Finance</h2>
+            <p class="section-description">Diversify your money across multiple forms for security and convenience.</p>
+            
+            <div class="checklist-category">
+                <h3>Payment Methods</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Credit cards (2 different ones, preferably no foreign transaction fees)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Debit/ATM card (notify bank of travel dates)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Local currency (small amount for arrival)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">USD/Euros (small amount for emergencies)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Money belt/hidden pouch</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Digital payment app setup (Apple Pay/Google Pay)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="checklist-category">
+                <h3>Financial Preparation</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Notify banks/credit card companies of travel plans</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Write down card numbers and emergency contact numbers (separate from cards)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Set travel alerts on financial accounts</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Check foreign transaction fees on cards</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Research ATM availability and fees at destination</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Budget for trip (daily spending, activities, emergencies)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h3>💳 Card Security Tips</h3>
+                <p>Carry cards separately (don't keep all in one wallet). Use RFID-blocking sleeves or wallets to prevent electronic skimming. Always have a backup payment method accessible separately from your main wallet.</p>
+            </div>
+        </section>
 
-                <!-- Health and Safety Section -->
-                <section class="content-section">
-                    <h2>Health, Safety, and Wellness</h2>
-                    
-                    <h3>Pre-Trip Health</h3>
-                    <p>Schedule a doctor visit four to six weeks before international travel, especially to destinations with disease risks. The <a href="https://wwwnc.cdc.gov/travel" target="_blank" rel="noopener">CDC's travel health website</a> lists recommended vaccinations and health precautions by country. Some vaccinations require multiple doses over several weeks, so early planning is essential.</p>
-                    
-                    <p>If you have chronic health conditions, get a letter from your doctor explaining your condition and medications. This helps if you need medical care abroad and assists customs officials who might question medications.</p>
-                    
-                    <h3>Travel Insurance and Medical Coverage</h3>
-                    <p>Understand your health insurance coverage for international travel. Many domestic plans don't cover medical care abroad. Travel medical insurance fills this gap and often includes emergency evacuation coverage, which can be lifesaving in serious situations.</p>
-                    
-                    <p>Compare comprehensive travel insurance policies that bundle trip cancellation, medical coverage, baggage protection, and travel delays. The small upfront cost protects against large financial losses.</p>
-                    
-                    <h3>Medications and First Aid</h3>
-                    <p>Pack a basic first aid kit: adhesive bandages, antibiotic ointment, pain relievers, antihistamines, anti-diarrheal medication, and any prescription medications you take regularly. Add motion sickness medication if you're prone to car or seasickness.</p>
-                    
-                    <p>Bring more prescription medication than you think you need. Delayed flights or extended trips happen, and accessing your specific medications abroad can be difficult or impossible.</p>
-                    
-                    <h3>Sun Protection and Hydration</h3>
-                    <p>Sunscreen is crucial even in destinations you don't think of as sunny. High altitude, snow reflection, and tropical climates all increase sun exposure. Bring sunscreen with high SPF and remember to reapply frequently.</p>
-                    
-                    <p>Stay hydrated during travel. Airplane cabins are extremely dry, and new climates affect your hydration needs. Drink more water than usual, especially in hot destinations or at high altitudes.</p>
-                    
-                    <h3>Emergency Contacts</h3>
-                    <p>Save emergency contacts before departure: your embassy or consulate, local emergency services number (equivalent to 911), your travel insurance emergency line, and contacts for credit card companies and your bank.</p>
-                    
-                    <p>Give someone at home a copy of your itinerary, including flight numbers, hotel names, and contact information. Check in regularly so someone knows you're safe.</p>
-                </section>
+        <!-- Section 4: Home Preparation -->
+        <section class="checklist-section" id="section-home">
+            <h2>🏠 Section 4: Home Preparation (1-2 Weeks Before)</h2>
+            <p class="section-description">Ensure your home is secure and responsibilities are covered while you're away.</p>
+            
+            <div class="checklist-category">
+                <h3>Home Security</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Arrange for house/pet sitter or ask neighbor to watch house</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Stop mail and newspaper delivery</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Set timers for lights (variable schedule)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Lock all windows and doors (including garage)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Store valuables in safe or off-site</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Unplug unnecessary electronics</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Adjust thermostat (cool in summer, warm enough in winter to prevent freezing)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="checklist-category">
+                <h3>Administrative Tasks</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Pay bills due while away or set up autopay</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Arrange for lawn care/snow removal if needed</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Empty refrigerator of perishables</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Take out trash/recycling</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Clean house (nice to return to clean home)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Leave itinerary and emergency contact with trusted person</span>
+                    </label>
+                </div>
+            </div>
+        </section>
 
-                <!-- Airport and Flight Section -->
-                <section class="content-section">
-                    <h2>Airport and Flight Preparation</h2>
-                    
-                    <h3>Check-In and Boarding</h3>
-                    <p>Check in online 24 hours before departure to secure better seat assignments and save time at the airport. Download boarding passes to your phone and keep screenshots as backup in case you lose internet connection.</p>
-                    
-                    <p>Arrive at the airport earlier than you think necessary. For domestic flights, TSA recommends two hours before departure. For international flights, three hours is standard. Holiday travel periods require even more buffer time.</p>
-                    
-                    <h3>Security Screening</h3>
-                    <p>Know TSA rules to speed through security. Liquids must be 3.4 ounces or less in a quart-sized clear bag. Remove laptops and large electronics. Take off shoes, belts, and jackets. Having everything ready before you reach the conveyor saves time and reduces stress.</p>
-                    
-                    <p>Consider TSA PreCheck or Global Entry for frequent travelers. The application fee provides years of expedited security screening, which quickly pays for itself in time saved.</p>
-                    
-                    <h3>International Arrivals</h3>
-                    <p>Fill out customs declaration forms during your flight rather than rushing through them after landing while juggling luggage. Be honest and accurate—customs violations can result in fines or denied entry.</p>
-                    
-                    <p>Know what you're allowed to bring into your destination country. Regulations about food, plants, medications, and goods vary significantly. When in doubt, declare items—customs officials appreciate honesty.</p>
-                </section>
-
-                <!-- Accommodation Section -->
-                <section class="content-section">
-                    <h2>Accommodation Preparation</h2>
-                    
-                    <h3>Before You Arrive</h3>
-                    <p>Confirm reservation details a few days before arrival. Verify check-in times, parking availability, and any special requests you made. Have the address, phone number, and confirmation number easily accessible.</p>
-                    
-                    <p>Research transportation from the airport to your accommodation. Knowing your options in advance—whether taxi, rideshare, public transit, or pre-booked transfer—eliminates confusion after a tiring flight. See our <a href="airport-transfers.html">airport transfers guide</a> for more details.</p>
-                    
-                    <h3>At Your Accommodation</h3>
-                    <p>Upon arrival, note emergency exit locations and how to use door locks. Store valuables in the hotel safe or secure location. Keep daily walking-around money separate from larger amounts and important documents.</p>
-                    
-                    <p>Take a photo of your hotel business card or write down the address in the local language. This helps taxi drivers understand your destination if you don't speak the local language.</p>
-                </section>
-
-                <!-- Pre-Departure Final Checks -->
-                <section class="content-section">
-                    <h2>Final Pre-Departure Checklist</h2>
-                    <p>The night before departure, do these final checks:</p>
-                    
-                    <h3>Home Preparation</h3>
-                    <p>Arrange pet care or house sitting if needed. Stop mail delivery or ask someone to collect it. Set lights on timers to give your home a lived-in appearance. Adjust thermostat to save energy. Empty perishable food from refrigerator for long trips.</p>
-                    
-                    <p>Unplug unnecessary electronics to prevent phantom power draw and reduce fire risk. Ensure all doors and windows are locked. Set security system if you have one.</p>
-                    
-                    <h3>What to Carry On</h3>
-                    <p>Keep essentials in carry-on luggage: medications, prescription glasses, valuables, a change of clothes, and anything you'd be devastated to lose. If checked luggage is delayed or lost, carry-on items keep you functional.</p>
-                    
-                    <p>Pack valuable electronics and jewelry in carry-on rather than checked bags. Airlines have limited liability for lost checked baggage, and valuables often aren't covered.</p>
-                    
-                    <h3>Last-Minute Verification</h3>
-                    <p>Confirm your flight hasn't been delayed or canceled. Airlines notify passengers via email or text, but actively checking the flight status before leaving for the airport can save a wasted trip.</p>
-                    
-                    <p>Verify you have everything: passport, tickets, phone, wallet, keys, medications, and glasses. This simple mental checklist prevents "I forgot it at home" panic.</p>
-                </section>
-
-                <!-- Customization Section -->
-                <section class="content-section">
-                    <h2>Customizing This Checklist for Your Trip</h2>
-                    <p>This comprehensive list covers most situations, but every trip is unique. Adapt based on:</p>
-                    
-                    <h3>Trip Duration</h3>
-                    <p>Weekend trips require far less than month-long journeys. Short trips minimize toiletries and clothing. Long trips need laundry planning and potentially mail forwarding.</p>
-                    
-                    <h3>Destination Climate</h3>
-                    <p>Beach destinations require sunscreen, swimsuits, and light clothing. Mountain trips need layers, hiking boots, and cold-weather gear. Research specific climate and pack accordingly.</p>
-                    
-                    <h3>Trip Purpose</h3>
-                    <p>Business travel needs professional clothes and probably a laptop. Adventure travel requires specific gear. Family vacations with children need different supplies than solo backpacking.</p>
-                    
-                    <h3>Personal Needs</h3>
-                    <p>Medical conditions, dietary requirements, or mobility issues require additional planning and specialized items. Think through your typical daily routine and what you need to maintain it while traveling.</p>
-                </section>
-
-                <!-- Conclusion -->
-                <section class="content-section">
-                    <h2>Using This Checklist Effectively</h2>
-                    <p>Start your packing and preparation at least a week before departure. Last-minute rushing leads to forgotten items and unnecessary stress. Work through sections systematically rather than randomly throwing things in a suitcase.</p>
-                    
-                    <p>Create your own version of this checklist with your specific needs. After each trip, update it with things you wish you'd brought or items you packed but never used. Your personalized checklist improves with experience.</p>
-                    
-                    <p>Remember that forgetting something isn't the end of the world. Most items can be purchased at your destination. The truly essential things—passport, medications, credit cards—go in your mental "triple-check" category. Everything else is replaceable.</p>
-                    
-                    <p>Travel should be exciting, not stressful. Good preparation through systematic checklists lets you focus on enjoying your journey rather than worrying about what you might have forgotten.</p>
-                </section>
-            </article>
-
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-card">
-                    <h3>Book Your Trip</h3>
-                    <ul class="sidebar-links">
-                        <li><a href="flights.html">Find Cheap Flights →</a></li>
-                        <li><a href="cars.html">Rent a Car →</a></li>
-                        <li><a href="airport-transfers.html">Book Transfer →</a></li>
-                    </ul>
+        <!-- Section 5: Packing List -->
+        <section class="checklist-section" id="section-packing">
+            <h2>🎒 Section 5: Packing List (2-3 Days Before)</h2>
+            <p class="section-description">Pack light but smart. Consider the climate, activities, and cultural norms of your destination.</p>
+            
+            <div class="packing-categories">
+                <div class="packing-category">
+                    <h3>Clothing Essentials</h3>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Underwear (1 per day + 2 extra)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Socks (including hiking/activity socks if needed)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">T-shirts/tops (mix of casual and nicer)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Pants/shorts (consider climate and activities)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Sweater/jacket (even for warm climates - planes/AC can be cold)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Sleepwear</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Swimwear (if applicable)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Rain jacket/poncho</span>
+                        </label>
+                    </div>
                 </div>
                 
-                <div class="sidebar-card">
-                    <h3>Official Resources</h3>
-                    <ul class="sidebar-links">
-                        <li><a href="https://travel.state.gov/" target="_blank" rel="noopener">U.S. State Dept Travel</a></li>
-                        <li><a href="https://wwwnc.cdc.gov/travel" target="_blank" rel="noopener">CDC Travel Health</a></li>
-                        <li><a href="https://www.tsa.gov/" target="_blank" rel="noopener">TSA Security Guidelines</a></li>
-                        <li><a href="https://www.iatatravelcentre.com/" target="_blank" rel="noopener">Country Requirements</a></li>
+                <div class="packing-category">
+                    <h3>Shoes</h3>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Comfortable walking shoes</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Dress shoes/sandals (if needed)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Flip-flops (for pool/shower)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Hiking/activity shoes (if applicable)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="packing-category">
+                    <h3>Toiletries & Personal</h3>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Toothbrush, toothpaste, floss</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Shampoo, conditioner, soap (travel sizes)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Deodorant</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Razor, shaving cream</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Hair brush/comb, hair ties</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Makeup (if applicable)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Nail clippers, tweezers</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Contact lenses, solution, glasses</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="packing-category">
+                    <h3>Electronics</h3>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Phone and charger</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Power adapter/converter (check destination)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Portable power bank</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Headphones/earbuds</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Camera, memory cards, charger</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">E-reader/tablet and charger</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Travel apps downloaded (maps, translation, airline)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="packing-category">
+                    <h3>Miscellaneous</h3>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Reusable water bottle</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Travel pillow, eye mask, ear plugs</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Travel laundry kit (sink stopper, detergent)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Ziploc bags (multiple sizes)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Small umbrella</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Journal, pen</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Books/magazines for flight</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Small daypack/fanny pack</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h3>🎒 Packing Pro Tips</h3>
+                <p><strong>Roll, don't fold:</strong> Rolling clothes saves space and reduces wrinkles. <strong>Pack cubes:</strong> Use packing cubes to organize and compress clothing. <strong>Liquids rule:</strong> Remember the 3-1-1 rule for carry-ons: 3.4oz (100ml) containers, 1 quart-sized bag, 1 bag per passenger.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: Last-Minute Checks -->
+        <section class="checklist-section" id="section-last-minute">
+            <h2>⏰ Section 6: Last-Minute Checks (Day of Travel)</h2>
+            <p class="section-description">Final verification before you walk out the door.</p>
+            
+            <div class="checklist-category urgent">
+                <h3>Before Leaving Home</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Check flight status online (delays/cancellations)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Confirm transportation to airport is arranged</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Weigh luggage (avoid overweight fees)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Pack phone charger in carry-on</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Empty water bottle (fill after security)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Turn off/unschedule any home appliances</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Lock all doors and windows</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Have passport and tickets easily accessible</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="checklist-category urgent">
+                <h3>At the Airport</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Check in and get boarding pass</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Verify gate number and boarding time</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Fill water bottle after security</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Keep valuables and medications in carry-on</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Take photos of checked luggage (for identification if lost)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="item-text">Confirm luggage tags show correct destination</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Checklists -->
+        <section class="checklist-section" id="section-specialized">
+            <h2>🎯 Specialized Checklists</h2>
+            <p class="section-description">Additional considerations for specific types of travel.</p>
+            
+            <div class="specialized-grid">
+                <div class="specialized-card">
+                    <h3>Business Travel</h3>
+                    <ul>
+                        <li>Business cards</li>
+                        <li>Presentation materials (on USB and cloud backup)</li>
+                        <li>Professional attire</li>
+                        <li>Company credit card</li>
+                        <li>Meeting schedules and contacts</li>
+                        <li>Expense tracking system/app</li>
                     </ul>
                 </div>
-            </aside>
-        </div>
+                <div class="specialized-card">
+                    <h3>Traveling with Kids</h3>
+                    <ul>
+                        <li>Child's passport/ID</li>
+                        <li>Notarized permission if traveling with one parent</li>
+                        <li>Snacks, toys, activities for travel</li>
+                        <li>Child medications/dosages</li>
+                        <li>Stroller/car seat (check airline policies)</li>
+                        <li>Baby wipes, diapers, changing pad</li>
+                    </ul>
+                </div>
+                <div class="specialized-card">
+                    <h3>Adventure Travel</h3>
+                    <ul>
+                        <li>Proper footwear for activities</li>
+                        <li>Technical clothing (quick-dry, layers)</li>
+                        <li>Waterproof bags for electronics</li>
+                        <li>Headlamp/flashlight</li>
+                        <li>Multi-tool (check airline rules)</li>
+                        <li>Map/compass/GPS device</li>
+                    </ul>
+                </div>
+                <div class="specialized-card">
+                    <h3>Beach/Tropical</h3>
+                    <ul>
+                        <li>Beach towel (quick-dry recommended)</li>
+                        <li>Water shoes</li>
+                        <li>Snorkel gear (if not renting)</li>
+                        <li>Beach bag</li>
+                        <li>Aloe vera/after-sun care</li>
+                        <li>Waterproof phone case</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="checklist-completion">
+            <div class="completion-box">
+                <h2>Checklist Progress</h2>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill">0%</div>
+                    </div>
+                    <div class="progress-text" id="progress-text">0 of 136 items completed</div>
+                </div>
+                <div class="completion-actions">
+                    <button id="reset-checklist" class="btn-secondary">Reset Checklist</button>
+                    <button id="select-all" class="btn-secondary">Select All Items</button>
+                    <button id="clear-all" class="btn-secondary">Clear All Selections</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="checklist-footer">
+            <div class="footer-note">
+                <h3>Final Travel Tips</h3>
+                <ul>
+                    <li><strong>Arrive early:</strong> International flights: 3 hours before; Domestic: 2 hours before</li>
+                    <li><strong>Stay hydrated:</strong> Drink water before and during your flight</li>
+                    <li><strong>Be flexible:</strong> Travel often involves unexpected changes</li>
+                    <li><strong>Keep copies separate:</strong> Store digital copies of important documents in cloud storage</li>
+                    <li><strong>Trust your instincts:</strong> If something feels wrong, it probably is</li>
+                </ul>
+                <p class="signature">Safe travels,<br>The Ryokome Team</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Ryokome</h4>
-                    <p>Your trusted partner for finding affordable flights, car rentals, and airport transfers.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="flights.html">Flights</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                    </ul>
-                </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Ryokome</h3>
+                <p>Helping travelers make informed decisions since 2023.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ryokome. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="cars.html">Car Rentals</a></li>
+                    <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                    <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Ryokome. All rights reserved.</p>
+            <p>Ryokome is an independent travel affiliate website. We may earn a commission when you book through our links, at no extra cost to you.</p>
         </div>
     </footer>
 
     <script src="assets/main.js"></script>
+    <script>
+        // Checklist-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Checklist progress tracking
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const progressFill = document.getElementById('progress-fill');
+            const progressText = document.getElementById('progress-text');
+            
+            // Load saved state from localStorage
+            checkboxes.forEach(checkbox => {
+                const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
+                const savedState = localStorage.getItem(`checklist_${itemId}`);
+                if (savedState === 'true') {
+                    checkbox.checked = true;
+                }
+                
+                // Save state when changed
+                checkbox.addEventListener('change', function() {
+                    localStorage.setItem(`checklist_${itemId}`, this.checked);
+                    updateProgress();
+                });
+            });
+            
+            function updateProgress() {
+                const total = checkboxes.length;
+                const checked = document.querySelectorAll('.checklist-item input[type="checkbox"]:checked').length;
+                const percentage = Math.round((checked / total) * 100);
+                
+                progressFill.style.width = `${percentage}%`;
+                progressFill.textContent = `${percentage}%`;
+                progressText.textContent = `${checked} of ${total} items completed`;
+            }
+            
+            // Button functionality
+            document.getElementById('reset-checklist').addEventListener('click', function() {
+                if (confirm('Are you sure you want to reset the entire checklist?')) {
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = false;
+                        const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
+                        localStorage.removeItem(`checklist_${itemId}`);
+                    });
+                    updateProgress();
+                }
+            });
+            
+            document.getElementById('select-all').addEventListener('click', function() {
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = true;
+                    const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
+                    localStorage.setItem(`checklist_${itemId}`, 'true');
+                });
+                updateProgress();
+            });
+            
+            document.getElementById('clear-all').addEventListener('click', function() {
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                    const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
+                    localStorage.setItem(`checklist_${itemId}`, 'false');
+                });
+                updateProgress();
+            });
+            
+            document.getElementById('print-checklist').addEventListener('click', function() {
+                window.print();
+            });
+            
+            document.getElementById('save-checklist').addEventListener('click', function() {
+                alert('To save as PDF: Use your browser\'s print function and select "Save as PDF" as the destination.');
+            });
+            
+            // Initialize progress
+            updateProgress();
+        });
+    </script>
 </body>
 </html>
