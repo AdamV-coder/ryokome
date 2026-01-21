@@ -1,0 +1,14 @@
+# Cloudflare Pages Redirects File
+# Format: source destination [status_code]
+
+# Redirect www to non-www (or vice versa)
+https://www.ryokome.com/* https://ryokome.com/:splat 301
+
+# Redirect old URLs if any (examples - adjust as needed)
+# /old-page.html /new-page.html 301
+
+# Custom 404 page (optional - create 404.html if needed)
+# /* /404.html 404
+
+# Force HTTPS (Cloudflare handles this by default, but you can be explicit)
+http://ryokome.com/* https://ryokome.com/:splat 301

@@ -1,16 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ryokome Travel Search Site</title>
-    <meta property="og:image" content="https://bolt.new/static/og_default.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find cheap flights, car rentals, and airport transfers with Ryokome. Compare prices and book your next trip with confidence.">
+    <meta name="keywords" content="cheap flights, flight search, car rental, airport transfers, travel deals">
+    <title>Ryokome - Find Cheap Flights, Car Rentals & Airport Transfers</title>
+    <link rel="stylesheet" href="assets/main.css">
 </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Ryokome</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="cars.html">Car Rentals</a></li>
+                <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Your Journey Starts with Smarter Travel Choices</h1>
+            <p class="hero-subtitle">Compare flights, find the best car rentals, and discover reliable airport transfers. Ryokome helps you make informed travel decisions without breaking the bank.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Flight Search Section -->
+        <section class="section search-section">
+            <div class="container">
+                <h2>Search for Cheap Flights</h2>
+                <p>Compare prices across hundreds of airlines and booking sites to find the best deal for your next trip. Our search tool pulls real-time data so you always see current prices.</p>
+                
+                <div class="widget-container">
+                    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=true&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230014FFff&color_button=%237B27F4ff&color_icons=%237B27F4FF&dark=%231C1C1Cff&light=%23EFEFEFff&secondary=%23CC25CCff&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Routes Section -->
+        <section class="section gray-bg">
+            <div class="container">
+                <h2>Popular Flight Routes</h2>
+                <p>Check out the most searched routes and current prices. These destinations are trending among travelers right now.</p>
+                
+                <div class="widget-container">
+                    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=false&primary=%230085FF&promo_id=4044&campaign_id=100" charset="utf-8"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Explore Destinations on the Map</h2>
+                <p>Visualize flight prices to destinations around the world. Click any location to see current fares and start planning your adventure.</p>
+                
+                <div class="widget-container map-widget">
+                    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&lat=26.1223084&lng=-80.1433786&powered_by=false&search_host=www.aviasales.com%2Fsearch&locale=en_us&origin=FLL&value_min=0&value_max=1000000&round_trip=true&only_direct=false&radius=1&draggable=true&disable_zoom=true&show_logo=false&scrollwheel=false&primary=%233FABDB&secondary=%233FABDB&light=%23ffffff&width=1500&height=500&zoom=2&promo_id=4054&campaign_id=100" charset="utf-8"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="section gray-bg">
+            <div class="container">
+                <h2>Everything You Need for Your Trip</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Flight Booking</h3>
+                        <p>Compare hundreds of airlines and travel sites to find the lowest airfare. We show you all the options so you can choose what works best for your schedule and budget.</p>
+                        <a href="flights.html" class="btn-link">Learn More →</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Car Rentals</h3>
+                        <p>Rent a car for ultimate flexibility during your trip. Perfect for exploring at your own pace, especially in destinations where public transport is limited.</p>
+                        <a href="cars.html" class="btn-link">Explore Options →</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Airport Transfers</h3>
+                        <p>Pre-book reliable airport transfers and skip the stress of finding transport after a long flight. Great for families, group travelers, and late-night arrivals.</p>
+                        <a href="airport-transfers.html" class="btn-link">Book Transfer →</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Travel Checklist</h3>
+                        <p>Never forget important documents or items again. Our comprehensive checklist covers everything from passports to phone chargers.</p>
+                        <a href="travel-checklist.html" class="btn-link">View Checklist →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Why Travelers Trust Ryokome</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Real-Time Pricing</h3>
+                        <p>We pull live data from airlines and booking platforms, so the prices you see are current and accurate.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>No Hidden Fees</h3>
+                        <p>What you see is what you pay. We connect you directly to booking sites with transparent pricing.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Honest Recommendations</h3>
+                        <p>We believe in helping you make informed decisions. Our content focuses on practical advice, not just sales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Ryokome</h4>
+                    <p>Your trusted partner for finding affordable flights, car rentals, and airport transfers.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="flights.html">Flights</a></li>
+                        <li><a href="cars.html">Car Rentals</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ryokome. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+</body>
 </html>
