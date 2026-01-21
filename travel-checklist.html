@@ -3,17 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive travel checklist with essential items, documents, and preparations for stress-free travel.">
-    <title>Complete Travel Checklist - Ryokome Travel Preparation</title>
+    <meta name="description" content="Comprehensive travel checklist to ensure you don't forget anything important. Share with travel companions and track your progress.">
+    <title>Travel Checklist | Never Forget Important Items - Ryokome</title>
     <link rel="stylesheet" href="assets/main.css">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
-    <!-- Google Analytics placeholder -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -28,7 +21,7 @@
                 <li><a href="flights.html">Flights</a></li>
                 <li><a href="cars.html">Cars</a></li>
                 <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                <li><a href="travel-checklist.html" class="active">Travel Checklist</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
@@ -36,97 +29,76 @@
 
     <main class="container checklist-container">
         <header class="page-header">
-            <h1>The Complete Travel Checklist</h1>
-            <p class="page-subtitle">Everything you need to prepare for a smooth, stress-free trip. Created by experienced travelers, updated regularly.</p>
-            <div class="checklist-actions">
-                <button id="print-checklist" class="btn-secondary">Print This Checklist</button>
-                <button id="save-checklist" class="btn-secondary">Save as PDF</button>
+            <h1>Travel Checklist</h1>
+            <p class="page-subtitle">Never forget important items with our comprehensive travel preparation guide.</p>
+            
+            <!-- Share Buttons -->
+            <div class="share-buttons">
+                <button class="share-btn whatsapp">WhatsApp</button>
+                <button class="share-btn facebook">Facebook</button>
+                <button class="share-btn email">Email</button>
+                <button class="share-btn copy">Copy Link</button>
             </div>
         </header>
 
-        <!-- Checklist Introduction -->
-        <section class="checklist-intro">
-            <div class="intro-box">
+        <!-- Introduction -->
+        <section class="section">
+            <div class="widget-container">
                 <h2>How to Use This Checklist</h2>
-                <p>This comprehensive checklist covers everything from documents to packing. Use it in stages:</p>
-                <ol>
-                    <li><strong>4+ weeks before travel:</strong> Review Sections 1-3 (Documents, Health, Money)</li>
-                    <li><strong>1-2 weeks before:</strong> Complete Section 4 (Home Preparation)</li>
-                    <li><strong>2-3 days before:</strong> Pack using Section 5 (Packing List)</li>
-                    <li><strong>Day of travel:</strong> Use Section 6 (Last-Minute Checks)</li>
-                </ol>
-                <p>Check items as you complete them. The checklist will save your progress automatically.</p>
+                <p>Check items as you prepare for your trip. Your progress is automatically saved in your browser. Share the checklist with travel companions to coordinate packing.</p>
+                
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">💾</div>
+                        <h3>Auto-Save</h3>
+                        <p>Your checklist progress is automatically saved in your browser.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🤝</div>
+                        <h3>Shareable</h3>
+                        <p>Share with travel companions for coordinated packing.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">📱</div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Access your checklist from any device, anywhere.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🖨️</div>
+                        <h3>Printable</h3>
+                        <p>Print the checklist for offline use.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: var(--space-xl);">
+                    <button id="reset-checklist" class="btn-secondary">Reset All Items</button>
+                    <button onclick="window.print()" class="btn-secondary">Print Checklist</button>
+                </div>
             </div>
         </section>
 
-        <!-- Section 1: Essential Documents -->
-        <section class="checklist-section" id="section-documents">
-            <h2>📄 Section 1: Essential Documents</h2>
-            <p class="section-description">These items should be kept both digitally and physically. Consider using a travel document organizer.</p>
+        <!-- Documents Section -->
+        <section class="section">
+            <h2>Essential Documents</h2>
             
             <div class="checklist-category">
                 <h3>Passports & Identification</h3>
                 <div class="checklist-items">
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Passport (valid for at least 6 months beyond return date)</span>
+                        <span class="item-text">Valid passport (6+ months validity)</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Photocopies of passport photo page (2 copies)</span>
+                        <span class="item-text">Photocopies of passport</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Passport photos (2 recent, for visas/replacements)</span>
+                        <span class="item-text">Driver's license</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Driver's license (if planning to drive)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">International Driving Permit (if required)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Student ID (if applicable, for discounts)</span>
-                    </label>
-                </div>
-            </div>
-            
-            <div class="checklist-category">
-                <h3>Visas & Entry Requirements</h3>
-                <div class="checklist-items">
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Required visas (applied for and received)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">ESTA/ETA/eTA (for US/Canada/Australia if required)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Proof of onward travel (return/continuing ticket)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Proof of sufficient funds (bank statement/credit card)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Vaccination certificates (if required)</span>
+                        <span class="item-text">Visas (if required)</span>
                     </label>
                 </div>
             </div>
@@ -136,176 +108,133 @@
                 <div class="checklist-items">
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Flight tickets/itinerary (printed and digital)</span>
+                        <span class="item-text">Flight tickets/itinerary</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Hotel/accommodation confirmations</span>
+                        <span class="item-text">Hotel confirmations</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Car rental confirmation</span>
+                        <span class="item-text">Travel insurance</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Travel insurance policy (with emergency numbers)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Tour/activity reservations</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Emergency contact list (family, embassy, insurance)</span>
+                        <span class="item-text">Emergency contact list</span>
                     </label>
                 </div>
             </div>
-            
-            <div class="resource-box">
-                <h4>Useful Resources:</h4>
-                <ul>
-                    <li><a href="https://travel.state.gov" target="_blank" rel="noopener">U.S. Department of State Traveler's Checklist</a> - Official travel advice</li>
-                    <li><a href="https://www.gov.uk/foreign-travel-advice" target="_blank" rel="noopener">UK Foreign Travel Advice</a> - Country-specific guidance</li>
-                    <li><a href="https://www.iatatravelcentre.com" target="_blank" rel="noopener">IATA Travel Centre</a> - Passport/visa requirements</li>
-                </ul>
-            </div>
         </section>
 
-        <!-- Section 2: Health & Safety -->
-        <section class="checklist-section" id="section-health">
-            <h2>🏥 Section 2: Health & Safety</h2>
-            <p class="section-description">Health preparations should begin 4-8 weeks before travel for vaccinations.</p>
+        <!-- Packing Section -->
+        <section class="section">
+            <h2>Packing List</h2>
             
             <div class="checklist-category">
-                <h3>Medical Preparation</h3>
+                <h3>Clothing</h3>
                 <div class="checklist-items">
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Travel insurance with medical coverage (verify COVID coverage)</span>
+                        <span class="item-text">Underwear (1 per day + extras)</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Required vaccinations (check CDC/WHO recommendations)</span>
+                        <span class="item-text">Socks</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Prescription medications (original containers, extra supply)</span>
+                        <span class="item-text">T-shirts/tops</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Doctor's note for medications/syringes</span>
+                        <span class="item-text">Pants/shorts</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Copy of prescriptions (generic names included)</span>
+                        <span class="item-text">Sweater/jacket</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Basic first aid kit</span>
+                        <span class="item-text">Sleepwear</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Personal medications (allergy, pain, motion sickness, etc.)</span>
+                        <span class="item-text">Swimwear (if needed)</span>
                     </label>
                 </div>
             </div>
             
             <div class="checklist-category">
-                <h3>Health Items</h3>
+                <h3>Toiletries</h3>
                 <div class="checklist-items">
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Insect repellent (DEET or picaridin based)</span>
+                        <span class="item-text">Toothbrush, toothpaste</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Sunscreen (SPF 30+, reef-safe if swimming)</span>
+                        <span class="item-text">Shampoo, conditioner</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Hand sanitizer</span>
+                        <span class="item-text">Deodorant</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Face masks (if required/desired)</span>
+                        <span class="item-text">Razor, shaving cream</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Water purification tablets/filter (if needed)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Travel health guide/book</span>
+                        <span class="item-text">Medications</span>
                     </label>
                 </div>
             </div>
             
-            <div class="resource-box">
-                <h4>Useful Resources:</h4>
-                <ul>
-                    <li><a href="https://wwwnc.cdc.gov/travel" target="_blank" rel="noopener">CDC Travel Health</a> - Vaccination requirements and health alerts</li>
-                    <li><a href="https://www.who.int/ith" target="_blank" rel="noopener">WHO International Travel and Health</a> - Global health guidance</li>
-                    <li><a href="https://www.fitfortravel.nhs.uk" target="_blank" rel="noopener">NHS Fit for Travel</a> - UK-based travel health advice</li>
-                </ul>
+            <div class="checklist-category">
+                <h3>Electronics</h3>
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="item-text">Phone and charger</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="item-text">Power adapter</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="item-text">Headphones</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span class="item-text">Camera and charger</span>
+                    </label>
+                </div>
             </div>
         </section>
 
-        <!-- Section 3: Money & Finance -->
-        <section class="checklist-section" id="section-money">
-            <h2>💰 Section 3: Money & Finance</h2>
-            <p class="section-description">Diversify your money across multiple forms for security and convenience.</p>
+        <!-- Money Section -->
+        <section class="section">
+            <h2>Money & Finance</h2>
             
             <div class="checklist-category">
                 <h3>Payment Methods</h3>
                 <div class="checklist-items">
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Credit cards (2 different ones, preferably no foreign transaction fees)</span>
+                        <span class="item-text">Credit cards (2 different ones)</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Debit/ATM card (notify bank of travel dates)</span>
+                        <span class="item-text">Debit/ATM card</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Local currency (small amount for arrival)</span>
+                        <span class="item-text">Local currency (small amount)</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">USD/Euros (small amount for emergencies)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Money belt/hidden pouch</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Digital payment app setup (Apple Pay/Google Pay)</span>
+                        <span class="item-text">USD/Euros (emergency cash)</span>
                     </label>
                 </div>
             </div>
@@ -315,513 +244,66 @@
                 <div class="checklist-items">
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Notify banks/credit card companies of travel plans</span>
+                        <span class="item-text">Notify banks of travel plans</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Write down card numbers and emergency contact numbers (separate from cards)</span>
+                        <span class="item-text">Write down card numbers</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Set travel alerts on financial accounts</span>
+                        <span class="item-text">Check foreign transaction fees</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Check foreign transaction fees on cards</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Research ATM availability and fees at destination</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Budget for trip (daily spending, activities, emergencies)</span>
+                        <span class="item-text">Set travel budget</span>
                     </label>
                 </div>
             </div>
-            
-            <div class="tip-box">
-                <h3>💳 Card Security Tips</h3>
-                <p>Carry cards separately (don't keep all in one wallet). Use RFID-blocking sleeves or wallets to prevent electronic skimming. Always have a backup payment method accessible separately from your main wallet.</p>
-            </div>
         </section>
 
-        <!-- Section 4: Home Preparation -->
-        <section class="checklist-section" id="section-home">
-            <h2>🏠 Section 4: Home Preparation (1-2 Weeks Before)</h2>
-            <p class="section-description">Ensure your home is secure and responsibilities are covered while you're away.</p>
+        <!-- Last-Minute Section -->
+        <section class="section">
+            <h2>Last-Minute Checks</h2>
             
             <div class="checklist-category">
-                <h3>Home Security</h3>
-                <div class="checklist-items">
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Arrange for house/pet sitter or ask neighbor to watch house</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Stop mail and newspaper delivery</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Set timers for lights (variable schedule)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Lock all windows and doors (including garage)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Store valuables in safe or off-site</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Unplug unnecessary electronics</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Adjust thermostat (cool in summer, warm enough in winter to prevent freezing)</span>
-                    </label>
-                </div>
-            </div>
-            
-            <div class="checklist-category">
-                <h3>Administrative Tasks</h3>
-                <div class="checklist-items">
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Pay bills due while away or set up autopay</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Arrange for lawn care/snow removal if needed</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Empty refrigerator of perishables</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Take out trash/recycling</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Clean house (nice to return to clean home)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Leave itinerary and emergency contact with trusted person</span>
-                    </label>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Packing List -->
-        <section class="checklist-section" id="section-packing">
-            <h2>🎒 Section 5: Packing List (2-3 Days Before)</h2>
-            <p class="section-description">Pack light but smart. Consider the climate, activities, and cultural norms of your destination.</p>
-            
-            <div class="packing-categories">
-                <div class="packing-category">
-                    <h3>Clothing Essentials</h3>
-                    <div class="checklist-items">
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Underwear (1 per day + 2 extra)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Socks (including hiking/activity socks if needed)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">T-shirts/tops (mix of casual and nicer)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Pants/shorts (consider climate and activities)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Sweater/jacket (even for warm climates - planes/AC can be cold)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Sleepwear</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Swimwear (if applicable)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Rain jacket/poncho</span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="packing-category">
-                    <h3>Shoes</h3>
-                    <div class="checklist-items">
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Comfortable walking shoes</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Dress shoes/sandals (if needed)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Flip-flops (for pool/shower)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Hiking/activity shoes (if applicable)</span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="packing-category">
-                    <h3>Toiletries & Personal</h3>
-                    <div class="checklist-items">
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Toothbrush, toothpaste, floss</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Shampoo, conditioner, soap (travel sizes)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Deodorant</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Razor, shaving cream</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Hair brush/comb, hair ties</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Makeup (if applicable)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Nail clippers, tweezers</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Contact lenses, solution, glasses</span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="packing-category">
-                    <h3>Electronics</h3>
-                    <div class="checklist-items">
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Phone and charger</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Power adapter/converter (check destination)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Portable power bank</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Headphones/earbuds</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Camera, memory cards, charger</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">E-reader/tablet and charger</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Travel apps downloaded (maps, translation, airline)</span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="packing-category">
-                    <h3>Miscellaneous</h3>
-                    <div class="checklist-items">
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Reusable water bottle</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Travel pillow, eye mask, ear plugs</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Travel laundry kit (sink stopper, detergent)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Ziploc bags (multiple sizes)</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Small umbrella</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Journal, pen</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Books/magazines for flight</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="item-text">Small daypack/fanny pack</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tip-box">
-                <h3>🎒 Packing Pro Tips</h3>
-                <p><strong>Roll, don't fold:</strong> Rolling clothes saves space and reduces wrinkles. <strong>Pack cubes:</strong> Use packing cubes to organize and compress clothing. <strong>Liquids rule:</strong> Remember the 3-1-1 rule for carry-ons: 3.4oz (100ml) containers, 1 quart-sized bag, 1 bag per passenger.</p>
-            </div>
-        </section>
-
-        <!-- Section 6: Last-Minute Checks -->
-        <section class="checklist-section" id="section-last-minute">
-            <h2>⏰ Section 6: Last-Minute Checks (Day of Travel)</h2>
-            <p class="section-description">Final verification before you walk out the door.</p>
-            
-            <div class="checklist-category urgent">
                 <h3>Before Leaving Home</h3>
                 <div class="checklist-items">
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Check flight status online (delays/cancellations)</span>
+                        <span class="item-text">Check flight status</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Confirm transportation to airport is arranged</span>
+                        <span class="item-text">Confirm transportation to airport</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Weigh luggage (avoid overweight fees)</span>
+                        <span class="item-text">Weigh luggage</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Pack phone charger in carry-on</span>
+                        <span class="item-text">Turn off appliances</span>
                     </label>
                     <label class="checklist-item">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Empty water bottle (fill after security)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Turn off/unschedule any home appliances</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
                         <span class="item-text">Lock all doors and windows</span>
                     </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Have passport and tickets easily accessible</span>
-                    </label>
-                </div>
-            </div>
-            
-            <div class="checklist-category urgent">
-                <h3>At the Airport</h3>
-                <div class="checklist-items">
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Check in and get boarding pass</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Verify gate number and boarding time</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Fill water bottle after security</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Keep valuables and medications in carry-on</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Take photos of checked luggage (for identification if lost)</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <span class="item-text">Confirm luggage tags show correct destination</span>
-                    </label>
                 </div>
             </div>
         </section>
 
-        <!-- Specialized Checklists -->
-        <section class="checklist-section" id="section-specialized">
-            <h2>🎯 Specialized Checklists</h2>
-            <p class="section-description">Additional considerations for specific types of travel.</p>
-            
-            <div class="specialized-grid">
-                <div class="specialized-card">
-                    <h3>Business Travel</h3>
-                    <ul>
-                        <li>Business cards</li>
-                        <li>Presentation materials (on USB and cloud backup)</li>
-                        <li>Professional attire</li>
-                        <li>Company credit card</li>
-                        <li>Meeting schedules and contacts</li>
-                        <li>Expense tracking system/app</li>
-                    </ul>
+        <!-- Completion -->
+        <section class="section" style="text-align: center;">
+            <div class="widget-container">
+                <h2>Checklist Complete!</h2>
+                <p>You're ready for your trip. Safe travels!</p>
+                <p>Share this checklist with your travel companions:</p>
+                <div class="share-buttons">
+                    <button class="share-btn whatsapp">Share via WhatsApp</button>
+                    <button class="share-btn email">Email Checklist</button>
+                    <button class="share-btn copy">Copy Link</button>
                 </div>
-                <div class="specialized-card">
-                    <h3>Traveling with Kids</h3>
-                    <ul>
-                        <li>Child's passport/ID</li>
-                        <li>Notarized permission if traveling with one parent</li>
-                        <li>Snacks, toys, activities for travel</li>
-                        <li>Child medications/dosages</li>
-                        <li>Stroller/car seat (check airline policies)</li>
-                        <li>Baby wipes, diapers, changing pad</li>
-                    </ul>
-                </div>
-                <div class="specialized-card">
-                    <h3>Adventure Travel</h3>
-                    <ul>
-                        <li>Proper footwear for activities</li>
-                        <li>Technical clothing (quick-dry, layers)</li>
-                        <li>Waterproof bags for electronics</li>
-                        <li>Headlamp/flashlight</li>
-                        <li>Multi-tool (check airline rules)</li>
-                        <li>Map/compass/GPS device</li>
-                    </ul>
-                </div>
-                <div class="specialized-card">
-                    <h3>Beach/Tropical</h3>
-                    <ul>
-                        <li>Beach towel (quick-dry recommended)</li>
-                        <li>Water shoes</li>
-                        <li>Snorkel gear (if not renting)</li>
-                        <li>Beach bag</li>
-                        <li>Aloe vera/after-sun care</li>
-                        <li>Waterproof phone case</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="checklist-completion">
-            <div class="completion-box">
-                <h2>Checklist Progress</h2>
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progress-fill">0%</div>
-                    </div>
-                    <div class="progress-text" id="progress-text">0 of 136 items completed</div>
-                </div>
-                <div class="completion-actions">
-                    <button id="reset-checklist" class="btn-secondary">Reset Checklist</button>
-                    <button id="select-all" class="btn-secondary">Select All Items</button>
-                    <button id="clear-all" class="btn-secondary">Clear All Selections</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="checklist-footer">
-            <div class="footer-note">
-                <h3>Final Travel Tips</h3>
-                <ul>
-                    <li><strong>Arrive early:</strong> International flights: 3 hours before; Domestic: 2 hours before</li>
-                    <li><strong>Stay hydrated:</strong> Drink water before and during your flight</li>
-                    <li><strong>Be flexible:</strong> Travel often involves unexpected changes</li>
-                    <li><strong>Keep copies separate:</strong> Store digital copies of important documents in cloud storage</li>
-                    <li><strong>Trust your instincts:</strong> If something feels wrong, it probably is</li>
-                </ul>
-                <p class="signature">Safe travels,<br>The Ryokome Team</p>
             </div>
         </section>
     </main>
@@ -830,10 +312,10 @@
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Ryokome</h3>
-                <p>Helping travelers make informed decisions since 2023.</p>
+                <p>Helping travelers find the best deals since 2023.</p>
             </div>
             <div class="footer-section">
-                <h4>Services</h4>
+                <h4>Travel Services</h4>
                 <ul>
                     <li><a href="flights.html">Flights</a></li>
                     <li><a href="cars.html">Car Rentals</a></li>
@@ -865,80 +347,5 @@
     </footer>
 
     <script src="assets/main.js"></script>
-    <script>
-        // Checklist-specific functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Checklist progress tracking
-            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-            const progressFill = document.getElementById('progress-fill');
-            const progressText = document.getElementById('progress-text');
-            
-            // Load saved state from localStorage
-            checkboxes.forEach(checkbox => {
-                const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
-                const savedState = localStorage.getItem(`checklist_${itemId}`);
-                if (savedState === 'true') {
-                    checkbox.checked = true;
-                }
-                
-                // Save state when changed
-                checkbox.addEventListener('change', function() {
-                    localStorage.setItem(`checklist_${itemId}`, this.checked);
-                    updateProgress();
-                });
-            });
-            
-            function updateProgress() {
-                const total = checkboxes.length;
-                const checked = document.querySelectorAll('.checklist-item input[type="checkbox"]:checked').length;
-                const percentage = Math.round((checked / total) * 100);
-                
-                progressFill.style.width = `${percentage}%`;
-                progressFill.textContent = `${percentage}%`;
-                progressText.textContent = `${checked} of ${total} items completed`;
-            }
-            
-            // Button functionality
-            document.getElementById('reset-checklist').addEventListener('click', function() {
-                if (confirm('Are you sure you want to reset the entire checklist?')) {
-                    checkboxes.forEach(checkbox => {
-                        checkbox.checked = false;
-                        const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
-                        localStorage.removeItem(`checklist_${itemId}`);
-                    });
-                    updateProgress();
-                }
-            });
-            
-            document.getElementById('select-all').addEventListener('click', function() {
-                checkboxes.forEach(checkbox => {
-                    checkbox.checked = true;
-                    const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
-                    localStorage.setItem(`checklist_${itemId}`, 'true');
-                });
-                updateProgress();
-            });
-            
-            document.getElementById('clear-all').addEventListener('click', function() {
-                checkboxes.forEach(checkbox => {
-                    checkbox.checked = false;
-                    const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
-                    localStorage.setItem(`checklist_${itemId}`, 'false');
-                });
-                updateProgress();
-            });
-            
-            document.getElementById('print-checklist').addEventListener('click', function() {
-                window.print();
-            });
-            
-            document.getElementById('save-checklist').addEventListener('click', function() {
-                alert('To save as PDF: Use your browser\'s print function and select "Save as PDF" as the destination.');
-            });
-            
-            // Initialize progress
-            updateProgress();
-        });
-    </script>
 </body>
 </html>
