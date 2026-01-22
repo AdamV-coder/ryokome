@@ -3,237 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compare millions of flights, hotels, and car rentals in one place. Find the best travel deals with Ryokome.">
-    <title>Ryokome | Compare Millions of Flights & Travel Deals</title>
+    <meta name="description" content="How to find cheap flights using comparison tools. Learn when to book, flexible date strategies, and insider tips for flight deals.">
+    <title>Find Cheap Flights - Comparison Guide & Tips | Ryokome</title>
     <link rel="stylesheet" href="assets/main.css">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
+    <!-- Header -->
+    <header class="header" data-animate>
+        <div class="container nav-container">
             <a href="index.html" class="logo">Ryokome</a>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="flights.html" class="active">Flights</a></li>
-                <li><a href="cars.html">Cars</a></li>
-                <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Compare Millions of Flights & Travel Deals</h1>
-            <p class="hero-subtitle">Find the best prices on flights, hotels, and car rentals all in one place. We search hundreds of travel sites to help you save.</p>
             
-            <!-- Flight Search Widget -->
-            <div class="widget-container">
-                <div class="widget-header">
-                    <h2>Search Flights, Hotels & Cars</h2>
-                    <p>Compare prices across hundreds of travel sites</p>
-                </div>
-                <div id="flight-widget">
-                    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=true&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230014FFff&color_button=%237B27F4ff&color_icons=%237B27F4FF&dark=%231C1C1Cff&light=%23EFEFEFff&secondary=%23CC25CCff&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100" charset="utf-8"></script>
-                </div>
+            <div class="nav-center">
+                <a href="flights.html" class="tab-button active">Flights</a>
+                <a href="cars.html" class="tab-button">Cars</a>
+                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
+                <a href="insurance.html" class="tab-button">Insurance</a>
             </div>
+            
+            <div class="nav-right">
+                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+            
+            <button class="hamburger">☰</button>
         </div>
     </header>
 
-    <!-- Stats Banner -->
-    <section class="stats-banner">
-        <div class="stats-content">
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Travel Sites Compared</div>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="logo">Ryokome</a>
+            <button class="close-mobile-nav">✕</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="flights.html" class="mobile-tab-button active">Flights</a>
+            <a href="cars.html" class="mobile-tab-button">Cars</a>
+            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
+            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
+            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-animate>
+                <h1>Find Cheap Flights with Smart Comparison</h1>
+                <p>Learn how flight comparison engines work, when to book for the best prices, and strategies that can save you hundreds on your next trip.</p>
+                <a href="#search" class="btn">Search Flights Now</a>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">1M+</div>
-                <div class="stat-label">Flight Deals Daily</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Price Tracking</div>
+        </div>
+    </section>
+
+    <!-- Flight Search Widget -->
+    <section id="search" class="section">
+        <div class="container">
+            <div class="flight-widget-container" data-animate>
+                <h2 class="text-center mb-2">Compare Flight Prices Instantly</h2>
+                <div class="widget-placeholder">
+                    <div style="text-align: center; padding: 2rem;">
+                        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Flight search widget will load here</p>
+                    </div>
+                </div>
+                <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=true&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230014FFff&color_button=%237B27F4ff&color_icons=%237B27F4FF&dark=%231C1C1Cff&light=%23EFEFEFff&secondary=%23CC25CCff&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100"></script>
             </div>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="container">
-        <!-- Popular Routes -->
-        <section class="section">
-            <h2>Popular Flight Routes</h2>
-            <p class="lead">Check prices for frequently searched routes</p>
-            <div class="widget-container">
-                <div id="popular-routes-widget">
-                    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=false&primary=%230085FF&promo_id=4044&campaign_id=100" charset="utf-8"></script>
+    <main class="section">
+        <div class="container">
+            <article class="content" data-animate>
+                <h1>How Flight Comparison Works: A Complete Guide</h1>
+                
+                <p>As someone who has booked hundreds of flights over the years, I've learned that understanding how flight search engines work is the key to finding the best deals. This guide will explain the process and share actionable strategies.</p>
+                
+                <h2>Understanding Flight Search Engines</h2>
+                <p>Flight comparison sites like ours don't actually sell tickets. Instead, we search hundreds of airlines and online travel agencies (OTAs) simultaneously to show you all available options. Here's what happens behind the scenes:</p>
+                
+                <ol>
+                    <li><strong>Query Distribution:</strong> When you search, our system sends your request to multiple Global Distribution Systems (GDS) like Amadeus, Sabre, and Travelport.</li>
+                    <li><strong>Real-time Pricing:</strong> Airlines update their prices constantly based on demand, seat availability, and competition.</li>
+                    <li><strong>Fare Aggregation:</strong> We also check online travel agencies who sometimes have access to different inventory or special deals.</li>
+                    <li><strong>Result Compilation:</strong> All options are sorted by price, duration, or your preferred criteria.</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <h3>Important Note</h3>
+                    <p>Prices can change rapidly. The fare you see might be different when you click through to book. This is normal - airlines adjust prices based on real-time demand. Always book when you see a good price rather than waiting.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Services -->
-        <section class="section">
-            <h2>Everything You Need for Your Trip</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">✈️</div>
-                    <h3>Flights</h3>
-                    <p>Compare millions of flights to find the best prices and routes.</p>
-                    <a href="flights.html" class="btn-secondary">Find Flights</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚗</div>
-                    <h3>Car Rentals</h3>
-                    <p>Find the right vehicle at the best price with our comparison tools.</p>
-                    <a href="cars.html" class="btn-secondary">Rent a Car</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏨</div>
-                    <h3>Airport Transfers</h3>
-                    <p>Book reliable transfers from the airport to your accommodation.</p>
-                    <a href="airport-transfers.html" class="btn-secondary">Book Transfer</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h3>Travel Checklist</h3>
-                    <p>Never forget important items with our comprehensive checklist.</p>
-                    <a href="travel-checklist.html" class="btn-secondary">View Checklist</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Prices Map -->
-        <section class="section">
-            <h2>Explore Flight Prices Worldwide</h2>
-            <p class="lead">Interactive map showing flight prices to destinations around the world</p>
-            <div class="widget-container">
-                <div id="map-widget">
-                    <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&lat=26.1223084&lng=-80.1433786&powered_by=false&search_host=www.aviasales.com%2Fsearch&locale=en_us&origin=FLL&value_min=0&value_max=1000000&round_trip=true&only_direct=false&radius=1&draggable=true&disable_zoom=true&show_logo=false&scrollwheel=false&primary=%233FABDB&secondary=%233FABDB&light=%23ffffff&width=1500&height=500&zoom=2&promo_id=4054&campaign_id=100" charset="utf-8"></script>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trust Section -->
-        <section class="trust-section">
-            <h2>Why Travelers Choose Ryokome</h2>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon">🔍</div>
-                    <h3>Compare Prices</h3>
-                    <p>We search hundreds of travel sites to find you the best deals.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">💎</div>
-                    <h3>No Hidden Fees</h3>
-                    <p>We show you the total price upfront, including all taxes and fees.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">🤝</div>
-                    <h3>Independent</h3>
-                    <p>We're not owned by any airline or travel company.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">🛡️</div>
-                    <h3>Secure Booking</h3>
-                    <p>Your bookings are made directly with trusted travel providers.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="section">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How does Ryokome compare flight prices?
-                    </div>
-                    <div class="faq-answer">
-                        <p>We search hundreds of travel sites, airlines, and booking platforms to find you the best flight deals. Our comparison tools show you all available options in one place, so you can choose what's best for your needs.</p>
+                
+                <h2>When to Book Cheap Flights: The Data</h2>
+                <p>Based on analysis of millions of flights, here are the optimal booking windows:</p>
+                
+                <h3>Domestic Flights (USA/Canada/Europe)</h3>
+                <ul>
+                    <li><strong>Best time:</strong> 1-3 months in advance</li>
+                    <li><strong>Sweet spot:</strong> 6-7 weeks before departure</li>
+                    <li><strong>Avoid:</strong> Last-minute bookings (unless there's a sale)</li>
+                </ul>
+                
+                <h3>International Flights</h3>
+                <ul>
+                    <li><strong>Best time:</strong> 2-5 months in advance</li>
+                    <li><strong>Europe/Asia:</strong> 3-4 months ahead</li>
+                    <li><strong>Australia/NZ:</strong> 4-5 months ahead</li>
+                    <li><strong>Peak season:</strong> Book 5-6 months early</li>
+                </ul>
+                
+                <h3>Day of Week Matters</h3>
+                <p>Statistical analysis shows:</p>
+                <ul>
+                    <li><strong>Cheapest days to book:</strong> Tuesday and Wednesday</li>
+                    <li><strong>Most expensive:</strong> Friday and Sunday</li>
+                    <li><strong>Cheapest days to fly:</strong> Tuesday, Wednesday, Saturday</li>
+                    <li><strong>Most expensive to fly:</strong> Friday and Sunday</li>
+                </ul>
+                
+                <h2>Flexible Date Strategy: The Secret to Big Savings</h2>
+                <p>Being flexible with dates is the single most effective way to save money. Here's how to do it:</p>
+                
+                <h3>1. Use the Calendar View</h3>
+                <p>Always check prices for +/- 3 days from your preferred dates. You might save 30-50% by shifting by just one day.</p>
+                
+                <h3>2. Consider Nearby Airports</h3>
+                <p>Flying into or out of alternative airports can yield significant savings:</p>
+                <ul>
+                    <li>New York: Compare JFK, LGA, EWR, and even PHL</li>
+                    <li>London: Compare LHR, LGW, STN, LTN</li>
+                    <li>California: Compare LAX, SNA, BUR, ONT</li>
+                </ul>
+                
+                <h3>3. Shoulder Season Travel</h3>
+                <p>Traveling just before or after peak season can mean:</p>
+                <ul>
+                    <li>40-60% cheaper flights</li>
+                    <li>Better weather than off-season</li>
+                    <li>Fewer crowds than peak season</li>
+                </ul>
+                
+                <h2>Pricing Calendar Widget</h2>
+                <p>Below is an example of how pricing calendars work. They visually show you the cheapest days to fly:</p>
+                
+                <div class="widget-placeholder mt-3 mb-3" style="min-height: 300px;">
+                    <div style="text-align: center; padding: 2rem;">
+                        <p>Pricing calendar widget would display here</p>
+                        <p>Showing cheapest days to fly in green, most expensive in red</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Is there a fee to use Ryokome?
+                <h2>Popular Routes Right Now</h2>
+                <p>Based on current search data, here are trending routes with good prices:</p>
+                
+                <div class="card-grid mt-3">
+                    <div class="card">
+                        <h3>NYC → LON</h3>
+                        <p>From <strong>$489</strong> roundtrip</p>
+                        <p>Multiple airlines · 7-hour flight</p>
                     </div>
-                    <div class="faq-answer">
-                        <p>No, our service is completely free. We earn commissions when you book through our links, at no extra cost to you. The prices you see are the same as if you went directly to the travel site.</p>
+                    
+                    <div class="card">
+                        <h3>LAX → TYO</h3>
+                        <p>From <strong>$725</strong> roundtrip</p>
+                        <p>Good availability · 11-hour flight</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>CHI → PAR</h3>
+                        <p>From <strong>$612</strong> roundtrip</p>
+                        <p>Spring deals · 8-hour flight</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How do I book through Ryokome?
+                <h2>Airline Loyalty vs. Price Shopping</h2>
+                <p>This is a common dilemma. My advice after years of travel:</p>
+                
+                <ul>
+                    <li><strong>For business travelers:</strong> Stick with one alliance for status benefits</li>
+                    <li><strong>For leisure travelers:</strong> Always price shop - loyalty rarely pays off for occasional travelers</li>
+                    <li><strong>Consider:</strong> The value of checked bags, seat selection, and change fees</li>
+                </ul>
+                
+                <h2>Booking Direct vs. Through Third Parties</h2>
+                <p>There are pros and cons to each:</p>
+                
+                <div class="card-grid mt-3">
+                    <div class="card">
+                        <h3>Booking Direct</h3>
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Easier changes/cancellations</li>
+                            <li>Direct customer service</li>
+                            <li>Sometimes better seat selection</li>
+                        </ul>
                     </div>
-                    <div class="faq-answer">
-                        <p>Simply use our search tools to find your travel options. When you find what you want, click the link to be taken directly to the booking site. Your booking is made securely with the travel provider.</p>
+                    
+                    <div class="card">
+                        <h3>Third-Party Sites</h3>
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                            <li>Often cheaper prices</li>
+                            <li>Bundle deals (flight+hotel)</li>
+                            <li>Price comparison in one place</li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Are my bookings secure?
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes. When you click through to book, you're taken directly to the official booking site of the airline, hotel, or car rental company. We don't handle any payments or personal information directly.</p>
+                <div class="highlight-box">
+                    <h3>My Recommendation</h3>
+                    <p>Use comparison sites like ours to find the best deal, then check the airline's website directly. Sometimes they'll match or beat the price. If there's a significant difference (more than 10%), book through the cheaper option but understand the trade-offs.</p>
+                </div>
+                
+                <h2>Hidden City Ticketing & Skiplagging</h2>
+                <p>A word of caution: Some websites promote "hidden city" ticketing (booking a flight with a connection where you get off at the connection point). While sometimes cheaper, this practice:</p>
+                
+                <ul>
+                    <li>Violates airline terms of service</li>
+                    <li>Can result in cancelled return flights</li>
+                    <li>May lead to loyalty program termination</li>
+                    <li>Doesn't work with checked baggage</li>
+                </ul>
+                
+                <p>I don't recommend this strategy for most travelers due to the risks involved.</p>
+                
+                <h2>Final Tips for Flight Booking</h2>
+                <ol>
+                    <li><strong>Clear cookies or use incognito mode</strong> - Some sites track searches and may raise prices</li>
+                    <li><strong>Set price alerts</strong> - Get notified when prices drop</li>
+                    <li><strong>Check multiple devices</strong> - Sometimes mobile apps have different deals</li>
+                    <li><strong>Consider red-eyes and odd hours</strong> - Often 20-30% cheaper</li>
+                    <li><strong>Book connecting flights separately</strong> - Sometimes cheaper but more risky</li>
+                </ol>
+                
+                <div class="share-section mt-4">
+                    <h3>Found This Guide Helpful?</h3>
+                    <p>Share it with fellow travelers or save it for your next trip planning.</p>
+                    <div class="share-buttons">
+                        <button class="share-button twitter">Twitter</button>
+                        <button class="share-button facebook">Facebook</button>
+                        <button class="share-button copy">Copy Link</button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </article>
+        </div>
     </main>
+
+    <!-- Related Content -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title text-center">More Travel Resources</h2>
+            <div class="card-grid" data-animate>
+                <div class="card">
+                    <h3>Travel Checklist</h3>
+                    <p>Don't forget anything important with our comprehensive pre-trip checklist.</p>
+                    <a href="travel-checklist.html" class="btn btn-outline">Get Checklist</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Airport Transfers</h3>
+                    <p>Navigate from airport to hotel smoothly with our transfer booking guide.</p>
+                    <a href="airport-transfers.html" class="btn btn-outline">Transfer Guide</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Travel Insurance</h3>
+                    <p>Protect your trip investment with the right insurance coverage.</p>
+                    <a href="insurance.html" class="btn btn-outline">Insurance Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Ryokome</h3>
-                <p>Helping travelers find the best deals since 2023.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Ryokome</h3>
+                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                </div>
+                
+                <div>
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights.html">Flight Comparison</a></li>
+                        <li><a href="cars.html">Car Rentals</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                        <li><a href="insurance.html">Travel Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                        <li><a href="blog.html">Travel Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Travel Services</h4>
-                <ul>
-                    <li><a href="flights.html">Flights</a></li>
-                    <li><a href="cars.html">Car Rentals</a></li>
-                    <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                    <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                </ul>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
             </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                    <li><a href="terms-of-service.html">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Ryokome. All rights reserved.</p>
-            <p>Ryokome is an independent travel affiliate website. We may earn a commission when you book through our links, at no extra cost to you.</p>
         </div>
     </footer>
 

@@ -1,143 +1,215 @@
-/**
- * Ryokome - Travel Affiliate Website
- * Clean, simple functionality
- */
-
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initFAQAccordion();
-    initShareButtons();
-    initChecklist();
-});
-
-/**
- * Mobile Menu Toggle
- */
-function initMobileMenu() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (!menuToggle || !navMenu) return;
-    
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        menuToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            navMenu.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-        }
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-        }
-    });
-}
-
-/**
- * FAQ Accordion
- */
-function initFAQAccordion() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', function() {
-            // Toggle current item
-            item.classList.toggle('active');
-        });
-    });
-}
-
-/**
- * Share Buttons
- */
-function initShareButtons() {
-    const shareButtons = document.querySelectorAll('.share-btn');
-    
-    shareButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ryokome - Compare and book cheap flights, car rentals, airport transfers, and travel insurance. Save money on your next trip with our comparison tools.">
+    <title>Ryokome - Find Cheap Flights, Cars & Airport Transfers</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" data-animate>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Ryokome</a>
             
-            const platform = this.classList[1]; // whatsapp, facebook, etc.
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('Check out this travel resource from Ryokome!');
+            <div class="nav-center">
+                <a href="flights.html" class="tab-button">Flights</a>
+                <a href="cars.html" class="tab-button">Cars</a>
+                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
+                <a href="insurance.html" class="tab-button">Insurance</a>
+            </div>
             
-            let shareUrl;
+            <div class="nav-right">
+                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
             
-            switch(platform) {
-                case 'whatsapp':
-                    shareUrl = `https://wa.me/?text=${text}%20${url}`;
-                    break;
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-                    break;
-                case 'email':
-                    shareUrl = `mailto:?subject=Travel%20Resource&body=${text}%20${url}`;
-                    break;
-                case 'copy':
-                    navigator.clipboard.writeText(window.location.href).then(() => {
-                        alert('Link copied to clipboard!');
-                    });
-                    return;
-            }
-            
-            if (shareUrl && platform !== 'copy') {
-                window.open(shareUrl, '_blank', 'width=600,height=400');
-            }
-        });
-    });
-}
+            <button class="hamburger">☰</button>
+        </div>
+    </header>
 
-/**
- * Checklist Functionality
- */
-function initChecklist() {
-    const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-    
-    // Load saved state
-    checkboxes.forEach(checkbox => {
-        const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
-        const savedState = localStorage.getItem(`checklist_${itemId}`);
-        if (savedState === 'true') {
-            checkbox.checked = true;
-        }
-        
-        // Save state when changed
-        checkbox.addEventListener('change', function() {
-            localStorage.setItem(`checklist_${itemId}`, this.checked);
-        });
-    });
-    
-    // Reset button
-    const resetBtn = document.getElementById('reset-checklist');
-    if (resetBtn) {
-        resetBtn.addEventListener('click', function() {
-            if (confirm('Reset all checklist items?')) {
-                checkboxes.forEach(checkbox => {
-                    checkbox.checked = false;
-                    const itemId = checkbox.closest('.checklist-item').querySelector('.item-text').textContent;
-                    localStorage.removeItem(`checklist_${itemId}`);
-                });
-            }
-        });
-    }
-}
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="logo">Ryokome</a>
+            <button class="close-mobile-nav">✕</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="flights.html" class="mobile-tab-button">Flights</a>
+            <a href="cars.html" class="mobile-tab-button">Cars</a>
+            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
+            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
+            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+        </div>
+    </div>
 
-// External link handler
-document.addEventListener('click', function(e) {
-    const link = e.target.closest('a');
-    if (link && link.hostname !== window.location.hostname) {
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-    }
-});
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-animate>
+                <h1>Find Cheap Flights, Cars & Transfers — Compare & Book Smarter</h1>
+                <p>Ryokome is your smart travel comparison platform. We search hundreds of providers to find you the best deals on flights, car rentals, airport transfers, and travel insurance. Save time and money on your next adventure.</p>
+                <a href="#search" class="btn">Start Your Search</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flight Search Widget -->
+    <section id="search" class="section">
+        <div class="container">
+            <div class="flight-widget-container" data-animate>
+                <h2 class="text-center mb-2">Search & Compare Flight Deals</h2>
+                <div class="widget-placeholder">
+                    <div style="text-align: center; padding: 2rem;">
+                        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Flight search widget will load here</p>
+                        <p style="color: #666;">Powered by our travel partners for real-time prices</p>
+                    </div>
+                </div>
+                <!-- Actual widget will be loaded here -->
+                <script async src="https://tpwgts.com/content?currency=usd&trs=482158&shmarker=691366&show_hotels=true&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230014FFff&color_button=%237B27F4ff&color_icons=%237B27F4FF&dark=%231C1C1Cff&light=%23EFEFEFff&secondary=%23CC25CCff&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=15&plain=true&origin=NYC&destination=PAR&promo_id=7879&campaign_id=100"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title text-center">Everything You Need for Your Trip</h2>
+            <p class="section-subtitle text-center">From flights to insurance, we've got you covered with the best deals</p>
+            
+            <div class="card-grid" data-animate>
+                <div class="card">
+                    <div class="card-icon">✈️</div>
+                    <h3>Flight Comparison</h3>
+                    <p>Find the cheapest flights with our smart search that compares hundreds of airlines and travel sites.</p>
+                    <a href="flights.html" class="btn btn-outline">Find Flights</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚗</div>
+                    <h3>Car Rentals</h3>
+                    <p>Compare prices from all major rental companies to get the best deal on your rental car.</p>
+                    <a href="cars.html" class="btn btn-outline">Find Cars</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚕</div>
+                    <h3>Airport Transfers</h3>
+                    <p>Pre-book reliable airport transfers and avoid overpriced taxis or confusing public transport.</p>
+                    <a href="airport-transfers.html" class="btn btn-outline">Book Transfers</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Travel Insurance</h3>
+                    <p>Protect your trip with comprehensive coverage for medical emergencies, cancellations, and more.</p>
+                    <a href="insurance.html" class="btn btn-outline">Get Insurance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Routes -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Popular Routes Right Now</h2>
+            <div class="card-grid" data-animate>
+                <div class="card">
+                    <h3>New York to Paris</h3>
+                    <p>Round trip from <strong>$489</strong></p>
+                    <p>Best time to book: 2-3 months in advance</p>
+                </div>
+                
+                <div class="card">
+                    <h3>London to Tokyo</h3>
+                    <p>Round trip from <strong>$725</strong></p>
+                    <p>Best time to book: 4-5 months in advance</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Los Angeles to Sydney</h3>
+                    <p>Round trip from <strong>$899</strong></p>
+                    <p>Best time to book: 3-4 months in advance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="trust-section" data-animate>
+                <h2>Trusted by Travelers Worldwide</h2>
+                <p>We partner with leading travel providers to bring you the best prices and reliable service.</p>
+                <div class="trust-badges">
+                    <div class="badge">Best Price Guarantee</div>
+                    <div class="badge">24/7 Customer Support</div>
+                    <div class="badge">Secure Booking</div>
+                    <div class="badge">No Hidden Fees</div>
+                </div>
+                <p class="mt-2"><small>Powered by Travelpayouts partners and trusted providers</small></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container text-center" data-animate>
+            <h2 class="section-title">Ready for Your Next Adventure?</h2>
+            <p class="section-subtitle">Start planning with our free travel checklist</p>
+            <a href="travel-checklist.html" class="btn btn-secondary">Get Your Travel Checklist</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Ryokome</h3>
+                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                </div>
+                
+                <div>
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights.html">Flight Comparison</a></li>
+                        <li><a href="cars.html">Car Rentals</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                        <li><a href="insurance.html">Travel Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                        <li><a href="blog.html">Travel Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>

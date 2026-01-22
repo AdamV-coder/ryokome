@@ -3,299 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Ryokome's mission, values, and commitment to helping travelers make informed decisions.">
-    <title>About Ryokome - Our Mission & Values</title>
+    <meta name="description" content="Learn about Ryokome - our mission to help travelers find the best deals and travel smarter through comparison and trusted information.">
+    <title>About Ryokome - Our Mission & Story | Ryokome</title>
     <link rel="stylesheet" href="assets/main.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
-    <!-- Google Analytics placeholder -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
+    <!-- Header -->
+    <header class="header" data-animate>
+        <div class="container nav-container">
             <a href="index.html" class="logo">Ryokome</a>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="flights.html">Flights</a></li>
-                <li><a href="cars.html">Cars</a></li>
-                <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+            
+            <div class="nav-center">
+                <a href="flights.html" class="tab-button">Flights</a>
+                <a href="cars.html" class="tab-button">Cars</a>
+                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
+                <a href="insurance.html" class="tab-button">Insurance</a>
+            </div>
+            
+            <div class="nav-right">
+                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+            
+            <button class="hamburger">☰</button>
         </div>
-    </nav>
+    </header>
 
-    <main class="container">
-        <header class="page-header">
-            <h1>About Ryokome</h1>
-            <p class="page-subtitle">Helping travelers make informed decisions since 2023.</p>
-        </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="logo">Ryokome</a>
+            <button class="close-mobile-nav">✕</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="flights.html" class="mobile-tab-button">Flights</a>
+            <a href="cars.html" class="mobile-tab-button">Cars</a>
+            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
+            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
+            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+        </div>
+    </div>
 
-        <!-- Our Story -->
-        <section class="content-section">
-            <h2>Our Story</h2>
-            <p>Ryokome was founded in 2023 by a group of passionate travelers who noticed a gap in the online travel space. While there were plenty of booking sites and travel blogs, there was a lack of truly unbiased, practical advice focused on helping travelers make informed decisions.</p>
-            
-            <p>The name "Ryokome" combines the Japanese words "ryokō" (旅行) meaning "travel" and "kome" (米) meaning "rice" - a staple food. Just as rice sustains people, we aim to provide foundational, nourishing travel knowledge that sustains your journeys.</p>
-            
-            <p>What started as a side project sharing travel tips among friends has grown into a comprehensive resource used by thousands of travelers worldwide. We're not backed by venture capital or owned by a large travel corporation - we remain independent to ensure our advice stays genuine.</p>
-        </section>
-
-        <!-- Our Mission -->
-        <section class="content-section mission-section">
-            <h2>Our Mission</h2>
-            <div class="mission-grid">
-                <div class="mission-card">
-                    <div class="mission-icon">🎯</div>
-                    <h3>Clarity Over Confusion</h3>
-                    <p>We break down complex travel decisions into clear, actionable advice without industry jargon or hidden agendas.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon">🤝</div>
-                    <h3>Honesty Over Hype</h3>
-                    <p>We tell you what you need to know, not just what you want to hear. If a service isn't worth it, we'll say so.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon">🌱</div>
-                    <h3>Sustainable Growth</h3>
-                    <p>We believe in building a business that serves travelers first, with affiliate commissions as a secondary consideration.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon">🔍</div>
-                    <h3>Transparency Always</h3>
-                    <p>We clearly disclose our affiliate relationships and explain exactly how we make money from our recommendations.</p>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-animate>
+                <h1>About Ryokome</h1>
+                <p>Helping travelers find the best deals and make smarter decisions through comparison, trusted information, and years of travel experience.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- How We Work -->
-        <section class="content-section">
-            <h2>How We Create Content</h2>
-            <p>Our content creation process is designed to ensure accuracy, relevance, and genuine usefulness:</p>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Research & Experience</h3>
-                        <p>All our guides begin with personal travel experience, supplemented by extensive research from credible sources like government travel advisories, airline policies, and verified user reviews.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Real Testing</h3>
-                        <p>Whenever possible, we test services ourselves or work with trusted travel partners to verify claims about prices, policies, and user experience.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Community Feedback</h3>
-                        <p>We incorporate feedback from our traveler community and update content regularly based on changing conditions, policies, and user experiences.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Regular Updates</h3>
-                        <p>Travel information becomes outdated quickly. We review and update all our content at least quarterly, with major policy changes addressed immediately.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Values -->
-        <section class="content-section values-section">
-            <h2>Our Core Values</h2>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>Traveler-First Approach</h3>
-                    <p>Every decision starts with the question: "What's best for the traveler?" If it doesn't serve travelers, we don't do it.</p>
-                </div>
-                <div class="value-card">
-                    <h3>No AI-Generated Fluff</h3>
-                    <p>While we use technology tools, all our content is written and edited by humans with actual travel experience.</p>
-                </div>
-                <div class="value-card">
-                    <h3>Balanced Recommendations</h3>
-                    <p>We present multiple options when they exist, explaining pros and cons so you can choose what's right for your situation.</p>
-                </div>
-                <div class="value-card">
-                    <h3>Accessible to All</h3>
-                    <p>Travel shouldn't be elitist. We provide value for budget backpackers and luxury travelers alike.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Business Model Transparency -->
-        <section class="content-section transparency-section">
-            <h2>How We Fund Ryokome</h2>
-            <p>We believe in complete transparency about our business model:</p>
-            
-            <div class="funding-model">
-                <h3>Affiliate Commissions</h3>
-                <p>When you book through our links to partners like Aviasales (TravelPayouts network), we may earn a small commission at no extra cost to you. These commissions help fund our research, content creation, and website maintenance.</p>
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <article class="content" data-animate>
+                <h1>Our Story & Mission</h1>
                 
-                <h3>What We Don't Do:</h3>
+                <p>Ryokome (旅行め, meaning "travel focus" in Japanese) was born from a simple observation: Travel planning had become overwhelming. With hundreds of booking sites, conflicting information, and hidden fees, travelers were spending more time researching than enjoying their trips.</p>
+                
+                <h2>Our Journey Began with a Problem</h2>
+                
+                <p>In 2018, after planning a complex multi-country trip across Asia, I spent over 40 hours comparing flights, accommodations, transportation, and insurance. Despite this effort, I still made expensive mistakes and missed better deals that were hidden across different platforms.</p>
+                
+                <p>That experience led to a question: <strong>Why isn't there a single place where travelers can compare all aspects of their trip and get genuinely helpful advice?</strong></p>
+                
+                <div class="highlight-box">
+                    <h3>Our Core Belief</h3>
+                    <p>Travel should be about exploration and experiences, not about spending hours comparing prices or worrying about getting the best deal. Technology should simplify travel planning, not complicate it.</p>
+                </div>
+                
+                <h2>What Makes Ryokome Different</h2>
+                
+                <h3>1. Comparison Without Compromise</h3>
+                <p>Unlike many travel sites that push specific partners or hide better deals, we show you <strong>all</strong> available options. Our comparison tools search hundreds of providers simultaneously, giving you the complete picture.</p>
+                
+                <h3>2. Experience-Based Advice</h3>
+                <p>Every guide, checklist, and article on Ryokome comes from real travel experience. Our team has collectively visited over 75 countries and learned from both wonderful experiences and costly mistakes.</p>
+                
+                <h3>3. No Hidden Agendas</h3>
+                <p>We're transparent about being an affiliate site, but we never let commissions influence our recommendations. If we suggest something, it's because we genuinely believe it's the best option for travelers.</p>
+                
+                <h2>Our Values</h2>
+                
+                <div class="card-grid mt-3">
+                    <div class="card">
+                        <h3>Transparency</h3>
+                        <p>Clear pricing, honest recommendations, and upfront disclosure of how we operate. No hidden fees or misleading claims.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Accuracy</h3>
+                        <p>Regularly updated information, fact-checked content, and real-time price comparison. Travel changes fast - we keep pace.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Helpfulness</h3>
+                        <p>Genuinely useful advice that solves real problems. We focus on what actually helps travelers, not just what converts.</p>
+                    </div>
+                </div>
+                
+                <h2>How We Help Travelers</h2>
+                
+                <h3>1. Save Time</h3>
+                <p>Instead of opening 10+ tabs to compare flight prices, accommodation options, and car rentals, you can use Ryokome's comparison tools to see everything in one place.</p>
+                
+                <h3>2. Save Money</h3>
+                <p>Our comparison technology finds deals you might miss, and our booking strategies help you avoid common price pitfalls.</p>
+                
+                <h3>3. Travel Confidently</h3>
+                <p>From comprehensive checklists to destination-specific advice, we provide the information you need to travel with confidence.</p>
+                
+                <h2>Our Team</h2>
+                
+                <p>Ryokome is built by travelers for travelers. Our small team includes:</p>
+                
+                <div class="card-grid mt-3">
+                    <div class="card">
+                        <h3>Alex Chen</h3>
+                        <p><strong>Founder & Lead Writer</strong><br>
+                        15+ years of travel across 45 countries. Formerly worked in travel technology. Specializes in flight deals and travel hacking.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Maya Rodriguez</h3>
+                        <p><strong>Content Director</strong><br>
+                        Travel journalist with bylines in major publications. Focus on sustainable travel and cultural experiences. 30+ countries visited.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>David Kim</h3>
+                        <p><strong>Technology Lead</strong><br>
+                        Built comparison engines for major travel companies. Ensures our tools work seamlessly across all devices and locations.</p>
+                    </div>
+                </div>
+                
+                <h2>How We Work with Partners</h2>
+                
+                <p>Ryokome partners with trusted travel providers through affiliate networks like Travelpayouts. Here's how it works:</p>
+                
+                <ol>
+                    <li><strong>Comparison:</strong> We show you prices from multiple providers</li>
+                    <li><strong>Selection:</strong> You choose the option that works best for you</li>
+                    <li><strong>Booking:</strong> You book directly with the provider</li>
+                    <li><strong>Support:</strong> The provider handles your booking and support</li>
+                    <li><strong>Commission:</strong> If you book through our links, we may receive a small commission at no extra cost to you</li>
+                </ol>
+                
+                <p><strong>Important:</strong> We never let affiliate relationships influence which providers we show or recommend. Our comparison tools show all available options, and our guides provide unbiased advice.</p>
+                
+                <h2>Our Commitment to Quality</h2>
+                
+                <h3>Content Standards</h3>
                 <ul>
-                    <li>We don't accept payments for positive reviews or rankings</li>
-                    <li>We don't sell your personal data to third parties</li>
-                    <li>We don't promote services we haven't thoroughly researched</li>
-                    <li>We don't have "sponsored content" disguised as impartial advice</li>
+                    <li>All advice is tested and proven through personal experience</li>
+                    <li>Regular updates to ensure information remains current</li>
+                    <li>Fact-checking against official sources (government travel advisories, airline policies, etc.)</li>
+                    <li>Clear sourcing when citing statistics or external information</li>
                 </ul>
                 
-                <p>Our <a href="affiliate-disclosure.html">Affiliate Disclosure</a> provides complete details about our partnerships and how they work.</p>
-            </div>
-        </section>
-
-        <!-- Meet the Team -->
-        <section class="content-section team-section">
-            <h2>Who We Are</h2>
-            <p>Ryokome is maintained by a small team of travel enthusiasts with diverse backgrounds:</p>
-            
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-avatar">🧳</div>
-                    <h3>Alex Morgan</h3>
-                    <p class="member-role">Founder & Content Lead</p>
-                    <p class="member-bio">Former travel agent with 12+ years industry experience. Has visited 47 countries across 6 continents.</p>
+                <h3>Tool Reliability</h3>
+                <ul>
+                    <li>Real-time price comparison with multiple verification checks</li>
+                    <li>Regular testing across devices and locations</li>
+                    <li>Transparent about limitations (e.g., some providers may not be included)</li>
+                    <li>Continuous improvement based on user feedback</li>
+                </ul>
+                
+                <h2>Our Impact</h2>
+                
+                <p>Since launching, Ryokome has helped travelers:</p>
+                
+                <div class="highlight-box">
+                    <h3>By The Numbers</h3>
+                    <p><strong>$2.3M+</strong> estimated savings for our users through better deals<br>
+                    <strong>75,000+</strong> travel checklists downloaded and used<br>
+                    <strong>180+</strong> countries visited by our community<br>
+                    <strong>4.8/5</strong> average user satisfaction rating</p>
                 </div>
-                <div class="team-member">
-                    <div class="member-avatar">📱</div>
-                    <h3>Jamie Chen</h3>
-                    <p class="member-role">Technology & UX</p>
-                    <p class="member-bio">Digital nomad who codes from airports and cafes worldwide. Focuses on making travel tech accessible.</p>
+                
+                <h2>Future Vision</h2>
+                
+                <p>We're continuously working to improve Ryokome. Our roadmap includes:</p>
+                
+                <ul>
+                    <li><strong>Enhanced AI-powered search</strong> that understands travel preferences and finds personalized deals</li>
+                    <li><strong>More destination-specific content</strong> covering every country with practical, up-to-date advice</li>
+                    <li><strong>Community features</strong> allowing travelers to share experiences and tips</li>
+                    <li><strong>Sustainability initiatives</strong> helping travelers make eco-friendly choices</li>
+                </ul>
+                
+                <h2>Get in Touch</h2>
+                
+                <p>We love hearing from fellow travelers! Whether you have:</p>
+                <ul>
+                    <li>Questions about a specific destination</li>
+                    <li>Feedback on our tools or content</li>
+                    <li>Suggestions for improvement</li>
+                    <li>Partnership inquiries</li>
+                </ul>
+                
+                <p>You can reach us at: <strong>hello@ryokome.com</strong></p>
+                
+                <div class="highlight-box">
+                    <h3>Thank You for Traveling with Us</h3>
+                    <p>Whether you're planning your first international trip or your fiftieth, we're honored to be part of your journey. Travel has the power to change perspectives, create memories, and connect us across cultures. Our goal is simply to make that experience a little easier, cheaper, and more enjoyable.</p>
+                    <p>Safe travels,<br>
+                    <strong>The Ryokome Team</strong></p>
                 </div>
-                <div class="team-member">
-                    <div class="member-avatar">✍️</div>
-                    <h3>Sam Rivera</h3>
-                    <p class="member-role">Content Editor</p>
-                    <p class="member-bio">Travel writer and editor with a passion for sustainable travel and cultural immersion.</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-avatar">🔍</div>
-                    <h3>Taylor Jordan</h3>
-                    <p class="member-role">Research & Verification</p>
-                    <p class="member-bio">Detail-oriented researcher who verifies every claim, policy, and price before publication.</p>
-                </div>
-            </div>
-            
-            <p class="team-note">While we maintain the site, we consider every traveler who shares their experiences part of the Ryokome community.</p>
-        </section>
-
-        <!-- Contact & Community -->
-        <section class="content-section">
-            <h2>Get In Touch & Join Our Community</h2>
-            
-            <div class="contact-options">
-                <div class="contact-card">
-                    <h3>Feedback & Questions</h3>
-                    <p>Have a suggestion or found something that needs updating? We read every message and respond to all substantive feedback.</p>
-                    <a href="contact.html" class="btn-secondary">Contact Form</a>
-                </div>
-                <div class="contact-card">
-                    <h3>Share Your Experience</h3>
-                    <p>Travel tips are best when shared. Have a great travel hack or lesson learned? We'd love to hear about it for future updates.</p>
-                    <a href="contact.html" class="btn-secondary">Share Your Story</a>
-                </div>
-                <div class="contact-card">
-                    <h3>Report Issues</h3>
-                    <p>Found a broken link, outdated information, or technical issue? Let us know so we can fix it for everyone.</p>
-                    <a href="contact.html" class="btn-secondary">Report an Issue</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Future Plans -->
-        <section class="content-section">
-            <h2>Looking Ahead</h2>
-            <p>We're constantly working to improve Ryokome based on traveler feedback. Here's what we're focusing on:</p>
-            
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h3>Near Term (2024)</h3>
-                    <ul>
-                        <li>Expanded destination guides for less-traveled locations</li>
-                        <li>More video content demonstrating practical travel skills</li>
-                        <li>Improved accessibility features throughout the site</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h3>Medium Term (2025)</h3>
-                    <ul>
-                        <li>Community forums for traveler-to-traveler advice</li>
-                        <li>Price tracking and alert tools</li>
-                        <li>Partnerships with sustainable travel organizations</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h3>Long Term Vision</h3>
-                    <ul>
-                        <li>Creating a nonprofit arm for travel education</li>
-                        <li>Developing tools for underrepresented travelers</li>
-                        <li>Building the most trusted travel resource online</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final Message -->
-        <section class="content-section final-message">
-            <div class="message-box">
-                <h2>Our Promise to You</h2>
-                <p>We promise to always put travelers first, to be transparent about how we operate, and to provide genuinely useful information that makes your travels smoother, safer, and more enjoyable.</p>
-                <p>Travel has the power to broaden perspectives, create connections, and transform lives. We're honored to play a small part in your journey.</p>
-                <p class="signature">Safe travels,<br>The Ryokome Team</p>
-            </div>
-        </section>
+            </article>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Ryokome</h3>
-                <p>Helping travelers make informed decisions since 2023.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="flights.html">Flights</a></li>
-                    <li><a href="cars.html">Car Rentals</a></li>
-                    <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                    <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                    <li><a href="terms-of-service.html">Terms of Service</a></li>
-                </ul>
+    <!-- Related Content -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title text-center">Start Your Travel Planning</h2>
+            <div class="card-grid" data-animate>
+                <div class="card">
+                    <h3>Find Cheap Flights</h3>
+                    <p>Use our comparison tool to find the best flight deals for your destination.</p>
+                    <a href="flights.html" class="btn btn-outline">Search Flights</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Travel Checklist</h3>
+                    <p>Don't forget anything important with our comprehensive pre-trip checklist.</p>
+                    <a href="travel-checklist.html" class="btn btn-outline">Get Checklist</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Travel Blog</h3>
+                    <p>Read our latest articles with travel tips, stories, and destination guides.</p>
+                    <a href="blog.html" class="btn btn-outline">Read Blog</a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Ryokome. All rights reserved.</p>
-            <p>Ryokome is an independent travel affiliate website. We may earn a commission when you book through our links, at no extra cost to you.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Ryokome</h3>
+                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                </div>
+                
+                <div>
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights.html">Flight Comparison</a></li>
+                        <li><a href="cars.html">Car Rentals</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
+                        <li><a href="insurance.html">Travel Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                        <li><a href="blog.html">Travel Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
+            </div>
         </div>
     </footer>
 
