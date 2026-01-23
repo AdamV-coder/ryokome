@@ -3,292 +3,843 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Ryokome - our mission to help travelers find the best deals and travel smarter through comparison and trusted information.">
-    <title>About Ryokome - Our Mission & Story | Ryokome</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <title>About Ryokome – Travel Comparison & Guidance | Ryokome</title>
+    <meta name="description" content="Learn about Ryokome's mission to provide transparent, independent travel comparison and guidance. Our traveler-first approach prioritizes trustworthy advice over commissions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1B2DD9;
+            --primary-dark: #0F1FA6;
+            --secondary: #26A9E0;
+            --success: #1EC912;
+            --dark: #262626;
+            --light: #FFFFFF;
+            --gray: #F5F7FA;
+            --gray-medium: #E8ECEF;
+            --gray-dark: #6C757D;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 2px;
+            background: var(--gray);
+            border-radius: var(--border-radius);
+            padding: 4px;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-tab.active,
+        .nav-tab:hover {
+            background: var(--light);
+            color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 8px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 5px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--light);
+            box-shadow: var(--shadow-heavy);
+            padding: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .mobile-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .mobile-tab {
+            padding: 8px 15px;
+            background: var(--gray);
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-tab.active {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn,
+            .mobile-menu {
+                display: none;
+            }
+            .nav-desktop {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            .header-content {
+                padding: 0 20px;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .page-header {
+                padding: 80px 0 60px;
+            }
+            .page-header h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: var(--gray);
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .section-text {
+            color: var(--gray-dark);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .section-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Mission Statement */
+        .mission-statement {
+            background: var(--white);
+            border-left: 4px solid var(--primary);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .mission-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--dark);
+            line-height: 1.6;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* How It Works */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .step-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--secondary);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .step-description {
+            color: var(--gray-dark);
+        }
+
+        @media (min-width: 768px) {
+            .steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Trust Signals */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .trust-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid var(--gray-medium);
+        }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .trust-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .trust-description {
+            color: var(--gray-dark);
+        }
+
+        @media (min-width: 768px) {
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Transparency Box */
+        .transparency-box {
+            background: #fff8f8;
+            border: 1px solid #ffeaea;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        .transparency-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .transparency-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .transparency-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .transparency-content {
+            color: var(--gray-dark);
+            line-height: 1.7;
+        }
+
+        .transparency-content a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .transparency-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-info {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--gray-medium);
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .contact-value {
+            color: var(--gray-dark);
+        }
+
+        .contact-value a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #B0B7C3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #B0B7C3;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Utility */
+        .hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" data-animate>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Ryokome</a>
-            
-            <div class="nav-center">
-                <a href="flights.html" class="tab-button">Flights</a>
-                <a href="cars.html" class="tab-button">Cars</a>
-                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
-                <a href="insurance.html" class="tab-button">Insurance</a>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Ryo<span>kome</span></a>
+                
+                <nav class="nav-desktop">
+                    <div class="nav-tabs">
+                        <button class="nav-tab">Flights</button>
+                        <button class="nav-tab">Cars</button>
+                        <button class="nav-tab">Airport Transfers</button>
+                        <button class="nav-tab">Insurance</button>
+                    </div>
+                    <div class="nav-right">
+                        <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
+                        <a href="blog.html" class="nav-link">Blog</a>
+                        <a href="about.html" class="nav-link active">About</a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             </div>
-            
-            <div class="nav-right">
-                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <div class="mobile-tabs">
+                    <button class="mobile-tab">Flights</button>
+                    <button class="mobile-tab">Cars</button>
+                    <button class="mobile-tab">Airport Transfers</button>
+                    <button class="mobile-tab">Insurance</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                </nav>
             </div>
-            
-            <button class="hamburger">☰</button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="index.html" class="logo">Ryokome</a>
-            <button class="close-mobile-nav">✕</button>
-        </div>
-        <div class="mobile-nav-links">
-            <a href="flights.html" class="mobile-tab-button">Flights</a>
-            <a href="cars.html" class="mobile-tab-button">Cars</a>
-            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
-            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
-            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
-            <a href="blog.html" class="mobile-nav-link">Blog</a>
-            <a href="about.html" class="mobile-nav-link">About</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content" data-animate>
-                <h1>About Ryokome</h1>
-                <p>Helping travelers find the best deals and make smarter decisions through comparison, trusted information, and years of travel experience.</p>
+            <h1>About Ryokome</h1>
+            <p>Transparent travel comparison and guidance. We help travelers make informed decisions through independent research and honest advice.</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Our Mission</h2>
+                <p class="section-text">Ryokome exists to simplify travel planning while maintaining uncompromising transparency. We noticed that many travel comparison sites prioritize commissions over clarity, leaving travelers confused about pricing, policies, and what actually matters.</p>
+                
+                <div class="mission-statement">
+                    <p class="mission-text">Our mission is to provide travelers with the information they need to make confident decisions, not just the options that generate the highest revenue.</p>
+                </div>
+                
+                <p class="section-text">Founded by experienced travelers who grew frustrated with opaque booking processes, Ryokome focuses on what actually improves travel experiences: clear information, honest comparisons, and practical guidance.</p>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="section">
+    <!-- How Ryokome Works -->
+    <section class="section">
         <div class="container">
-            <article class="content" data-animate>
-                <h1>Our Story & Mission</h1>
+            <div class="section-content">
+                <h2 class="section-title">How Ryokome Works</h2>
+                <p class="section-text">We operate differently from traditional travel booking platforms. Our approach prioritizes traveler education and transparent comparison over quick transactions.</p>
                 
-                <p>Ryokome (旅行め, meaning "travel focus" in Japanese) was born from a simple observation: Travel planning had become overwhelming. With hundreds of booking sites, conflicting information, and hidden fees, travelers were spending more time researching than enjoying their trips.</p>
-                
-                <h2>Our Journey Began with a Problem</h2>
-                
-                <p>In 2018, after planning a complex multi-country trip across Asia, I spent over 40 hours comparing flights, accommodations, transportation, and insurance. Despite this effort, I still made expensive mistakes and missed better deals that were hidden across different platforms.</p>
-                
-                <p>That experience led to a question: <strong>Why isn't there a single place where travelers can compare all aspects of their trip and get genuinely helpful advice?</strong></p>
-                
-                <div class="highlight-box">
-                    <h3>Our Core Belief</h3>
-                    <p>Travel should be about exploration and experiences, not about spending hours comparing prices or worrying about getting the best deal. Technology should simplify travel planning, not complicate it.</p>
-                </div>
-                
-                <h2>What Makes Ryokome Different</h2>
-                
-                <h3>1. Comparison Without Compromise</h3>
-                <p>Unlike many travel sites that push specific partners or hide better deals, we show you <strong>all</strong> available options. Our comparison tools search hundreds of providers simultaneously, giving you the complete picture.</p>
-                
-                <h3>2. Experience-Based Advice</h3>
-                <p>Every guide, checklist, and article on Ryokome comes from real travel experience. Our team has collectively visited over 75 countries and learned from both wonderful experiences and costly mistakes.</p>
-                
-                <h3>3. No Hidden Agendas</h3>
-                <p>We're transparent about being an affiliate site, but we never let commissions influence our recommendations. If we suggest something, it's because we genuinely believe it's the best option for travelers.</p>
-                
-                <h2>Our Values</h2>
-                
-                <div class="card-grid mt-3">
-                    <div class="card">
-                        <h3>Transparency</h3>
-                        <p>Clear pricing, honest recommendations, and upfront disclosure of how we operate. No hidden fees or misleading claims.</p>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Independent Research</h3>
+                        <p class="step-description">We analyze travel options without external pressure. Our team regularly tests booking processes, reviews provider policies, and monitors pricing patterns to provide current, accurate information.</p>
                     </div>
                     
-                    <div class="card">
-                        <h3>Accuracy</h3>
-                        <p>Regularly updated information, fact-checked content, and real-time price comparison. Travel changes fast - we keep pace.</p>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Transparent Comparison</h3>
+                        <p class="step-description">We show all relevant options with clear pricing breakdowns. Unlike platforms that hide fees or promote specific partners, we disclose what's included (and what's not) upfront.</p>
                     </div>
                     
-                    <div class="card">
-                        <h3>Helpfulness</h3>
-                        <p>Genuinely useful advice that solves real problems. We focus on what actually helps travelers, not just what converts.</p>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Educational Guidance</h3>
+                        <p class="step-description">Beyond comparison, we provide context. Our guides explain industry practices, common pitfalls, and strategic approaches to help you understand why certain options might be better for your situation.</p>
                     </div>
                 </div>
-                
-                <h2>How We Help Travelers</h2>
-                
-                <h3>1. Save Time</h3>
-                <p>Instead of opening 10+ tabs to compare flight prices, accommodation options, and car rentals, you can use Ryokome's comparison tools to see everything in one place.</p>
-                
-                <h3>2. Save Money</h3>
-                <p>Our comparison technology finds deals you might miss, and our booking strategies help you avoid common price pitfalls.</p>
-                
-                <h3>3. Travel Confidently</h3>
-                <p>From comprehensive checklists to destination-specific advice, we provide the information you need to travel with confidence.</p>
-                
-                <h2>Our Team</h2>
-                
-                <p>Ryokome is built by travelers for travelers. Our small team includes:</p>
-                
-                <div class="card-grid mt-3">
-                    <div class="card">
-                        <h3>Alex Chen</h3>
-                        <p><strong>Founder & Lead Writer</strong><br>
-                        15+ years of travel across 45 countries. Formerly worked in travel technology. Specializes in flight deals and travel hacking.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Maya Rodriguez</h3>
-                        <p><strong>Content Director</strong><br>
-                        Travel journalist with bylines in major publications. Focus on sustainable travel and cultural experiences. 30+ countries visited.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>David Kim</h3>
-                        <p><strong>Technology Lead</strong><br>
-                        Built comparison engines for major travel companies. Ensures our tools work seamlessly across all devices and locations.</p>
-                    </div>
-                </div>
-                
-                <h2>How We Work with Partners</h2>
-                
-                <p>Ryokome partners with trusted travel providers through affiliate networks like Travelpayouts. Here's how it works:</p>
-                
-                <ol>
-                    <li><strong>Comparison:</strong> We show you prices from multiple providers</li>
-                    <li><strong>Selection:</strong> You choose the option that works best for you</li>
-                    <li><strong>Booking:</strong> You book directly with the provider</li>
-                    <li><strong>Support:</strong> The provider handles your booking and support</li>
-                    <li><strong>Commission:</strong> If you book through our links, we may receive a small commission at no extra cost to you</li>
-                </ol>
-                
-                <p><strong>Important:</strong> We never let affiliate relationships influence which providers we show or recommend. Our comparison tools show all available options, and our guides provide unbiased advice.</p>
-                
-                <h2>Our Commitment to Quality</h2>
-                
-                <h3>Content Standards</h3>
-                <ul>
-                    <li>All advice is tested and proven through personal experience</li>
-                    <li>Regular updates to ensure information remains current</li>
-                    <li>Fact-checking against official sources (government travel advisories, airline policies, etc.)</li>
-                    <li>Clear sourcing when citing statistics or external information</li>
-                </ul>
-                
-                <h3>Tool Reliability</h3>
-                <ul>
-                    <li>Real-time price comparison with multiple verification checks</li>
-                    <li>Regular testing across devices and locations</li>
-                    <li>Transparent about limitations (e.g., some providers may not be included)</li>
-                    <li>Continuous improvement based on user feedback</li>
-                </ul>
-                
-                <h2>Our Impact</h2>
-                
-                <p>Since launching, Ryokome has helped travelers:</p>
-                
-                <div class="highlight-box">
-                    <h3>By The Numbers</h3>
-                    <p><strong>$2.3M+</strong> estimated savings for our users through better deals<br>
-                    <strong>75,000+</strong> travel checklists downloaded and used<br>
-                    <strong>180+</strong> countries visited by our community<br>
-                    <strong>4.8/5</strong> average user satisfaction rating</p>
-                </div>
-                
-                <h2>Future Vision</h2>
-                
-                <p>We're continuously working to improve Ryokome. Our roadmap includes:</p>
-                
-                <ul>
-                    <li><strong>Enhanced AI-powered search</strong> that understands travel preferences and finds personalized deals</li>
-                    <li><strong>More destination-specific content</strong> covering every country with practical, up-to-date advice</li>
-                    <li><strong>Community features</strong> allowing travelers to share experiences and tips</li>
-                    <li><strong>Sustainability initiatives</strong> helping travelers make eco-friendly choices</li>
-                </ul>
-                
-                <h2>Get in Touch</h2>
-                
-                <p>We love hearing from fellow travelers! Whether you have:</p>
-                <ul>
-                    <li>Questions about a specific destination</li>
-                    <li>Feedback on our tools or content</li>
-                    <li>Suggestions for improvement</li>
-                    <li>Partnership inquiries</li>
-                </ul>
-                
-                <p>You can reach us at: <strong>hello@ryokome.com</strong></p>
-                
-                <div class="highlight-box">
-                    <h3>Thank You for Traveling with Us</h3>
-                    <p>Whether you're planning your first international trip or your fiftieth, we're honored to be part of your journey. Travel has the power to change perspectives, create memories, and connect us across cultures. Our goal is simply to make that experience a little easier, cheaper, and more enjoyable.</p>
-                    <p>Safe travels,<br>
-                    <strong>The Ryokome Team</strong></p>
-                </div>
-            </article>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Related Content -->
-    <section class="section section-alt">
+    <!-- Why Trust Us -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title text-center">Start Your Travel Planning</h2>
-            <div class="card-grid" data-animate>
-                <div class="card">
-                    <h3>Find Cheap Flights</h3>
-                    <p>Use our comparison tool to find the best flight deals for your destination.</p>
-                    <a href="flights.html" class="btn btn-outline">Search Flights</a>
+            <div class="section-content">
+                <h2 class="section-title">Why Trust Ryokome</h2>
+                <p class="section-text">Trust in travel advice is earned through consistency, transparency, and prioritizing traveler needs over business incentives. Here's how we maintain that trust.</p>
+                
+                <div class="trust-grid">
+                    <div class="trust-card">
+                        <div class="trust-icon">🔍</div>
+                        <h3 class="trust-title">No Hidden Influences</h3>
+                        <p class="trust-description">We don't accept payments for placement or preferential treatment. Our comparisons are based on objective criteria like price transparency, customer service ratings, and policy clarity.</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <div class="trust-icon">📊</div>
+                        <h3 class="trust-title">Data-Driven Analysis</h3>
+                        <p class="trust-description">Our advice is based on actual booking data, industry research, and continuous monitoring. We track price trends, policy changes, and customer feedback to ensure our guidance remains relevant.</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <div class="trust-icon">👥</div>
+                        <h3 class="trust-title">Traveler-First Approach</h3>
+                        <p class="trust-description">Every decision starts with the question: "What helps travelers make better choices?" This philosophy shapes our content, comparison criteria, and recommendation methodology.</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <div class="trust-icon">🔄</div>
+                        <h3 class="trust-title">Continuous Updates</h3>
+                        <p class="trust-description">Travel changes constantly. We regularly review and update our content to reflect current industry practices, pricing structures, and regulatory requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Complete Transparency</h2>
+                <p class="section-text">We believe transparency should be the standard in travel, not an exception. Here's exactly how our platform operates.</p>
+                
+                <div class="transparency-box">
+                    <div class="transparency-header">
+                        <div class="transparency-icon">💰</div>
+                        <h3 class="transparency-title">Our Business Model</h3>
+                    </div>
+                    <div class="transparency-content">
+                        <p>Ryokome earns revenue through affiliate commissions when travelers book through our partner links. This model aligns our success with yours: we only earn when you find value in our recommendations.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>Important:</strong> These commissions do not increase your costs. Prices shown through our platform are identical to booking directly. Our affiliate relationships never influence search results or rankings—we display options based on objective criteria.</p>
+                        
+                        <p style="margin-top: 15px;">We maintain editorial independence by separating our comparison research from revenue considerations. Our content team operates without access to affiliate performance data, ensuring recommendations remain unbiased.</p>
+                        
+                        <p style="margin-top: 15px;"><a href="#">View our complete affiliate disclosure</a> for detailed information about our partnerships and revenue structure.</p>
+                    </div>
                 </div>
                 
-                <div class="card">
-                    <h3>Travel Checklist</h3>
-                    <p>Don't forget anything important with our comprehensive pre-trip checklist.</p>
-                    <a href="travel-checklist.html" class="btn btn-outline">Get Checklist</a>
-                </div>
+                <p class="section-text">We welcome scrutiny of our methods and recommendations. If you ever have questions about how we operate or why we suggest certain options, please contact us directly. We'll provide detailed explanations of our research and reasoning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Contact & Questions</h2>
+                <p class="section-text">We're committed to being accessible and responsive. Whether you have feedback, questions about our methodology, or need clarification on our recommendations, we're here to help.</p>
                 
-                <div class="card">
-                    <h3>Travel Blog</h3>
-                    <p>Read our latest articles with travel tips, stories, and destination guides.</p>
-                    <a href="blog.html" class="btn btn-outline">Read Blog</a>
+                <div class="contact-info">
+                    <h3 class="contact-title">Get in Touch</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-label">General Inquiries</div>
+                        <div class="contact-value">contact@ryokome.com</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-label">Content & Editorial</div>
+                        <div class="contact-value">editorial@ryokome.com</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-label">Feedback & Suggestions</div>
+                        <div class="contact-value">feedback@ryokome.com</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-label">Response Time</div>
+                        <div class="contact-value">We aim to respond within 2 business days. All emails receive a personal reply, not automated responses.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <h3>Ryokome</h3>
-                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                    <p style="color: #B0B7C3; margin-bottom: 20px;">Independent travel comparison and guidance based on transparency and traveler-first principles.</p>
                 </div>
                 
                 <div>
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="flights.html">Flight Comparison</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                        <li><a href="insurance.html">Travel Insurance</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3>Resources</h3>
+                    <h3>Travel Resources</h3>
                     <ul class="footer-links">
                         <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                        <li><a href="blog.html">Travel Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="flights.html">Flight Booking Guide</a></li>
+                        <li><a href="cars.html">Car Rental Guide</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3>Legal</h3>
+                    <h3>Legal & Transparency</h3>
                     <ul class="footer-links">
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" class="active">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
+            <div class="copyright">
+                <p>© 2023 Ryokome. All rights reserved. Ryokome is an independent travel comparison platform.</p>
+                <p style="margin-top: 10px;">Our content represents our independent analysis and should not be considered professional financial or legal advice.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
+        // Tab switching functionality
+        const allTabs = document.querySelectorAll('.nav-tab, .mobile-tab');
+        allTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active state
+                allTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close mobile menu after selection
+                document.getElementById('mobileMenu').classList.remove('active');
+            });
+        });
+        
+        // Sticky header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.05)';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple email obfuscation (basic protection)
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailElements = document.querySelectorAll('.contact-value');
+            emailElements.forEach(element => {
+                if (element.textContent.includes('@')) {
+                    // Basic protection - in production you might use more robust methods
+                    element.innerHTML = element.innerHTML.replace(/@/g, '&#64;').replace(/\./g, '&#46;');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

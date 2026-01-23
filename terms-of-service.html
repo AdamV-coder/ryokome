@@ -3,309 +3,708 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ryokome Terms of Service - Terms governing your use of our travel comparison website and services.">
-    <title>Terms of Service | Ryokome</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <title>Terms of Service | Ryokome Travel Platform</title>
+    <meta name="description" content="Ryokome Terms of Service: Legal agreement governing use of our travel comparison platform, including limitations of liability and user responsibilities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1B2DD9;
+            --primary-dark: #0F1FA6;
+            --secondary: #26A9E0;
+            --success: #1EC912;
+            --dark: #262626;
+            --light: #FFFFFF;
+            --gray: #F5F7FA;
+            --gray-medium: #E8ECEF;
+            --gray-dark: #6C757D;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 8px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 5px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--light);
+            box-shadow: var(--shadow-heavy);
+            padding: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn,
+            .mobile-menu {
+                display: none;
+            }
+            .nav-desktop {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            .header-content {
+                padding: 0 20px;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        @media (min-width: 768px) {
+            .page-header {
+                padding: 80px 0 60px;
+            }
+            .page-header h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-medium);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 40px 0 20px;
+            color: var(--dark);
+        }
+
+        .section-text {
+            color: var(--gray-dark);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .section-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Terms Sections */
+        .terms-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--gray-medium);
+        }
+
+        .terms-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .terms-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Lists */
+        .terms-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .terms-list li {
+            margin-bottom: 10px;
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+
+        .terms-list strong {
+            color: var(--dark);
+        }
+
+        /* Important Notice */
+        .notice-box {
+            background: #fff8f8;
+            border: 1px solid #ffeaea;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        .notice-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Definitions */
+        .definitions {
+            background: var(--gray);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .definition-item {
+            margin-bottom: 20px;
+        }
+
+        .definition-term {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .definition-description {
+            color: var(--gray-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #B0B7C3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #B0B7C3;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Utility */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" data-animate>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Ryokome</a>
-            
-            <div class="nav-center">
-                <a href="flights.html" class="tab-button">Flights</a>
-                <a href="cars.html" class="tab-button">Cars</a>
-                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
-                <a href="insurance.html" class="tab-button">Insurance</a>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Ryo<span>kome</span></a>
+                
+                <nav class="nav-desktop">
+                    <div class="nav-right">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="terms-of-service.html" class="nav-link active">Terms</a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             </div>
-            
-            <div class="nav-right">
-                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <nav class="mobile-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="terms-of-service.html" class="nav-link active">Terms</a>
+                </nav>
             </div>
-            
-            <button class="hamburger">☰</button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="index.html" class="logo">Ryokome</a>
-            <button class="close-mobile-nav">✕</button>
-        </div>
-        <div class="mobile-nav-links">
-            <a href="flights.html" class="mobile-tab-button">Flights</a>
-            <a href="cars.html" class="mobile-tab-button">Cars</a>
-            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
-            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
-            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
-            <a href="blog.html" class="mobile-nav-link">Blog</a>
-            <a href="about.html" class="mobile-nav-link">About</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content" data-animate>
-                <h1>Terms of Service</h1>
-                <p>Last updated: January 15, 2024</p>
-            </div>
+            <h1>Terms of Service</h1>
+            <p>Legal agreement governing your use of the Ryokome travel comparison platform. Please read these terms carefully before using our services.</p>
+            <p class="last-updated">Last updated: December 2023</p>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="section">
+    <main class="content-section">
         <div class="container">
-            <article class="content" data-animate>
-                <h1>Ryokome Terms of Service</h1>
-                
-                <p>Please read these Terms of Service ("Terms") carefully before using the Ryokome website (the "Service") operated by Ryokome ("us," "we," or "our").</p>
-                
-                <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.</p>
-                
-                <p><strong>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Service.</strong></p>
-                
-                <h2>1. Description of Service</h2>
-                
-                <p>Ryokome is a travel comparison website that:</p>
-                <ul>
-                    <li>Provides travel information, guides, and checklists</li>
-                    <li>Compares prices from various travel providers</li>
-                    <li>Directs users to third-party travel providers for booking</li>
-                    <li>Publishes travel-related content and advice</li>
-                </ul>
-                
-                <p><strong>Important:</strong> We are not a travel agency, booking platform, or travel provider. We do not book travel, process payments, or handle reservations. All bookings are made directly with third-party providers.</p>
-                
-                <h2>2. User Responsibilities</h2>
-                
-                <p>By using our Service, you agree to:</p>
-                
-                <h3>Accuracy of Information</h3>
-                <p>You are responsible for verifying all travel information, including but not limited to:</p>
-                <ul>
-                    <li>Flight schedules and availability</li>
-                    <li>Hotel rates and policies</li>
-                    <li>Car rental terms and conditions</li>
-                    <li>Travel requirements (visas, passports, vaccinations)</li>
-                    <li>Provider terms and cancellation policies</li>
-                </ul>
-                
-                <h3>Legal Compliance</h3>
-                <p>You agree to comply with all applicable laws and regulations regarding travel and use of our Service.</p>
-                
-                <h3>Account Security</h3>
-                <p>If you create an account with us (for newsletters, etc.), you are responsible for maintaining the confidentiality of your account information.</p>
-                
-                <h2>3. Intellectual Property</h2>
-                
-                <p>The Service and its original content, features, and functionality are owned by Ryokome and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
-                
-                <p>You may not:</p>
-                <ul>
-                    <li>Copy, modify, or create derivative works of our content</li>
-                    <li>Use our trademarks or logos without permission</li>
-                    <li>Scrape, crawl, or collect content from our website</li>
-                    <li>Reverse engineer any part of our Service</li>
-                </ul>
-                
-                <h2>4. Third-Party Links and Services</h2>
-                
-                <p>Our Service contains links to third-party websites and services that are not owned or controlled by Ryokome.</p>
-                
-                <p>We have no control over, and assume no responsibility for:</p>
-                <ul>
-                    <li>The content, privacy policies, or practices of any third-party sites or services</li>
-                    <li>The accuracy of prices, availability, or terms shown by third-party providers</li>
-                    <li>The quality or safety of travel services provided by third parties</li>
-                </ul>
-                
-                <p>You acknowledge and agree that Ryokome shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
-                
-                <h2>5. Disclaimer of Warranties</h2>
-                
-                <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. RYOKOME MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THE SERVICE OR THE INFORMATION, CONTENT, OR MATERIALS INCLUDED THEREON.</p>
-                
-                <p>TO THE FULLEST EXTENT PERMISSIBLE BY APPLICABLE LAW, RYOKOME DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
-                
-                <p>WE DO NOT WARRANT THAT:</p>
-                <ul>
-                    <li>The Service will be uninterrupted, timely, secure, or error-free</li>
-                    <li>The results obtained from using the Service will be accurate or reliable</li>
-                    <li>The quality of any products, services, information, or other material obtained through the Service will meet your expectations</li>
-                </ul>
-                
-                <h2>6. Limitation of Liability</h2>
-                
-                <p>IN NO EVENT SHALL RYOKOME, NOR ITS DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
-                
-                <ul>
-                    <li>Your access to or use of or inability to access or use the Service</li>
-                    <li>Any conduct or content of any third party on the Service</li>
-                    <li>Any content obtained from the Service</li>
-                    <li>Unauthorized access, use, or alteration of your transmissions or content</li>
-                    <li>Travel arrangements made through third-party providers</li>
-                    <li>Cancellations, delays, or other travel disruptions</li>
-                    <li>Errors or omissions in travel information</li>
-                </ul>
-                
-                <p>THIS LIMITATION APPLIES WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER BASIS, EVEN IF RYOKOME HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-                
-                <h2>7. Indemnification</h2>
-                
-                <p>You agree to defend, indemnify, and hold harmless Ryokome and its licensees and licensors, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of:</p>
-                
-                <ul>
-                    <li>Your use of and access to the Service</li>
-                    <li>Your violation of these Terms</li>
-                    <li>Your violation of any third-party right, including without limitation any copyright, property, or privacy right</li>
-                    <li>Any claim that your use of the Service caused damage to a third party</li>
-                </ul>
-                
-                <h2>8. Termination</h2>
-                
-                <p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
-                
-                <p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
-                
-                <h2>9. Governing Law</h2>
-                
-                <p>These Terms shall be governed and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions.</p>
-                
-                <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
-                
-                <h2>10. Changes to Terms</h2>
-                
-                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
-                
-                <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
-                
-                <h2>11. Affiliate Relationships</h2>
-                
-                <p>Ryokome participates in affiliate marketing programs. This means we may earn commissions on bookings made through links on our website. These commissions come at no additional cost to you.</p>
-                
-                <p>We are committed to providing unbiased recommendations regardless of commission rates. Our comparison tools show all available options, not just those from affiliate partners.</p>
-                
-                <p>For more information, see our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
-                
-                <h2>12. Travel Advisory</h2>
-                
-                <p>Travel involves risks. You are responsible for:</p>
-                <ul>
-                    <li>Checking travel advisories from your government</li>
-                    <li>Obtaining necessary travel documents (passports, visas, etc.)</li>
-                    <li>Purchasing adequate travel insurance</li>
-                    <li>Understanding health and safety risks at your destination</li>
-                </ul>
-                
-                <h2>13. Price and Availability Information</h2>
-                
-                <p>Travel prices and availability change frequently. We strive to provide accurate information but cannot guarantee:</p>
-                <ul>
-                    <li>That prices shown are the lowest available</li>
-                    <li>That prices won't change before booking</li>
-                    <li>That all available options are displayed</li>
-                    <li>That providers will honor displayed prices</li>
-                </ul>
-                
-                <p>Always verify prices and availability directly with the provider before booking.</p>
-                
-                <h2>14. Contact Us</h2>
-                
-                <p>If you have any questions about these Terms, please contact us at:</p>
-                
-                <div class="highlight-box">
-                    <p><strong>Email:</strong> legal@ryokome.com</p>
-                    <p><strong>Mail:</strong><br>
-                    Ryokome Legal Department<br>
-                    123 Travel Street<br>
-                    San Francisco, CA 94107<br>
-                    United States</p>
+            <div class="notice-box">
+                <h3 class="notice-title">Important Legal Notice</h3>
+                <p class="section-text">By accessing or using the Ryokome website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+            </div>
+
+            <h2 class="section-title">Agreement to Terms</h2>
+            <p class="section-text">These Terms of Service ("Terms") constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Ryokome ("we," "us," or "our"), concerning your access to and use of the ryokome.com website as well as any related applications (the "Site").</p>
+            
+            <p class="section-text">The Site provides an online travel comparison platform that allows users to compare travel options, access travel information, and be redirected to third-party booking platforms. We do not directly book or sell travel services.</p>
+
+            <div class="definitions">
+                <div class="definition-item">
+                    <div class="definition-term">Site</div>
+                    <div class="definition-description">The ryokome.com website and associated web pages.</div>
                 </div>
-                
-                <div class="highlight-box">
-                    <h3>Summary for Users</h3>
-                    <p>We provide travel comparison information, not booking services. Always verify information with providers. We're not responsible for third-party services. Prices and availability change frequently. Travel involves risks - get insurance and check travel advisories.</p>
+                <div class="definition-item">
+                    <div class="definition-term">Services</div>
+                    <div class="definition-description">Travel comparison, information provision, and redirection services provided through the Site.</div>
                 </div>
-            </article>
+                <div class="definition-item">
+                    <div class="definition-term">Content</div>
+                    <div class="definition-description">All information, text, graphics, data, and other materials displayed on or available through the Site.</div>
+                </div>
+                <div class="definition-item">
+                    <div class="definition-term">Third-Party Services</div>
+                    <div class="definition-description">External platforms, including but not limited to airlines, hotels, car rental companies, insurance providers, and booking platforms.</div>
+                </div>
+            </div>
+
+            <!-- Acceptable Use -->
+            <div class="terms-item">
+                <h3 class="terms-title">1. Acceptable Use of the Site</h3>
+                <p class="section-text">You agree to use the Site only for lawful purposes and in accordance with these Terms. You agree not to use the Site:</p>
+                
+                <ul class="terms-list">
+                    <li>In any way that violates any applicable federal, state, local, or international law or regulation</li>
+                    <li>To engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Site</li>
+                    <li>To attempt to interfere with the proper working of the Site or bypass any measures we use to restrict access</li>
+                    <li>To use any robot, spider, or other automatic device, process, or means to access the Site for any purpose</li>
+                    <li>To introduce any viruses, trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful</li>
+                    <li>To attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Site or systems connected to the Site</li>
+                </ul>
+            </div>
+
+            <!-- Intellectual Property -->
+            <div class="terms-item">
+                <h3 class="terms-title">2. Intellectual Property Rights</h3>
+                <p class="section-text">The Site and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by Ryokome, its licensors, or other providers of such material and are protected by copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+                
+                <p class="section-text">You are granted a limited, non-exclusive, non-transferable, and revocable license to access and use the Site for personal, non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Site, except as follows:</p>
+                
+                <ul class="terms-list">
+                    <li>Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials</li>
+                    <li>You may store files that are automatically cached by your Web browser for display enhancement purposes</li>
+                    <li>You may print or download one copy of a reasonable number of pages of the Site for your own personal, non-commercial use</li>
+                </ul>
+                
+                <p class="section-text">The Ryokome name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Ryokome or its affiliates or licensors. You must not use such marks without our prior written permission.</p>
+            </div>
+
+            <!-- User Content -->
+            <div class="terms-item">
+                <h3 class="terms-title">3. User Contributions</h3>
+                <p class="section-text">The Site may contain message boards, chat rooms, personal web pages or profiles, forums, and other interactive features that allow users to post, submit, publish, display, or transmit content or materials.</p>
+                
+                <p class="section-text">Any User Contribution you post to the site will be considered non-confidential and non-proprietary. By providing any User Contribution on the Site, you grant us and our affiliates and service providers, and each of their and our respective licensees, successors, and assigns the right to use, reproduce, modify, perform, display, distribute, and otherwise disclose to third parties any such material.</p>
+                
+                <p class="section-text">You represent and warrant that:</p>
+                
+                <ul class="terms-list">
+                    <li>You own or control all rights in and to the User Contributions and have the right to grant the license granted above to us and our affiliates and service providers, and each of their and our respective licensees, successors, and assigns</li>
+                    <li>All of your User Contributions do and will comply with these Terms of Service</li>
+                </ul>
+                
+                <p class="section-text">We have the right to remove or refuse to post any User Contributions for any or no reason in our sole discretion.</p>
+            </div>
+
+            <!-- Affiliate Disclosure -->
+            <div class="terms-item">
+                <h3 class="terms-title">4. Affiliate Relationships and Compensation</h3>
+                <p class="section-text">Ryokome participates in various affiliate marketing programs, which means we may earn commissions on purchases made through our links to retailer sites. Our affiliate relationships include but are not limited to partnerships with travel booking platforms, airlines, hotels, and car rental companies.</p>
+                
+                <p class="section-text">Important terms regarding our affiliate relationships:</p>
+                
+                <ul class="terms-list">
+                    <li>Commissions received do not affect the price you pay for travel services</li>
+                    <li>We maintain editorial independence in our recommendations and comparisons</li>
+                    <li>Affiliate relationships do not guarantee placement or preferential treatment in search results</li>
+                    <li>All prices displayed are provided by third parties and are subject to change without notice</li>
+                </ul>
+                
+                <p class="section-text">For complete details about our affiliate relationships and compensation structure, please refer to our <a href="#" style="color: var(--primary); text-decoration: none;">Affiliate Disclosure</a>.</p>
+            </div>
+
+            <!-- Third-Party Links -->
+            <div class="terms-item">
+                <h3 class="terms-title">5. Third-Party Links and Services</h3>
+                <p class="section-text">The Site contains links to third-party websites and services that are not owned or controlled by Ryokome. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
+                
+                <p class="section-text">You acknowledge and agree that Ryokome shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+                
+                <p class="section-text">We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit. When you leave our Site, these Terms no longer govern.</p>
+            </div>
+
+            <!-- Disclaimer of Warranties -->
+            <div class="terms-item">
+                <h3 class="terms-title">6. Disclaimer of Warranties</h3>
+                <p class="section-text">YOUR USE OF THE SITE AND SERVICES IS AT YOUR SOLE RISK. THE SITE AND SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. RYOKOME EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+                
+                <p class="section-text">RYOKOME MAKES NO WARRANTY THAT:</p>
+                
+                <ul class="terms-list">
+                    <li>THE SITE OR SERVICES WILL MEET YOUR REQUIREMENTS</li>
+                    <li>THE SITE OR SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE</li>
+                    <li>THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SITE OR SERVICES WILL BE ACCURATE OR RELIABLE</li>
+                    <li>THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SITE WILL MEET YOUR EXPECTATIONS</li>
+                    <li>ANY ERRORS IN THE SOFTWARE WILL BE CORRECTED</li>
+                </ul>
+                
+                <p class="section-text">ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SITE OR SERVICES IS DONE AT YOUR OWN DISCRETION AND RISK AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF ANY SUCH MATERIAL.</p>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="terms-item">
+                <h3 class="terms-title">7. Limitation of Liability</h3>
+                <p class="section-text">TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL RYOKOME, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+                
+                <ul class="terms-list">
+                    <li>YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SITE OR SERVICES</li>
+                    <li>ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SITE OR SERVICES</li>
+                    <li>ANY CONTENT OBTAINED FROM THE SITE OR SERVICES</li>
+                    <li>UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT</li>
+                </ul>
+                
+                <p class="section-text">IN NO EVENT SHALL RYOKOME'S AGGREGATE LIABILITY FOR ALL CLAIMS RELATING TO THE SITE OR SERVICES EXCEED ONE HUNDRED U.S. DOLLARS (U.S. $100.00) OR THE EQUIVALENT IN LOCAL CURRENCY.</p>
+                
+                <p class="section-text">SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES. ACCORDINGLY, SOME OF THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.</p>
+            </div>
+
+            <!-- Price Accuracy -->
+            <div class="terms-item">
+                <h3 class="terms-title">8. Price and Availability Information</h3>
+                <p class="section-text">Ryokome displays travel price and availability information provided by third-party suppliers and booking platforms. We strive to provide accurate and current information but cannot guarantee the accuracy, completeness, or timeliness of the information displayed.</p>
+                
+                <p class="section-text">Important terms regarding prices and availability:</p>
+                
+                <ul class="terms-list">
+                    <li>All prices are subject to change without notice</li>
+                    <li>Displayed prices may not include all taxes, fees, or additional charges</li>
+                    <li>Availability of travel services is not guaranteed until confirmed by the service provider</li>
+                    <li>Prices may vary based on booking time, demand, and other market factors</li>
+                    <li>Currency conversions are approximate and may not reflect exact exchange rates</li>
+                </ul>
+                
+                <p class="section-text">You acknowledge that Ryokome is not responsible for any errors or omissions in price or availability information provided by third parties.</p>
+            </div>
+
+            <!-- Indemnification -->
+            <div class="terms-item">
+                <h3 class="terms-title">9. Indemnification</h3>
+                <p class="section-text">You agree to defend, indemnify, and hold harmless Ryokome, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Site, including, but not limited to, any use of the Site's content, services, and products other than as expressly authorized in these Terms or your use of any information obtained from the Site.</p>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="terms-item">
+                <h3 class="terms-title">10. Governing Law and Dispute Resolution</h3>
+                <p class="section-text">These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Ryokome is established, without regard to its conflict of law provisions.</p>
+                
+                <p class="section-text">Any dispute arising from or relating to these Terms or your use of the Site shall first be subject to informal negotiation between the parties. If such negotiation does not resolve the dispute within thirty (30) days, either party may seek resolution through mediation administered by a mutually agreed mediator.</p>
+                
+                <p class="section-text">If mediation is unsuccessful, the dispute may be submitted to binding arbitration in accordance with the rules of the International Chamber of Commerce. The arbitration shall take place in a neutral location mutually agreed upon by the parties.</p>
+                
+                <p class="section-text">Notwithstanding the foregoing, Ryokome may seek injunctive or other equitable relief to protect its intellectual property rights in any court of competent jurisdiction.</p>
+            </div>
+
+            <!-- Changes to Terms -->
+            <div class="terms-item">
+                <h3 class="terms-title">11. Changes to These Terms</h3>
+                <p class="section-text">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                
+                <p class="section-text">By continuing to access or use our Site after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you must stop using the Site.</p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="terms-item">
+                <h3 class="terms-title">12. Contact Information</h3>
+                <p class="section-text">If you have any questions about these Terms of Service, please contact us at:</p>
+                
+                <ul class="terms-list">
+                    <li><strong>Email:</strong> legal@ryokome.com</li>
+                    <li><strong>Response Time:</strong> We aim to respond to legal inquiries within 30 days</li>
+                </ul>
+            </div>
+
+            <div class="notice-box">
+                <h3 class="notice-title">Severability and Waiver</h3>
+                <p class="section-text">If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect. The failure of Ryokome to enforce any right or provision of these Terms will not be deemed a waiver of such right or provision.</p>
+            </div>
         </div>
     </main>
 
-    <!-- Related Policies -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title text-center">Related Policies</h2>
-            <div class="card-grid" data-animate>
-                <div class="card">
-                    <h3>Privacy Policy</h3>
-                    <p>How we collect, use, and protect your personal information.</p>
-                    <a href="privacy-policy.html" class="btn btn-outline">Read Privacy Policy</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Cookie Policy</h3>
-                    <p>How we use cookies and similar technologies on our website.</p>
-                    <a href="cookie-policy.html" class="btn btn-outline">Read Cookie Policy</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Affiliate Disclosure</h3>
-                    <p>How we earn commissions and our commitment to unbiased recommendations.</p>
-                    <a href="affiliate-disclosure.html" class="btn btn-outline">Read Disclosure</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <h3>Ryokome</h3>
-                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                    <p style="color: #B0B7C3; margin-bottom: 20px;">Independent travel comparison platform providing transparent information and guidance.</p>
                 </div>
                 
                 <div>
-                    <h3>Services</h3>
+                    <h3>Legal Documents</h3>
                     <ul class="footer-links">
-                        <li><a href="flights.html">Flight Comparison</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                        <li><a href="insurance.html">Travel Insurance</a></li>
+                        <li><a href="terms-of-service.html" class="active">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3>Resources</h3>
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Travel Resources</h3>
                     <ul class="footer-links">
                         <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                        <li><a href="blog.html">Travel Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3>Legal</h3>
-                    <ul class="footer-links">
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="flights.html">Flight Guide</a></li>
+                        <li><a href="cars.html">Car Rental Guide</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
+            <div class="copyright">
+                <p>© 2023 Ryokome. All rights reserved. These Terms of Service are effective as of the last updated date above.</p>
+                <p style="margin-top: 10px;">Ryokome is an independent travel comparison platform. We do not directly book travel services.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
+        // Sticky header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.05)';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple email obfuscation
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailElements = document.querySelectorAll('.terms-list li');
+            emailElements.forEach(element => {
+                if (element.textContent.includes('@')) {
+                    element.innerHTML = element.innerHTML.replace(/@/g, '&#64;').replace(/\./g, '&#46;');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

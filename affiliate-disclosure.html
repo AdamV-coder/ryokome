@@ -3,364 +3,792 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ryokome Affiliate Disclosure - Learn how we earn commissions and our commitment to providing unbiased travel recommendations.">
-    <title>Affiliate Disclosure | Ryokome</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <title>Affiliate Disclosure | Ryokome Travel Platform</title>
+    <meta name="description" content="Transparent affiliate disclosure: Ryokome earns commissions from travel bookings made through our links at no extra cost to you. Complete editorial independence maintained.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1B2DD9;
+            --primary-dark: #0F1FA6;
+            --secondary: #26A9E0;
+            --success: #1EC912;
+            --dark: #262626;
+            --light: #FFFFFF;
+            --gray: #F5F7FA;
+            --gray-medium: #E8ECEF;
+            --gray-dark: #6C757D;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 8px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 5px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--light);
+            box-shadow: var(--shadow-heavy);
+            padding: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn,
+            .mobile-menu {
+                display: none;
+            }
+            .nav-desktop {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            .header-content {
+                padding: 0 20px;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .page-header {
+                padding: 80px 0 60px;
+            }
+            .page-header h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 40px 0 20px;
+            color: var(--dark);
+        }
+
+        .section-text {
+            color: var(--gray-dark);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .section-text:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Transparency Box */
+        .transparency-box {
+            background: #fff8f8;
+            border: 1px solid #ffeaea;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        .transparency-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .transparency-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .transparency-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--gray);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        @media (min-width: 768px) {
+            .steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Key Principles */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .principle-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .principle-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .principle-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .principle-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        @media (min-width: 768px) {
+            .principles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin: 60px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid var(--gray-medium);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: var(--light);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--gray);
+        }
+
+        .faq-question.active {
+            background: var(--gray);
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            background: var(--light);
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 1000px;
+        }
+
+        /* Contact */
+        .contact-section {
+            text-align: center;
+            padding: 50px 0;
+            background: var(--gray);
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #B0B7C3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #B0B7C3;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Utility */
+        .hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" data-animate>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Ryokome</a>
-            
-            <div class="nav-center">
-                <a href="flights.html" class="tab-button">Flights</a>
-                <a href="cars.html" class="tab-button">Cars</a>
-                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
-                <a href="insurance.html" class="tab-button">Insurance</a>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Ryo<span>kome</span></a>
+                
+                <nav class="nav-desktop">
+                    <div class="nav-right">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="affiliate-disclosure.html" class="nav-link active">Affiliate Disclosure</a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             </div>
-            
-            <div class="nav-right">
-                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <nav class="mobile-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="affiliate-disclosure.html" class="nav-link active">Affiliate Disclosure</a>
+                </nav>
             </div>
-            
-            <button class="hamburger">☰</button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="index.html" class="logo">Ryokome</a>
-            <button class="close-mobile-nav">✕</button>
-        </div>
-        <div class="mobile-nav-links">
-            <a href="flights.html" class="mobile-tab-button">Flights</a>
-            <a href="cars.html" class="mobile-tab-button">Cars</a>
-            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
-            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
-            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
-            <a href="blog.html" class="mobile-nav-link">Blog</a>
-            <a href="about.html" class="mobile-nav-link">About</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content" data-animate>
-                <h1>Affiliate Disclosure</h1>
-                <p>Transparency about how we earn commissions and our commitment to unbiased travel recommendations.</p>
-            </div>
+            <h1>Affiliate Disclosure</h1>
+            <p>Complete transparency about how Ryokome earns revenue. We believe in clear disclosure and maintaining editorial independence in our travel recommendations.</p>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="section">
+    <main class="content-section">
         <div class="container">
-            <article class="content" data-animate>
-                <h1>Our Affiliate Relationships</h1>
-                
-                <p>At Ryokome, we believe in transparency. This page explains how we earn revenue and how it affects the content and recommendations on our website.</p>
-                
-                <div class="highlight-box">
-                    <h3>TL;DR - Quick Summary</h3>
-                    <p>Ryokome earns commissions when you book travel through links on our site. These commissions come at <strong>no additional cost to you</strong>. We show all available options in our comparison tools, not just those from partners. We never let commissions influence our recommendations. Our goal is to help you find the best travel deals, regardless of commission rates.</p>
+            <div class="transparency-box">
+                <div class="transparency-header">
+                    <div class="transparency-icon">💰</div>
+                    <h2 class="transparency-title">Clear Disclosure Statement</h2>
                 </div>
-                
-                <h2>1. How Affiliate Marketing Works</h2>
-                
-                <p>Ryokome participates in affiliate marketing programs, including:</p>
-                
-                <ul>
-                    <li><strong>Travelpayouts:</strong> A major travel affiliate network connecting publishers with travel companies</li>
-                    <li><strong>Individual partnerships:</strong> Direct relationships with specific travel providers</li>
-                    <li><strong>Advertising networks:</strong> Display advertising on our site</li>
-                </ul>
-                
-                <p>Here's how it works:</p>
-                <ol>
-                    <li>You search for travel deals using our comparison tools</li>
-                    <li>You click on a deal that interests you</li>
-                    <li>You're redirected to the travel provider's website</li>
-                    <li>You complete your booking directly with the provider</li>
-                    <li>If you book, the provider pays us a commission (typically 1-10% of the booking value)</li>
-                </ol>
-                
-                <p><strong>Important:</strong> The price you pay is exactly the same whether you book through our links or go directly to the provider's website. We do not add any fees or markups.</p>
-                
-                <h2>2. Our Commitment to Unbiased Recommendations</h2>
-                
-                <p>We take several steps to ensure our recommendations remain unbiased:</p>
-                
-                <h3>Comparison Tools Show All Options</h3>
-                <p>Our flight, car rental, and hotel comparison tools display <strong>all available options</strong> from our data sources, not just those from affiliate partners. We sort results by price (lowest first) by default, not by commission rate.</p>
-                
-                <h3>Editorial Independence</h3>
-                <p>Our travel guides, checklists, and articles are written based on genuine travel experience and research, not based on which companies pay the highest commissions.</p>
-                
-                <h3>Clear Disclosure</h3>
-                <p>We clearly disclose affiliate relationships (like on this page) and include disclosure notices on pages containing affiliate links.</p>
-                
-                <h3>Regular Price Verification</h3>
-                <p>We regularly check that prices shown through our affiliate links are the same as prices available directly from providers.</p>
-                
-                <h2>3. Types of Affiliate Relationships</h2>
-                
-                <h3>Flight Comparisons</h3>
-                <p>We work with multiple flight search providers and online travel agencies. Our comparison tool aggregates results from various sources to show you the widest selection of options.</p>
-                
-                <h3>Car Rentals</h3>
-                <p>We partner with major car rental companies and comparison platforms. You'll see options from all major providers regardless of our partnership status.</p>
-                
-                <h3>Hotel Bookings</h3>
-                <p>Through our hotel search widget, you can compare prices from hundreds of booking sites and hotel chains.</p>
-                
-                <h3>Travel Insurance</h3>
-                <p>We may earn commissions on insurance policies purchased through our comparison tools. We recommend specific policies based on coverage and value, not commission rates.</p>
-                
-                <h2>4. What We Don't Do</h2>
-                
-                <div class="card-grid mt-3">
-                    <div class="card">
-                        <h3>No Price Manipulation</h3>
-                        <p>We don't inflate prices or add hidden fees. The price you see is the price you pay.</p>
+                <p class="section-text"><strong>Ryokome earns commissions from travel bookings made through links on our website.</strong> This means when you click on a travel option (flight, hotel, car rental, etc.) and complete a booking, we may receive a commission from the booking platform or service provider.</p>
+                <p class="section-text"><strong>Important:</strong> These commissions do not increase the price you pay. You pay exactly the same price whether you book through our links or go directly to the provider's website.</p>
+            </div>
+
+            <h2 class="section-title">How Our Affiliate Program Works</h2>
+            <p class="section-text">Ryokome participates in affiliate marketing programs with various travel booking platforms and service providers. Here's how it works in practice:</p>
+
+            <div class="how-it-works">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">You Search for Travel Options</h3>
+                        <p class="section-text">Use our comparison tools to find flights, hotels, car rentals, or other travel services. We show you options from multiple providers.</p>
                     </div>
                     
-                    <div class="card">
-                        <h3>No Fake Reviews</h3>
-                        <p>We don't publish fake positive reviews or hide negative information about partners.</p>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">You Click Through to Book</h3>
+                        <p class="section-text">When you find an option you like, clicking the "View Deal" or similar button takes you to the booking platform's website through our affiliate link.</p>
                     </div>
                     
-                    <div class="card">
-                        <h3>No Exclusive Deals</h3>
-                        <p>We don't claim to have "exclusive" deals that aren't available elsewhere.</p>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">You Complete Your Booking</h3>
+                        <p class="section-text">You book directly with the service provider (airline, hotel, etc.) on their website. The price you pay is identical to booking directly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-subtitle">Our Key Principles</h2>
+            <p class="section-text">To ensure we maintain trust and provide genuine value, we operate under these core principles:</p>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-header">
+                        <div class="principle-icon">⚖️</div>
+                        <h3 class="principle-title">No Additional Cost to You</h3>
+                    </div>
+                    <p class="section-text">Commissions are paid by the service provider, not by you. The price you see is the same price you would pay booking directly. We never add fees or markups.</p>
+                </div>
+                
+                <div class="principle-card">
+                    <div class="principle-header">
+                        <div class="principle-icon">📰</div>
+                        <h3 class="principle-title">Editorial Independence</h3>
+                    </div>
+                    <p class="section-text">Our recommendations and comparisons are based on objective criteria, not commission rates. We never accept payment for placement or preferential treatment.</p>
+                </div>
+                
+                <div class="principle-card">
+                    <div class="principle-header">
+                        <div class="principle-icon">🔍</div>
+                        <h3 class="principle-title">Transparent Comparison</h3>
+                    </div>
+                    <p class="section-text">We show all relevant options with clear information about what's included. We don't hide fees or promote partners based on commission potential.</p>
+                </div>
+                
+                <div class="principle-card">
+                    <div class="principle-header">
+                        <div class="principle-icon">🎯</div>
+                        <h3 class="principle-title">Traveler-First Approach</h3>
+                    </div>
+                    <p class="section-text">Every decision starts with the question: "What helps travelers make better choices?" Revenue considerations never override traveler interests.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Our Affiliate Partners</h2>
+            <p class="section-text">Ryokome works with established, reputable affiliate networks and travel providers. Our primary partners include:</p>
+
+            <div class="how-it-works" style="margin: 30px 0;">
+                <ul class="section-text" style="padding-left: 20px;">
+                    <li><strong>Travelpayouts/Aviasales:</strong> For flight comparison and booking</li>
+                    <li><strong>Rental car affiliate programs:</strong> With major international car rental companies</li>
+                    <li><strong>Hotel booking platforms:</strong> Various hotel affiliate partnerships</li>
+                    <li><strong>Travel insurance providers:</strong> Including EKTA Travel Insurance and others</li>
+                    <li><strong>Airport transfer services:</strong> Various ground transportation providers</li>
+                </ul>
+                <p class="section-text" style="margin-top: 20px;">We regularly evaluate our affiliate partnerships to ensure they meet our standards for traveler experience and service quality.</p>
+            </div>
+
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I pay more when booking through Ryokome?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="section-text">No, you pay exactly the same price. The commission comes from the service provider's marketing budget, not from additional charges to you. The price displayed is the same price you would pay if you went directly to the provider's website.</p>
                     </div>
                 </div>
                 
-                <h2>5. How We Use Commission Revenue</h2>
-                
-                <p>Commissions help us:</p>
-                
-                <ul>
-                    <li><strong>Maintain and improve our comparison tools</strong> - Technology and data feeds cost money</li>
-                    <li><strong>Create high-quality content</strong> - Research, writing, and fact-checking take time</li>
-                    <li><strong>Keep the website free</strong> - We don't charge users for access to our tools or content</li>
-                    <li><strong>Cover operational costs</strong> - Hosting, security, and customer support</li>
-                </ul>
-                
-                <p>Without affiliate commissions, we would need to charge subscription fees or show intrusive advertising. We believe the current model provides the best balance of free access for users and sustainable operation for us.</p>
-                
-                <h2>6. User Experience Considerations</h2>
-                
-                <p>We design our affiliate links to be as unobtrusive as possible:</p>
-                
-                <h3>Clear Labeling</h3>
-                <p>Links that may earn commissions are typically labeled with phrases like "Check price" or "View deal" rather than overly promotional language.</p>
-                
-                <h3>No Forced Redirects</h3>
-                <p>We don't use pop-ups, forced redirects, or other intrusive methods to get clicks.</p>
-                
-                <h3>Transparent Process</h3>
-                <p>When you click an affiliate link, it's clear you're going to a third-party website to complete your booking.</p>
-                
-                <h2>7. Data and Privacy</h2>
-                
-                <p>When you click an affiliate link:</p>
-                
-                <ul>
-                    <li>We may share anonymous tracking data with the affiliate network (like a unique identifier to track the click)</li>
-                    <li>We <strong>do not</strong> share personal information like your name, email, or travel details</li>
-                    <li>The travel provider only receives your information when you choose to book with them</li>
-                </ul>
-                
-                <p>For more details, see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-                
-                <h2>8. Our Editorial Standards</h2>
-                
-                <p>All content on Ryokome is created under these editorial standards:</p>
-                
-                <div class="highlight-box">
-                    <h3>Editorial Guidelines</h3>
-                    <ol>
-                        <li><strong>Accuracy First:</strong> We verify information from multiple sources before publishing</li>
-                        <li><strong>Experience-Based:</strong> Recommendations come from actual travel experience</li>
-                        <li><strong>Transparent:</strong> We disclose limitations and potential conflicts of interest</li>
-                        <li><strong>User-Focused:</strong> We prioritize what's genuinely helpful for travelers</li>
-                        <li><strong>Regular Updates:</strong> We review and update content regularly</li>
-                    </ol>
-                </div>
-                
-                <h2>9. Comparison with Other Business Models</h2>
-                
-                <p>Many travel websites use one of these models:</p>
-                
-                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
-                    <thead>
-                        <tr style="background-color: var(--light);">
-                            <th style="padding: 0.8rem; text-align: left; border: 1px solid var(--border);">Model</th>
-                            <th style="padding: 0.8rem; text-align: left; border: 1px solid var(--border);">How It Works</th>
-                            <th style="padding: 0.8rem; text-align: left; border: 1px solid var(--border);">Ryokome's Approach</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);"><strong>Paid Placements</strong></td>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);">Companies pay to be featured prominently</td>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);">We don't accept paid placements. All listings in comparison tools are based on availability and price.</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);"><strong>Subscription Fees</strong></td>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);">Users pay to access content or tools</td>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);">Our website is completely free to use.</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);"><strong>Intrusive Ads</strong></td>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);">Pop-ups, auto-play videos, etc.</td>
-                            <td style="padding: 0.8rem; border: 1px solid var(--border);">We use minimal, non-intrusive advertising.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h2>10. Your Rights as a User</h2>
-                
-                <p>As a Ryokome user, you have the right to:</p>
-                
-                <ul>
-                    <li><strong>Compare prices elsewhere:</strong> We encourage you to check prices on other sites</li>
-                    <li><strong>Book directly:</strong> You can always go directly to a provider's website</li>
-                    <li><strong>Ignore recommendations:</strong> Our advice is just that - advice</li>
-                    <li><strong>Ask questions:</strong> Contact us if you have concerns about any content</li>
-                </ul>
-                
-                <h2>11. How to Support Us Without Booking</h2>
-                
-                <p>If you find our content helpful but don't need to book travel right now, you can support us by:</p>
-                
-                <div class="card-grid mt-3">
-                    <div class="card">
-                        <h3>Share Our Content</h3>
-                        <p>Share helpful guides and checklists with fellow travelers.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do affiliate commissions influence your recommendations?</span>
+                        <span class="faq-icon">▼</span>
                     </div>
-                    
-                    <div class="card">
-                        <h3>Subscribe to Our Newsletter</h3>
-                        <p>Stay updated with our latest travel tips and tools.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Provide Feedback</h3>
-                        <p>Tell us what you find helpful and what we can improve.</p>
+                    <div class="faq-answer">
+                        <p class="section-text">No. Our editorial team operates independently from our revenue team. We never receive higher commissions for promoting specific options, and we never accept payment for placement. Recommendations are based on objective criteria including price transparency, customer service ratings, and overall value.</p>
                     </div>
                 </div>
                 
-                <h2>12. Questions and Concerns</h2>
-                
-                <p>We're committed to maintaining your trust. If you have any questions or concerns about our affiliate relationships:</p>
-                
-                <ul>
-                    <li>Notice a price discrepancy? Let us know</li>
-                    <li>Find a broken link? Report it to us</li>
-                    <li>Have suggestions for improvement? We'd love to hear them</li>
-                    <li>Question a recommendation? Ask us about it</li>
-                </ul>
-                
-                <div class="highlight-box">
-                    <h3>Contact Information</h3>
-                    <p><strong>Email:</strong> affiliates@ryokome.com</p>
-                    <p><strong>Mail:</strong><br>
-                    Ryokome Affiliate Relations<br>
-                    123 Travel Street<br>
-                    San Francisco, CA 94107<br>
-                    United States</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens if I book directly instead of through your links?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="section-text">You'll pay the same price and receive the same service. However, booking directly means Ryokome doesn't earn a commission. If you find our comparison tools and travel guidance valuable, using our affiliate links helps support our work in creating more helpful travel content.</p>
+                    </div>
                 </div>
                 
-                <h2>13. Policy Updates</h2>
-                
-                <p>We may update this Affiliate Disclosure from time to time. The "Last updated" date at the top of the page indicates when changes were made. Significant changes will be announced on our website or via our newsletter.</p>
-                
-                <div class="highlight-box">
-                    <h3>Final Note</h3>
-                    <p>We built Ryokome to help travelers, not to maximize commissions. While we earn revenue through affiliate links, our primary goal is providing genuine value. If we wouldn't recommend something to a friend or family member, we won't recommend it to you, regardless of commission potential.</p>
-                    <p>Thank you for trusting us with your travel planning.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this disclosure compliant with Google and FTC requirements?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="section-text">Yes. This disclosure meets and exceeds requirements from the Federal Trade Commission (FTC) in the United States and Google's affiliate program policies. We provide clear, conspicuous disclosure about our affiliate relationships before users engage with affiliate links.</p>
+                    </div>
                 </div>
-            </article>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I opt out of affiliate tracking?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="section-text">You can clear your browser cookies or use private browsing mode to prevent affiliate tracking. However, this means we won't receive credit if you decide to book after using our comparison tools. For more information, see our <a href="cookie-policy.html" style="color: var(--primary);">Cookie Policy</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2 class="section-subtitle">Questions About Our Disclosure?</h2>
+                <p class="section-text">If you have any questions about our affiliate relationships or how we maintain editorial independence, please contact us:</p>
+                <div class="how-it-works" style="max-width: 400px; margin: 30px auto;">
+                    <p class="section-text" style="text-align: center;">
+                        <strong>Email:</strong> disclosure@ryokome.com<br>
+                        <strong>Response Time:</strong> Within 48 hours
+                    </p>
+                </div>
+            </div>
+
+            <div class="transparency-box">
+                <h3 class="transparency-title">Our Commitment to Transparency</h3>
+                <p class="section-text">We believe that trust is earned through honesty and transparency. While affiliate commissions help fund our platform and content creation, they never compromise our commitment to providing genuine, helpful travel guidance.</p>
+                <p class="section-text" style="margin-top: 15px;">If you ever feel that our recommendations don't align with this commitment, please contact us immediately. We take these matters seriously and will investigate any concerns thoroughly.</p>
+            </div>
         </div>
     </main>
 
-    <!-- Related Policies -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title text-center">Related Policies</h2>
-            <div class="card-grid" data-animate>
-                <div class="card">
-                    <h3>Privacy Policy</h3>
-                    <p>How we collect, use, and protect your personal information.</p>
-                    <a href="privacy-policy.html" class="btn btn-outline">Read Privacy Policy</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Terms of Service</h3>
-                    <p>Terms governing your use of Ryokome's website and services.</p>
-                    <a href="terms-of-service.html" class="btn btn-outline">Read Terms</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Cookie Policy</h3>
-                    <p>How we use cookies and similar technologies on our website.</p>
-                    <a href="cookie-policy.html" class="btn btn-outline">Read Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <h3>Ryokome</h3>
-                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                    <p style="color: #B0B7C3; margin-bottom: 20px;">Transparent travel comparison with clear affiliate disclosure practices.</p>
                 </div>
                 
                 <div>
-                    <h3>Services</h3>
+                    <h3>Legal Documents</h3>
                     <ul class="footer-links">
-                        <li><a href="flights.html">Flight Comparison</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                        <li><a href="insurance.html">Travel Insurance</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                        <li><a href="blog.html">Travel Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3>Legal</h3>
-                    <ul class="footer-links">
+                        <li><a href="affiliate-disclosure.html" class="active">Affiliate Disclosure</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
                         <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Travel Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
+                        <li><a href="flights.html">Flight Guide</a></li>
+                        <li><a href="cars.html">Car Rental Guide</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
+            <div class="copyright">
+                <p>© 2023 Ryokome. All rights reserved. This Affiliate Disclosure is provided for transparency and compliance purposes.</p>
+                <p style="margin-top: 10px;">Ryokome is an independent travel comparison platform. We do not directly book travel services.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all FAQ items
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+        
+        // Sticky header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.05)';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple email obfuscation
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailElements = document.querySelectorAll('.section-text');
+            emailElements.forEach(element => {
+                if (element.innerHTML.includes('@')) {
+                    element.innerHTML = element.innerHTML.replace(/@/g, '&#64;').replace(/\./g, '&#46;');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

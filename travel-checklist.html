@@ -3,370 +3,1129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive travel checklist for international and domestic trips. Don't forget anything important with our detailed packing and preparation guide.">
-    <title>Ultimate Travel Checklist - Don't Forget Anything | Ryokome</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <title>Ultimate Travel Checklist – Essential Preparation Guide | Ryokome</title>
+    <meta name="description" content="Comprehensive travel checklist covering documents, health, flights, money, and electronics. Prepare for international travel with confidence using our expert guide.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1B2DD9;
+            --primary-dark: #0F1FA6;
+            --secondary: #26A9E0;
+            --success: #1EC912;
+            --warning: #F9AC1A;
+            --danger: #DC3545;
+            --dark: #262626;
+            --light: #FFFFFF;
+            --gray: #F5F7FA;
+            --gray-medium: #E8ECEF;
+            --gray-dark: #6C757D;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 2px;
+            background: var(--gray);
+            border-radius: var(--border-radius);
+            padding: 4px;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-tab.active,
+        .nav-tab:hover {
+            background: var(--light);
+            color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 8px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 5px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--light);
+            box-shadow: var(--shadow-heavy);
+            padding: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .mobile-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .mobile-tab {
+            padding: 8px 15px;
+            background: var(--gray);
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-tab.active {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn,
+            .mobile-menu {
+                display: none;
+            }
+            .nav-desktop {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            .header-content {
+                padding: 0 20px;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 40px 0 30px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .page-header {
+                padding: 60px 0 40px;
+            }
+            .page-header h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 50px 0;
+        }
+
+        @media (min-width: 992px) {
+            .content-wrapper {
+                grid-template-columns: 1fr 300px;
+            }
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 800px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 40px 0 25px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            color: var(--dark);
+        }
+
+        .section-text {
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .checklist-container {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--gray-medium);
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .checklist-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .checklist-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .checklist-content p {
+            color: var(--gray-dark);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .checklist-tip {
+            background: rgba(249, 172, 26, 0.1);
+            padding: 12px 15px;
+            border-radius: 6px;
+            border-left: 3px solid var(--warning);
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        .checklist-tip strong {
+            color: var(--dark);
+        }
+
+        .external-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .external-link:hover {
+            border-bottom-color: var(--primary);
+        }
+
+        .external-link:after {
+            content: " ↗";
+            font-size: 0.9rem;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff8f8;
+            border: 1px solid #ffeaea;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--danger);
+        }
+
+        .warning-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .warning-icon {
+            font-size: 1.5rem;
+            color: var(--danger);
+        }
+
+        .warning-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        .sidebar-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 4px solid var(--primary);
+        }
+
+        .sidebar-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-title .icon {
+            color: var(--primary);
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .share-button {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 15px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .share-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .share-email {
+            background: var(--primary);
+            color: white;
+        }
+
+        .share-copy {
+            background: var(--gray);
+            color: var(--dark);
+        }
+
+        .share-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .quick-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .quick-links li {
+            margin-bottom: 12px;
+        }
+
+        .quick-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .quick-links a:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .quick-links .icon {
+            color: var(--secondary);
+        }
+
+        .print-button {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .print-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Expert Advice */
+        .expert-advice {
+            background: rgba(38, 169, 224, 0.1);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 40px 0;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .expert-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .expert-icon {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .expert-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 50px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #B0B7C3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #B0B7C3;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Utility */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" data-animate>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Ryokome</a>
-            
-            <div class="nav-center">
-                <a href="flights.html" class="tab-button">Flights</a>
-                <a href="cars.html" class="tab-button">Cars</a>
-                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
-                <a href="insurance.html" class="tab-button">Insurance</a>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Ryo<span>kome</span></a>
+                
+                <nav class="nav-desktop">
+                    <div class="nav-tabs">
+                        <button class="nav-tab">Flights</button>
+                        <button class="nav-tab">Cars</button>
+                        <button class="nav-tab">Airport Transfers</button>
+                        <button class="nav-tab">Insurance</button>
+                    </div>
+                    <div class="nav-right">
+                        <a href="#" class="nav-link active">Travel Checklist</a>
+                        <a href="#" class="nav-link">Blog</a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             </div>
-            
-            <div class="nav-right">
-                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <div class="mobile-tabs">
+                    <button class="mobile-tab">Flights</button>
+                    <button class="mobile-tab">Cars</button>
+                    <button class="mobile-tab">Airport Transfers</button>
+                    <button class="mobile-tab">Insurance</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="#" class="nav-link active">Travel Checklist</a>
+                    <a href="#" class="nav-link">Blog</a>
+                </nav>
             </div>
-            
-            <button class="hamburger">☰</button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="index.html" class="logo">Ryokome</a>
-            <button class="close-mobile-nav">✕</button>
-        </div>
-        <div class="mobile-nav-links">
-            <a href="flights.html" class="mobile-tab-button">Flights</a>
-            <a href="cars.html" class="mobile-tab-button">Cars</a>
-            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
-            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
-            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
-            <a href="blog.html" class="mobile-nav-link">Blog</a>
-            <a href="about.html" class="mobile-nav-link">About</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content" data-animate>
-                <h1>Ultimate Travel Checklist</h1>
-                <p>Don't forget anything important on your next trip. This comprehensive checklist has been curated from years of travel experience to cover everything from documents to packing tips.</p>
-                <a href="#documents" class="btn">Jump to Documents</a>
-            </div>
+            <h1>Ultimate Travel Checklist – Essential Preparation Guide</h1>
+            <p>Don't leave home unprepared. Use our comprehensive travel checklist developed from years of international travel experience. Covering documents, health, flights, money, and electronics to ensure a smooth journey.</p>
+            <p class="last-updated">Last updated: December 2023 | Based on international travel best practices</p>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="section">
-        <div class="container">
-            <!-- Share Section -->
-            <div class="share-section" data-animate>
-                <h3>Found this useful? Share it!</h3>
-                <div class="share-buttons">
-                    <button class="share-button twitter">Twitter</button>
-                    <button class="share-button facebook">Facebook</button>
-                    <button class="share-button whatsapp">WhatsApp</button>
-                    <button class="share-button email">Email</button>
-                    <button class="share-button copy">Copy Link</button>
-                </div>
-            </div>
-
-            <!-- Introduction -->
-            <article class="content" data-animate>
-                <p>After traveling to over 30 countries and learning from countless mistakes (like forgetting power adapters in Japan or not having visa copies in Egypt), I've compiled this ultimate travel checklist. Whether you're a seasoned traveler or planning your first big trip, this guide will help ensure you don't forget anything important.</p>
-                
-                <div class="highlight-box">
-                    <h3>Pro Tip: Start Early</h3>
-                    <p>Begin preparing at least 2 weeks before international trips and 1 week before domestic trips. Last-minute packing leads to forgotten essentials.</p>
+    <div class="container">
+        <div class="content-wrapper">
+            <main class="main-content">
+                <!-- Introduction -->
+                <div class="section-text">
+                    <p>Proper preparation is the foundation of successful international travel. This comprehensive checklist, developed from extensive travel experience across 50+ countries, covers every essential aspect of trip preparation. Whether you're a first-time international traveler or a seasoned globetrotter, following this guide will minimize stress and maximize enjoyment.</p>
                 </div>
 
                 <!-- Documents Section -->
-                <section id="documents">
-                    <h2>📄 Essential Documents & Information</h2>
-                    <p>These are the most critical items. Without proper documents, you might not even get on the plane.</p>
-                    
-                    <h3>Must-Have Documents (International Travel)</h3>
-                    <ul>
-                        <li><strong>Passport</strong> with at least 6 months validity from your return date (check your destination's requirements)</li>
-                        <li><strong>Visa(s)</strong> if required - apply well in advance</li>
-                        <li><strong>Flight tickets</strong> and itinerary - print and digital copies</li>
-                        <li><strong>Hotel/accommodation confirmations</strong> - some countries require proof of stay</li>
-                        <li><strong>Travel insurance documents</strong> with emergency contact numbers</li>
-                        <li><strong>Driver's license</strong> (international permit if renting a car abroad)</li>
-                        <li><strong>Vaccination certificates</strong> if required (check <a href="https://www.cdc.gov/travel" target="_blank" rel="noopener">CDC travel health notices</a>)</li>
-                    </ul>
-                    
-                    <h3>Recommended Document Preparations</h3>
-                    <ol>
-                        <li><strong>Create digital copies:</strong> Scan all important documents and save them in a secure cloud service (Google Drive, Dropbox) and email them to yourself.</li>
-                        <li><strong>Physical copies:</strong> Print two sets of all documents - keep one in your carry-on and one in checked luggage.</li>
-                        <li><strong>Emergency contacts:</strong> Write down emergency contact information and keep it separate from your phone.</li>
-                        <li><strong>Credit card contacts:</strong> Note down the international customer service numbers for your credit cards.</li>
-                    </ol>
-                    
-                    <div class="highlight-box">
-                        <h3>Government Resources</h3>
-                        <p>Always check official government travel advisories before your trip:
-                            <br><a href="https://travel.state.gov" target="_blank" rel="noopener">U.S. Department of State</a> |
-                            <a href="https://www.gov.uk/foreign-travel-advice" target="_blank" rel="noopener">UK Foreign Travel Advice</a> |
-                            <a href="https://travel.gc.ca" target="_blank" rel="noopener">Government of Canada Travel</a>
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Health & Insurance -->
-                <section id="health">
-                    <h2>🏥 Health, Medications & Insurance</h2>
-                    <p>Don't compromise on health preparations. What seems minor at home can become major abroad.</p>
-                    
-                    <h3>Essential Health Items</h3>
-                    <ul>
-                        <li><strong>Prescription medications</strong> in original containers with pharmacy labels</li>
-                        <li><strong>Doctor's note</strong> for medications, especially controlled substances</li>
-                        <li><strong>Basic first aid kit</strong> with bandages, antiseptic, pain relievers, anti-diarrheal</li>
-                        <li><strong>Personal medications:</strong> Allergy meds, asthma inhalers, epinephrine auto-injector if needed</li>
-                        <li><strong>Motion sickness medication</strong> if prone to it</li>
-                        <li><strong>Sunscreen and lip balm with SPF</strong></li>
-                        <li><strong>Insect repellent</strong> (check if DEET is needed for your destination)</li>
-                    </ul>
-                    
-                    <h3>Travel Insurance Must-Haves</h3>
-                    <p>Based on experience, here's what to look for in travel insurance:</p>
-                    <ol>
-                        <li><strong>Medical coverage:</strong> Minimum $100,000 for international travel, $500,000 recommended</li>
-                        <li><strong>Emergency evacuation:</strong> Crucial for remote destinations</li>
-                        <li><strong>Trip cancellation:</strong> Covering non-refundable expenses if you must cancel</li>
-                        <li><strong>Baggage loss/delay:</strong> At least $1,500 coverage</li>
-                        <li><strong>24/7 assistance:</strong> With local language support</li>
-                    </ol>
-                    
-                    <p><em>Personal story:</em> In Thailand, I witnessed a traveler break their leg on a remote island. Without proper evacuation coverage, they faced $15,000 in medical transport costs. Don't skip insurance!</p>
-                </section>
-
-                <!-- Money & Finances -->
-                <section id="money">
-                    <h2>💰 Money, Cards & Financial Preparations</h2>
-                    
-                    <h3>Payment Methods to Carry</h3>
-                    <ul>
-                        <li><strong>Two credit cards</strong> from different networks (Visa + Mastercard)</li>
-                        <li><strong>Debit card</strong> for ATM withdrawals</li>
-                        <li><strong>Small amount of local currency</strong> for arrival (order from your bank for better rates)</li>
-                        <li><strong>Emergency cash</strong> in USD or EUR (widely accepted worldwide)</li>
-                        <li><strong>Travel money belt</strong> or hidden pouch for backup cash</li>
-                    </ul>
-                    
-                    <h3>Financial Preparation Steps</h3>
-                    <ol>
-                        <li><strong>Notify your bank</strong> of travel dates and destinations to avoid card freezes</li>
-                        <li><strong>Set up travel notices</strong> on all credit/debit cards</li>
-                        <li><strong>Check foreign transaction fees</strong> - get cards with no fees if possible</li>
-                        <li><strong>Know your PINs</strong> - some countries use chip-and-PIN exclusively</li>
-                        <li><strong>Download your bank's app</strong> for quick balance checks and card freezes if lost</li>
-                    </ol>
-                </section>
-
-                <!-- Packing -->
-                <section id="packing">
-                    <h2>🎒 Smart Packing Strategy</h2>
-                    <p>Packing light but comprehensively is an art. Here's what I've learned after hundreds of trips.</p>
-                    
-                    <h3>Carry-On Essentials (Never Check These)</h3>
-                    <ul>
-                        <li>All important documents (passport, tickets, insurance)</li>
-                        <li>Medications and basic first aid</li>
-                        <li>One change of clothes</li>
-                        <li>Chargers and power bank</li>
-                        <li>Valuables (jewelry, electronics)</li>
-                        <li>Essential toiletries</li>
-                        <li>Entertainment (book, tablet, headphones)</li>
-                        <li>Snacks and empty water bottle</li>
-                    </ul>
-                    
-                    <h3>Clothing Packing Tips</h3>
-                    <ol>
-                        <li><strong>Roll, don't fold</strong> to save space and reduce wrinkles</li>
-                        <li><strong>Use packing cubes</strong> to organize by category</li>
-                        <li><strong>Choose versatile items</strong> that mix and match</li>
-                        <li><strong>Check airline baggage rules</strong> - <a href="https://www.tsa.gov/travel/security-screening/whatcanibring/all" target="_blank" rel="noopener">TSA prohibited items</a></li>
-                        <li><strong>Weigh your bag</strong> before leaving for the airport</li>
-                    </ol>
-                    
-                    <h3>Technology & Electronics</h3>
-                    <ul>
-                        <li>Phone and charger</li>
-                        <li>Universal power adapter (I recommend the ones with USB-C ports)</li>
-                        <li>Power bank (under 100Wh for flights)</li>
-                        <li>Headphones (noise-canceling for flights)</li>
-                        <li>Camera and accessories if needed</li>
-                        <li>E-reader or tablet</li>
-                        <li>Extra memory cards</li>
-                    </ul>
-                </section>
-
-                <!-- Airport Tips -->
-                <section id="airport">
-                    <h2>✈️ Airport & Flight Preparation</h2>
-                    
-                    <h3>Before Leaving for Airport</h3>
-                    <ul>
-                        <li>Check flight status online</li>
-                        <li>Confirm baggage allowance and restrictions</li>
-                        <li>Check-in online 24 hours before</li>
-                        <li>Download boarding pass to phone and print backup</li>
-                        <li>Confirm airport terminal and check-in requirements</li>
-                        <li>Arrange transportation to airport</li>
-                    </ul>
-                    
-                    <h3>At the Airport</h3>
-                    <ol>
-                        <li><strong>Arrive early:</strong> 3 hours for international, 2 hours for domestic</li>
-                        <li><strong>Keep documents accessible</strong> for check-in and security</li>
-                        <li><strong>Empty water bottle</strong> - fill after security</li>
-                        <li><strong>Wear comfortable shoes</strong> that are easy to remove</li>
-                        <li><strong>Pack liquids in clear bag</strong> (3-1-1 rule: 3.4oz/100ml containers, 1 quart-sized bag, 1 per passenger)</li>
-                    </ol>
-                    
-                    <h3>In-Flight Comfort</h3>
-                    <ul>
-                        <li>Compression socks for long flights</li>
-                        <li>Neck pillow and eye mask</li>
-                        <li>Hydration - drink water, avoid alcohol</li>
-                        <li>Move around periodically on long flights</li>
-                        <li>Entertainment downloaded offline</li>
-                    </ul>
-                </section>
-
-                <!-- Last-Minute Checklist -->
-                <section id="last-minute">
-                    <h2>⏰ 24-Hour Countdown Checklist</h2>
-                    
-                    <div class="highlight-box">
-                        <h3>The Day Before Travel</h3>
-                        <ul>
-                            <li>✓ Confirm all reservations (flights, hotels, cars)</li>
-                            <li>✓ Check weather at destination</li>
-                            <li>✓ Notify credit card companies</li>
-                            <li>✓ Set up mail hold or collection</li>
-                            <li>✓ Arrange pet/plant care</li>
-                            <li>✓ Pay any bills due while away</li>
-                            <li>✓ Empty refrigerator of perishables</li>
-                            <li>✓ Take out trash</li>
-                            <li>✓ Set home security system</li>
-                            <li>✓ Pack toiletries last</li>
-                            <li>✓ Charge all electronics</li>
-                            <li>✓ Download offline maps</li>
-                        </ul>
-                    </div>
-                    
-                    <h3>Before Walking Out the Door</h3>
-                    <ul>
-                        <li>Turn off appliances (coffee maker, iron, etc.)</li>
-                        <li>Adjust thermostat</li>
-                        <li>Lock all windows and doors</li>
-                        <li>Have passport, tickets, wallet ready</li>
-                        <li>Check you have house keys upon return</li>
-                    </ul>
-                </section>
-
-                <!-- Conclusion -->
-                <section id="conclusion">
-                    <h2>Bon Voyage!</h2>
-                    <p>Travel should be enjoyable, not stressful. By following this comprehensive checklist, you can minimize pre-trip anxiety and focus on the excitement of your upcoming adventure.</p>
-                    
-                    <p><strong>Remember:</strong> No checklist is perfect for every traveler or destination. Use this as a foundation and customize based on your specific needs, destination, and travel style.</p>
-                    
-                    <div class="highlight-box">
-                        <h3>Pro Traveler's Final Advice</h3>
-                        <p>Always pack patience and flexibility. Travel inevitably involves unexpected changes - delayed flights, weather issues, or cultural surprises. The ability to adapt with a positive attitude will enhance your experience more than any physical item in your luggage.</p>
-                    </div>
-                    
-                    <p>Safe travels and wonderful adventures!</p>
-                </section>
-                
-                <!-- Print & Save Section -->
-                <div class="share-section mt-4">
-                    <h3>Want a Printable Version?</h3>
-                    <p>Click print (Ctrl+P or Cmd+P) and save as PDF to keep this checklist for future trips.</p>
-                    <button onclick="window.print()" class="btn">Print This Checklist</button>
+                <h2 class="section-title">1. Essential Travel Documents</h2>
+                <div class="section-text">
+                    <p>Document preparation should begin at least 6-8 weeks before departure, especially for visa applications. Missing or incorrect documents can result in denied boarding or entry.</p>
                 </div>
-            </article>
+
+                <div class="checklist-container">
+                    <div class="checklist-item">
+                        <div class="checklist-number">1</div>
+                        <div class="checklist-content">
+                            <h3>Valid Passport</h3>
+                            <p>Ensure your passport is valid for at least 6 months beyond your return date. Many countries enforce this rule strictly. Check expiration dates for all traveling family members.</p>
+                            <div class="checklist-tip">
+                                <strong>Expert Tip:</strong> Photocopy the photo page of your passport and store separately from the original. Consider using a <a href="https://travel.state.gov/content/travel/en/international-travel/while-abroad/emergency-assistance.html" class="external-link" target="_blank">U.S. State Department passport card</a> as secondary ID.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">2</div>
+                        <div class="checklist-content">
+                            <h3>Visas & Entry Requirements</h3>
+                            <p>Research destination-specific requirements. Many countries now offer e-Visas, while others require embassy applications. Processing times vary from 24 hours to several weeks.</p>
+                            <div class="checklist-tip">
+                                <strong>Resource:</strong> Check the <a href="https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages.html" class="external-link" target="_blank">U.S. State Department country pages</a> for official requirements.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">3</div>
+                        <div class="checklist-content">
+                            <h3>International Driving Permit (IDP)</h3>
+                            <p>Required in over 150 countries when renting cars. Must be accompanied by your valid domestic license. Obtain from AAA or your national automobile association.</p>
+                            <div class="checklist-tip">
+                                <strong>Note:</strong> IDPs are valid for one year and cannot be obtained abroad. Apply 2-3 weeks before departure.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">4</div>
+                        <div class="checklist-content">
+                            <h3>Travel Insurance Documents</h3>
+                            <p>Carry printed copies of your policy, including coverage details, emergency contact numbers, and claim procedures. Save digital copies in cloud storage.</p>
+                            <div class="checklist-tip">
+                                <strong>Essential:</strong> Verify medical evacuation coverage limits – adequate coverage typically starts at $100,000.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Section -->
+                <h2 class="section-title">2. Health & Medical Preparation</h2>
+                <div class="section-text">
+                    <p>Medical emergencies abroad can be costly and complex. Proper health preparation is non-negotiable for international travel.</p>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <div class="warning-icon">⚠️</div>
+                        <h3 class="warning-title">Critical Medical Notice</h3>
+                    </div>
+                    <p>Most domestic health insurance provides minimal coverage abroad. A medical evacuation alone can cost $15,000-$200,000. Travel medical insurance is essential, not optional.</p>
+                </div>
+
+                <div class="checklist-container">
+                    <div class="checklist-item">
+                        <div class="checklist-number">1</div>
+                        <div class="checklist-content">
+                            <h3>Vaccinations & Health Advisories</h3>
+                            <p>Check <a href="https://www.cdc.gov/travel" class="external-link" target="_blank">CDC travel health notices</a> 6-8 weeks before travel. Some vaccinations require multiple doses over several weeks.</p>
+                            <div class="checklist-tip">
+                                <strong>Required:</strong> Yellow fever vaccination certificates for certain African and South American countries.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">2</div>
+                        <div class="checklist-content">
+                            <h3>Prescription Medications</h3>
+                            <p>Carry medications in original containers with pharmacy labels. Bring documentation from your doctor for controlled substances. Pack extra supplies (7-10 days beyond trip length).</p>
+                            <div class="checklist-tip">
+                                <strong>Important:</strong> Check if your medications are legal at your destination. Some common prescriptions are banned in certain countries.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">3</div>
+                        <div class="checklist-content">
+                            <h3>Medical Information & Contacts</h3>
+                            <p>Carry a list of medical conditions, allergies, blood type, and emergency contacts. Include your doctor's contact information and insurance policy details.</p>
+                            <div class="checklist-tip">
+                                <strong>Smart Traveler:</strong> Register with the <a href="https://step.state.gov/" class="external-link" target="_blank">Smart Traveler Enrollment Program (STEP)</a> for emergency alerts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flights Section -->
+                <h2 class="section-title">3. Flight & Transportation Preparation</h2>
+                <div class="section-text">
+                    <p>Air travel requires careful planning beyond just booking tickets. These steps ensure smoother airport experiences and better flight management.</p>
+                </div>
+
+                <div class="checklist-container">
+                    <div class="checklist-item">
+                        <div class="checklist-number">1</div>
+                        <div class="checklist-content">
+                            <h3>Flight Confirmations & Check-in</h3>
+                            <p>Check-in online 24 hours before departure when possible. Download boarding passes to your phone and carry printed backups. Verify terminal information day-of.</p>
+                            <div class="checklist-tip">
+                                <strong>Pro Tip:</strong> Set flight status alerts through airline apps or services like <a href="https://www.flightstats.com" class="external-link" target="_blank">FlightStats</a>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">2</div>
+                        <div class="checklist-content">
+                            <h3>Baggage Requirements & Fees</h3>
+                            <p>Know your airline's baggage allowance, weight limits, and prohibited items. Measure and weigh bags before leaving home to avoid costly airport fees.</p>
+                            <div class="checklist-tip">
+                                <strong>Save Money:</strong> Many airlines charge less for checked bags purchased online versus at the airport.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">3</div>
+                        <div class="checklist-content">
+                            <h3>Airport Transfer Arrangements</h3>
+                            <p>Pre-book airport transfers, especially for late arrivals or unfamiliar destinations. Have local currency for taxis and know public transport options.</p>
+                            <div class="checklist-tip">
+                                <strong>Safety First:</strong> Pre-booked transfers are often safer than hailing taxis in unfamiliar countries.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expert Advice -->
+                <div class="expert-advice">
+                    <div class="expert-header">
+                        <div class="expert-icon">💡</div>
+                        <h3 class="expert-title">Ryokome's Airport Security Tip</h3>
+                    </div>
+                    <p>Arrive at international airports 3 hours before departure. This allows time for enhanced security, document checks, and unexpected queues. Keep essential documents (passport, boarding pass, visa) in an easily accessible but secure location. Consider TSA PreCheck or Global Entry for faster security processing on future trips.</p>
+                </div>
+
+                <!-- Money Section -->
+                <h2 class="section-title">4. Money & Financial Preparation</h2>
+                <div class="section-text">
+                    <p>Financial preparation involves more than just carrying cash. A layered approach ensures access to funds while protecting against loss or theft.</p>
+                </div>
+
+                <div class="checklist-container">
+                    <div class="checklist-item">
+                        <div class="checklist-number">1</div>
+                        <div class="checklist-content">
+                            <h3>Multiple Payment Methods</h3>
+                            <p>Carry 2-3 credit cards from different issuers (Visa, Mastercard, American Express). Notify banks of travel plans to avoid fraud alerts blocking cards.</p>
+                            <div class="checklist-tip">
+                                <strong>Smart Strategy:</strong> Use credit cards with no foreign transaction fees and travel benefits like rental car insurance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">2</div>
+                        <div class="checklist-content">
+                            <h3>Local Currency Strategy</h3>
+                            <p>Obtain some local currency before departure for immediate expenses. Use ATMs at major banks (not standalone machines) for better rates and security.</p>
+                            <div class="checklist-tip">
+                                <strong>Best Practice:</strong> Avoid airport currency exchanges - rates are typically 5-15% worse than city centers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">3</div>
+                        <div class="checklist-content">
+                            <h3>Emergency Cash Reserve</h3>
+                            <p>Keep $200-$500 USD in small bills as emergency backup. Store separately from primary wallet. US dollars are widely accepted for emergencies worldwide.</p>
+                            <div class="checklist-tip">
+                                <strong>Security:</strong> Consider a hidden money belt or neck wallet for emergency cash and backup credit card.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Section -->
+                <h2 class="section-title">5. Electronics & Connectivity</h2>
+                <div class="section-text">
+                    <p>In our connected world, electronic preparation is crucial for communication, navigation, and entertainment while traveling.</p>
+                </div>
+
+                <div class="checklist-container">
+                    <div class="checklist-item">
+                        <div class="checklist-number">1</div>
+                        <div class="checklist-content">
+                            <h3>Power Adapters & Converters</h3>
+                            <p>Research outlet types and voltage requirements at your destination. Universal adapters are convenient but verify they work with your specific devices.</p>
+                            <div class="checklist-tip">
+                                <strong>Critical:</strong> Most modern electronics (phones, laptops) support 100-240V - check labels. Hair dryers and curling irons often require converters.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">2</div>
+                        <div class="checklist-content">
+                            <h3>Communication Solutions</h3>
+                            <p>Unlock your phone for international use or purchase a local SIM card. Download offline maps, translation apps, and essential travel apps before departure.</p>
+                            <div class="checklist-tip">
+                                <strong>Free Option:</strong> Use WhatsApp, Signal, or Telegram for free messaging over Wi-Fi. Download Google Translate's offline language packs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">3</div>
+                        <div class="checklist-content">
+                            <h3>Data Backup & Security</h3>
+                            <p>Backup phone and camera data to cloud services daily. Enable device tracking (Find My iPhone, Find My Device). Use VPN on public Wi-Fi networks.</p>
+                            <div class="checklist-tip">
+                                <strong>Security:</strong> Password-protect all devices and consider installing tracking apps like Prey in case of theft.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Checklist -->
+                <h2 class="section-title">Final 24-Hour Checklist</h2>
+                <div class="section-text">
+                    <p>Complete these items within 24 hours of departure for a stress-free start to your journey.</p>
+                </div>
+
+                <div class="checklist-container">
+                    <div class="checklist-item">
+                        <div class="checklist-number">✓</div>
+                        <div class="checklist-content">
+                            <h3>Home Preparation</h3>
+                            <p>Stop mail delivery, set lights on timers, arrange pet care, empty refrigerator perishables, set thermostat, and notify a trusted neighbor.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">✓</div>
+                        <div class="checklist-content">
+                            <h3>Travel Day Essentials</h3>
+                            <p>Pack charging cables in carry-on, fill water bottle after security, wear comfortable shoes, and carry essential medications in original containers.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-number">✓</div>
+                        <div class="checklist-content">
+                            <h3>Digital Preparation</h3>
+                            <p>Share itinerary with emergency contacts, download entertainment for flight, charge all devices fully, and enable travel notifications on credit cards.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-text" style="margin-top: 40px;">
+                    <p>This comprehensive travel checklist represents distilled wisdom from thousands of international journeys. While individual needs may vary, following these guidelines will significantly reduce travel stress and increase trip enjoyment. Safe travels from the Ryokome team!</p>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title"><span class="icon">📋</span> Share This Checklist</h3>
+                    <p>Help fellow travelers by sharing this comprehensive guide.</p>
+                    <div class="share-buttons">
+                        <button class="share-button share-whatsapp" onclick="shareWhatsApp()">
+                            <span>WhatsApp</span>
+                        </button>
+                        <button class="share-button share-email" onclick="shareEmail()">
+                            <span>Email</span>
+                        </button>
+                        <button class="share-button share-copy" onclick="copyLink()">
+                            <span>Copy Link</span>
+                        </button>
+                    </div>
+                    <button class="print-button" onclick="window.print()">
+                        <span>🖨️</span>
+                        <span>Print Checklist</span>
+                    </button>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title"><span class="icon">🔗</span> Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="https://travel.state.gov" target="_blank" class="external-link"><span class="icon">🇺🇸</span> U.S. State Department</a></li>
+                        <li><a href="https://www.cdc.gov/travel" target="_blank" class="external-link"><span class="icon">🏥</span> CDC Travel Health</a></li>
+                        <li><a href="https://www.who.int/ith" target="_blank" class="external-link"><span class="icon">🌍</span> WHO Travel Advice</a></li>
+                        <li><a href="https://www.iatatravelcentre.com" target="_blank" class="external-link"><span class="icon">✈️</span> IATA Travel Centre</a></li>
+                        <li><a href="https://www.tsa.gov/travel" target="_blank" class="external-link"><span class="icon">🛂</span> TSA Regulations</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title"><span class="icon">⚠️</span> Emergency Contacts</h3>
+                    <p>Save these numbers in your phone:</p>
+                    <ul class="quick-links" style="margin-top: 15px;">
+                        <li><a href="tel:+1-202-501-4444"><span class="icon">📞</span> U.S. Embassy Hotline</a></li>
+                        <li><a href="tel:112"><span class="icon">🚨</span> EU Emergency: 112</a></li>
+                        <li><a href="tel:911"><span class="icon">🚓</span> U.S. Emergency: 911</a></li>
+                        <li><a href="tel:999"><span class="icon">🚑</span> UK Emergency: 999</a></li>
+                    </ul>
+                </div>
+            </aside>
         </div>
-    </main>
-
-    <!-- Related Resources -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title text-center">More Travel Resources</h2>
-            <div class="card-grid" data-animate>
-                <div class="card">
-                    <h3>Find Cheap Flights</h3>
-                    <p>Learn our strategies for finding the best flight deals and when to book.</p>
-                    <a href="flights.html" class="btn btn-outline">Flight Tips</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Travel Insurance Guide</h3>
-                    <p>Understand what coverage you need and how to choose the right policy.</p>
-                    <a href="insurance.html" class="btn btn-outline">Insurance Guide</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Airport Transfer Tips</h3>
-                    <p>Navigate airports efficiently and choose the best transportation options.</p>
-                    <a href="airport-transfers.html" class="btn btn-outline">Transfer Guide</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <h3>Ryokome</h3>
-                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                    <p style="color: #B0B7C3; margin-bottom: 20px;">Expert travel advice and comprehensive planning resources since 2023.</p>
                 </div>
                 
                 <div>
-                    <h3>Services</h3>
+                    <h3>Travel Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="flights.html">Flight Comparison</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
+                        <li><a href="flights.html">Flight Booking Guide</a></li>
+                        <li><a href="cars.html">Car Rental Tips</a></li>
                         <li><a href="airport-transfers.html">Airport Transfers</a></li>
                         <li><a href="insurance.html">Travel Insurance</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3>Resources</h3>
+                    <h3>Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                        <li><a href="blog.html">Travel Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3>Legal</h3>
+                    <h3>Company</h3>
                     <ul class="footer-links">
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
+            <div class="copyright">
+                <p>© 2023 Ryokome. All rights reserved. This travel checklist is provided for informational purposes only. Always verify travel requirements with official government sources before departure.</p>
+                <p style="margin-top: 10px;">Travel regulations and requirements change frequently. Check official sources for the most current information.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Share functions
+        function shareWhatsApp() {
+            const text = "Check out Ryokome's Ultimate Travel Checklist - comprehensive guide for international travel preparation";
+            const url = window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+        }
+
+        function shareEmail() {
+            const subject = "Ryokome Travel Checklist - Essential Preparation Guide";
+            const body = `I found this comprehensive travel checklist helpful for trip preparation:\n\n${window.location.href}\n\nCovers documents, health, flights, money, and electronics preparation.`;
+            window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const button = document.querySelector('.share-copy');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<span>✓ Copied!</span>';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+
+        // Tab switching functionality
+        const allTabs = document.querySelectorAll('.nav-tab, .mobile-tab');
+        allTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active state
+                allTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close mobile menu after selection
+                document.getElementById('mobileMenu').classList.remove('active');
+            });
+        });
+
+        // Sticky header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Checklist interaction
+        const checklistItems = document.querySelectorAll('.checklist-item');
+        checklistItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const number = this.querySelector('.checklist-number');
+                if (number.textContent === '✓') {
+                    number.textContent = this.getAttribute('data-original-number') || '✓';
+                    number.style.background = 'var(--primary)';
+                } else {
+                    this.setAttribute('data-original-number', number.textContent);
+                    number.textContent = '✓';
+                    number.style.background = 'var(--success)';
+                }
+            });
+        });
+
+        // Print styling
+        window.addEventListener('beforeprint', () => {
+            document.querySelector('.sidebar').style.display = 'none';
+            document.querySelector('header').style.display = 'none';
+            document.querySelector('footer').style.display = 'none';
+            document.querySelector('.share-buttons').style.display = 'none';
+            document.querySelector('.print-button').style.display = 'none';
+        });
+
+        window.addEventListener('afterprint', () => {
+            document.querySelector('.sidebar').style.display = '';
+            document.querySelector('header').style.display = '';
+            document.querySelector('footer').style.display = '';
+            document.querySelector('.share-buttons').style.display = '';
+            document.querySelector('.print-button').style.display = '';
+        });
+    </script>
 </body>
 </html>

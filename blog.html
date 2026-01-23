@@ -3,293 +3,958 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ryokome travel blog with tips, guides, and stories to help you travel smarter and save money on your adventures.">
-    <title>Travel Blog - Tips, Guides & Stories | Ryokome</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <title>Travel Guides & Smart Booking Tips | Ryokome</title>
+    <meta name="description" content="Expert travel guides and booking advice from Ryokome. Learn how to find better deals, avoid common mistakes, and travel smarter with our authoritative content.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1B2DD9;
+            --primary-dark: #0F1FA6;
+            --secondary: #26A9E0;
+            --success: #1EC912;
+            --dark: #262626;
+            --light: #FFFFFF;
+            --gray: #F5F7FA;
+            --gray-medium: #E8ECEF;
+            --gray-dark: #6C757D;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 2px;
+            background: var(--gray);
+            border-radius: var(--border-radius);
+            padding: 4px;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-tab.active,
+        .nav-tab:hover {
+            background: var(--light);
+            color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 8px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 5px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--light);
+            box-shadow: var(--shadow-heavy);
+            padding: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .mobile-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .mobile-tab {
+            padding: 8px 15px;
+            background: var(--gray);
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-tab.active {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn,
+            .mobile-menu {
+                display: none;
+            }
+            .nav-desktop {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            .header-content {
+                padding: 0 20px;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .page-header {
+                padding: 80px 0 60px;
+            }
+            .page-header h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Blog Intro */
+        .blog-intro {
+            padding: 60px 0 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .blog-intro h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .blog-intro p {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            line-height: 1.7;
+        }
+
+        /* Articles Grid */
+        .articles-section {
+            padding: 0 0 80px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-medium);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .article-content {
+            padding: 30px;
+        }
+
+        .article-category {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--primary);
+            color: var(--light);
+            border-radius: var(--border-radius);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .article-category.flights {
+            background: var(--primary);
+        }
+
+        .article-category.booking {
+            background: #7C3AED;
+        }
+
+        .article-category.transfers {
+            background: #0891B2;
+        }
+
+        .article-category.rentals {
+            background: #EA580C;
+        }
+
+        .article-category.insurance {
+            background: #DC2626;
+        }
+
+        .article-category.general {
+            background: var(--secondary);
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .article-excerpt {
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-medium);
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+        }
+
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+            gap: 12px;
+        }
+
+        .read-more::after {
+            content: "→";
+            transition: var(--transition);
+        }
+
+        .article-stats {
+            display: flex;
+            gap: 15px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            padding: 60px 0;
+            background: var(--gray);
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .newsletter-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .newsletter-text {
+            color: var(--gray-dark);
+            margin-bottom: 25px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--gray-medium);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(27, 45, 217, 0.1);
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: var(--light);
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-button:hover {
+            background: var(--primary-dark);
+        }
+
+        .privacy-note {
+            font-size: 0.8rem;
+            color: var(--gray-dark);
+            margin-top: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .newsletter-form {
+                flex-direction: row;
+            }
+            .form-group {
+                flex: 1;
+            }
+            .form-button {
+                width: auto;
+                min-width: 150px;
+            }
+        }
+
+        /* Categories */
+        .categories-section {
+            padding: 60px 0;
+        }
+
+        .categories-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--dark);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            padding: 25px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-medium);
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .category-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .category-count {
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+        }
+
+        @media (min-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #B0B7C3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #B0B7C3;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Utility */
+        .hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" data-animate>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Ryokome</a>
-            
-            <div class="nav-center">
-                <a href="flights.html" class="tab-button">Flights</a>
-                <a href="cars.html" class="tab-button">Cars</a>
-                <a href="airport-transfers.html" class="tab-button">Airport Transfers</a>
-                <a href="insurance.html" class="tab-button">Insurance</a>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Ryo<span>kome</span></a>
+                
+                <nav class="nav-desktop">
+                    <div class="nav-tabs">
+                        <button class="nav-tab">Flights</button>
+                        <button class="nav-tab">Cars</button>
+                        <button class="nav-tab">Airport Transfers</button>
+                        <button class="nav-tab">Insurance</button>
+                    </div>
+                    <div class="nav-right">
+                        <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
+                        <a href="blog.html" class="nav-link active">Blog</a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             </div>
-            
-            <div class="nav-right">
-                <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <div class="mobile-tabs">
+                    <button class="mobile-tab">Flights</button>
+                    <button class="mobile-tab">Cars</button>
+                    <button class="mobile-tab">Airport Transfers</button>
+                    <button class="mobile-tab">Insurance</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="travel-checklist.html" class="nav-link">Travel Checklist</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </nav>
             </div>
-            
-            <button class="hamburger">☰</button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="index.html" class="logo">Ryokome</a>
-            <button class="close-mobile-nav">✕</button>
-        </div>
-        <div class="mobile-nav-links">
-            <a href="flights.html" class="mobile-tab-button">Flights</a>
-            <a href="cars.html" class="mobile-tab-button">Cars</a>
-            <a href="airport-transfers.html" class="mobile-tab-button">Airport Transfers</a>
-            <a href="insurance.html" class="mobile-tab-button">Insurance</a>
-            <a href="travel-checklist.html" class="mobile-nav-link">Travel Checklist</a>
-            <a href="blog.html" class="mobile-nav-link">Blog</a>
-            <a href="about.html" class="mobile-nav-link">About</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content" data-animate>
-                <h1>Ryokome Travel Blog</h1>
-                <p>Practical travel tips, money-saving strategies, and personal stories to help you travel smarter and make the most of your adventures.</p>
-                <a href="#featured" class="btn">Read Featured Articles</a>
+            <h1>Travel Guides & Smart Booking Tips</h1>
+            <p>Expert advice to help you travel smarter, save money, and avoid common pitfalls. Based on real travel experience and data-driven insights.</p>
+        </div>
+    </section>
+
+    <!-- Blog Intro -->
+    <section class="blog-intro">
+        <div class="container">
+            <h2>Learn to Travel Smarter</h2>
+            <p>The Ryokome blog provides authoritative, practical travel advice based on years of industry experience. We cut through the myths and marketing hype to give you actionable strategies for better travel planning, booking, and experiences.</p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid">
+                <!-- Article 1 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category flights">Flights</span>
+                        <h3 class="article-title">The Truth About Finding Cheap Flights: What Actually Works</h3>
+                        <p class="article-excerpt">Forget the "secret tricks" you see online. Based on analysis of millions of airfares, we reveal the real strategies that consistently find the best prices. Learn about booking windows, day-of-week myths, and the tools that actually help.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 8 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category booking">Booking</span>
+                        <h3 class="article-title">Booking Timing Myths Debunked: The 57-Day Rule and Other Fiction</h3>
+                        <p class="article-excerpt">Is there really a perfect day to book flights? We examine the data behind common booking myths and provide evidence-based advice for when to actually purchase flights for domestic and international travel.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 6 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category transfers">Transfers</span>
+                        <h3 class="article-title">Airport Transfers vs Taxis: When Pre-Booking Saves Money and Stress</h3>
+                        <p class="article-excerpt">Analysis of transfer costs in 50+ airports reveals when pre-booked transfers offer better value than taxis. Includes safety considerations, hidden taxi fees, and destinations where transfers are essential.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category rentals">Car Rentals</span>
+                        <h3 class="article-title">7 Costly Car Rental Mistakes Even Experienced Travelers Make</h3>
+                        <p class="article-excerpt">From insurance confusion to fuel policy traps, we identify the most expensive rental car errors. Learn how to navigate CDW/LDW insurance, avoid upgrade pressure, and understand international driving requirements.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 9 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category insurance">Insurance</span>
+                        <h3 class="article-title">Travel Insurance Basics: What You Actually Need (And What's Wasteful)</h3>
+                        <p class="article-excerpt">Not all travel insurance is created equal. We break down essential coverage types, explain medical evacuation realities, and help you avoid overpaying for unnecessary add-ons.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 10 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category general">Packing</span>
+                        <h3 class="article-title">The Carry-On Revolution: How to Pack Light for Any Trip</h3>
+                        <p class="article-excerpt">Learn packing strategies used by frequent travelers to avoid checked baggage fees and streamline airport experiences. Includes clothing strategies, TSA compliance tips, and weight distribution techniques.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 8 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category flights">Flights</span>
+                        <h3 class="article-title">Understanding Airline Fare Classes: From Basic Economy to Business</h3>
+                        <p class="article-excerpt">Decode airline pricing structures and learn which fare class offers the best value for your travel style. We compare restrictions, change policies, and hidden benefits across major carriers.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <span class="article-category general">Planning</span>
+                        <h3 class="article-title">The 30-Day Pre-Travel Checklist: A Step-by-Step Preparation Guide</h3>
+                        <p class="article-excerpt">A comprehensive timeline for trip preparation covering documents, bookings, health considerations, and home arrangements. Based on experience from organizing thousands of trips.</p>
+                        <div class="article-meta">
+                            <a href="#" class="read-more">Read full guide</a>
+                            <div class="article-stats">
+                                <span class="stat">🕒 12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="section">
+    <!-- Categories -->
+    <section class="categories-section">
         <div class="container">
-            <h2 class="section-title" id="featured">Featured Articles</h2>
-            
-            <!-- Featured Articles -->
-            <div class="card-grid" data-animate>
-                <article class="card">
-                    <div class="card-icon">💰</div>
-                    <h3>How I Saved $2,300 on a Month-Long Europe Trip</h3>
-                    <p><small>Published: January 15, 2024 • 8 min read</small></p>
-                    <p>Detailed breakdown of flight hacks, accommodation strategies, and daily spending tips that made extended European travel affordable.</p>
-                    <a href="#" class="btn btn-outline">Read Article</a>
-                </article>
-                
-                <article class="card">
-                    <div class="card-icon">🎒</div>
-                    <h3>The Ultimate One-Bag Packing Strategy</h3>
-                    <p><small>Published: December 3, 2023 • 6 min read</small></p>
-                    <p>After 5 years of carry-on only travel, here's exactly what I pack for any climate and trip duration from weekend to month-long.</p>
-                    <a href="#" class="btn btn-outline">Read Article</a>
-                </article>
-                
-                <article class="card">
-                    <div class="card-icon">✈️</div>
-                    <h3>Flight Booking Mistakes That Cost You Money</h3>
-                    <p><small>Published: November 18, 2023 • 10 min read</small></p>
-                    <p>Common errors travelers make when booking flights and how to avoid them, based on analysis of thousands of bookings.</p>
-                    <a href="#" class="btn btn-outline">Read Article</a>
-                </article>
-            </div>
-            
-            <h2 class="section-title mt-4">Recent Articles</h2>
-            
-            <!-- Recent Articles List -->
-            <div class="content" data-animate>
-                <article class="card mb-2">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0;">Solo Female Travel: Safety Tips That Actually Work</h3>
-                            <p><small>Published: October 29, 2023 • Category: Safety Tips</small></p>
-                            <p>Practical safety advice from women who travel solo, beyond the generic "be aware of your surroundings" advice you usually hear.</p>
-                        </div>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read More</a>
-                    </div>
-                </article>
-                
-                <article class="card mb-2">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0;">Digital Nomad Essentials: Setting Up Your Mobile Office</h3>
-                            <p><small>Published: October 12, 2023 • Category: Digital Nomad</small></p>
-                            <p>From reliable portable WiFi to ergonomic travel gear, here's what you actually need to work productively from anywhere.</p>
-                        </div>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read More</a>
-                    </div>
-                </article>
-                
-                <article class="card mb-2">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0;">Off-Peak Travel: Best Destinations by Month</h3>
-                            <p><small>Published: September 25, 2023 • Category: Destination Guides</small></p>
-                            <p>Where to travel each month for the best weather, fewer crowds, and lower prices based on seasonal patterns.</p>
-                        </div>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read More</a>
-                    </div>
-                </article>
-                
-                <article class="card mb-2">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0;">Credit Card Points: Maximizing Travel Rewards</h3>
-                            <p><small>Published: September 8, 2023 • Category: Money Saving</small></p>
-                            <p>A straightforward guide to travel credit cards, sign-up bonuses, and redemption strategies for free flights and hotels.</p>
-                        </div>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read More</a>
-                    </div>
-                </article>
-                
-                <article class="card mb-2">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div>
-                            <h3 style="margin-top: 0;">Travel Photography: Pack Light, Shoot Right</h3>
-                            <p><small>Published: August 21, 2023 • Category: Photography</small></p>
-                            <p>Essential camera gear for travelers and techniques for capturing amazing photos without carrying professional equipment.</p>
-                        </div>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read More</a>
-                    </div>
-                </article>
-            </div>
-            
-            <!-- Categories Section -->
-            <h2 class="section-title mt-4">Browse by Category</h2>
-            <div class="card-grid" data-animate>
-                <div class="card">
-                    <h3>Budget Travel</h3>
-                    <p>Money-saving strategies, affordable destinations, and cost-cutting tips.</p>
-                    <a href="#" class="btn btn-outline">Browse Category</a>
+            <h2 class="categories-title">Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">✈️</div>
+                    <div class="category-name">Flight Booking</div>
+                    <div class="category-count">8 guides</div>
                 </div>
-                
-                <div class="card">
-                    <h3>Destination Guides</h3>
-                    <p>Detailed guides to specific countries, cities, and regions.</p>
-                    <a href="#" class="btn btn-outline">Browse Category</a>
+                <div class="category-card">
+                    <div class="category-icon">🚗</div>
+                    <div class="category-name">Car Rentals</div>
+                    <div class="category-count">5 guides</div>
                 </div>
-                
-                <div class="card">
-                    <h3>Travel Planning</h3>
-                    <p>Booking strategies, itinerary planning, and preparation tips.</p>
-                    <a href="#" class="btn btn-outline">Browse Category</a>
+                <div class="category-card">
+                    <div class="category-icon">🏨</div>
+                    <div class="category-name">Accommodation</div>
+                    <div class="category-count">6 guides</div>
                 </div>
-            </div>
-            
-            <div class="card-grid mt-2">
-                <div class="card">
-                    <h3>Travel Gear</h3>
-                    <p>Product reviews, packing lists, and gear recommendations.</p>
-                    <a href="#" class="btn btn-outline">Browse Category</a>
+                <div class="category-card">
+                    <div class="category-icon">🛡️</div>
+                    <div class="category-name">Travel Insurance</div>
+                    <div class="category-count">4 guides</div>
                 </div>
-                
-                <div class="card">
-                    <h3>Solo Travel</h3>
-                    <p>Tips and stories specifically for solo travelers.</p>
-                    <a href="#" class="btn btn-outline">Browse Category</a>
+                <div class="category-card">
+                    <div class="category-icon">🧳</div>
+                    <div class="category-name">Packing & Prep</div>
+                    <div class="category-count">7 guides</div>
                 </div>
-                
-                <div class="card">
-                    <h3>Family Travel</h3>
-                    <p>Traveling with kids, multi-generational trips, and family-friendly destinations.</p>
-                    <a href="#" class="btn btn-outline">Browse Category</a>
+                <div class="category-card">
+                    <div class="category-icon">💼</div>
+                    <div class="category-name">Business Travel</div>
+                    <div class="category-count">3 guides</div>
                 </div>
-            </div>
-            
-            <!-- Newsletter Signup -->
-            <div class="highlight-box mt-4" data-animate>
-                <h3>Subscribe to Our Travel Newsletter</h3>
-                <p>Get weekly travel tips, exclusive deals, and new article notifications directly in your inbox.</p>
-                <form id="newsletter-form" style="margin-top: 1.5rem;">
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <input type="email" placeholder="Your email address" required 
-                               style="flex: 1; min-width: 250px; padding: 0.8rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
-                        <button type="submit" class="btn">Subscribe</button>
-                    </div>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">We respect your privacy. Unsubscribe at any time.</p>
-                </form>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Popular Resources -->
-    <section class="section section-alt">
+    <!-- Newsletter -->
+    <section class="newsletter-section">
         <div class="container">
-            <h2 class="section-title text-center">Popular Travel Resources</h2>
-            <div class="card-grid" data-animate>
-                <div class="card">
-                    <h3>Ultimate Travel Checklist</h3>
-                    <p>Our comprehensive checklist covering everything from documents to packing.</p>
-                    <a href="travel-checklist.html" class="btn btn-outline">View Checklist</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Flight Comparison Guide</h3>
-                    <p>Learn how to find the cheapest flights and when to book.</p>
-                    <a href="flights.html" class="btn btn-outline">Read Guide</a>
-                </div>
-                
-                <div class="card">
-                    <h3>Travel Insurance Explained</h3>
-                    <p>Understand what coverage you need and how to choose the right policy.</p>
-                    <a href="insurance.html" class="btn btn-outline">Learn More</a>
-                </div>
+            <div class="newsletter-content">
+                <h3 class="newsletter-title">Get Smarter Travel Tips</h3>
+                <p class="newsletter-text">Join 15,000+ travelers who receive our weekly newsletter with actionable advice, data-driven insights, and exclusive booking strategies.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="form-button">Subscribe</button>
+                </form>
+                <p class="privacy-note">We respect your privacy. Unsubscribe anytime. No spam, ever.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <h3>Ryokome</h3>
-                    <p>Your smart travel comparison platform. Find the best deals on flights, cars, transfers, and insurance.</p>
+                    <p style="color: #B0B7C3; margin-bottom: 20px;">Authoritative travel guidance based on real expertise and data analysis since 2023.</p>
                 </div>
                 
                 <div>
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="flights.html">Flight Comparison</a></li>
-                        <li><a href="cars.html">Car Rentals</a></li>
-                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
-                        <li><a href="insurance.html">Travel Insurance</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3>Resources</h3>
+                    <h3>Travel Resources</h3>
                     <ul class="footer-links">
                         <li><a href="travel-checklist.html">Travel Checklist</a></li>
-                        <li><a href="blog.html">Travel Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="flights.html">Flight Booking Guide</a></li>
+                        <li><a href="cars.html">Car Rental Guide</a></li>
+                        <li><a href="airport-transfers.html">Airport Transfers</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3>Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2024</span> Ryokome. All rights reserved. This site uses affiliate links.</p>
+            <div class="copyright">
+                <p>© 2023 Ryokome. All rights reserved. All travel advice is based on extensive research and experience. Individual results may vary.</p>
+                <p style="margin-top: 10px;">Prices and availability subject to change. Always verify information with official sources.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/main.js"></script>
     <script>
-        // Newsletter form handling
-        document.getElementById('newsletter-form')?.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             
-            // In a real implementation, this would send to a server
-            // For demo purposes, we'll just show a confirmation
-            alert(`Thank you for subscribing with ${email}! You'll receive our next newsletter.`);
-            this.reset();
+            if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
+        // Tab switching functionality
+        const allTabs = document.querySelectorAll('.nav-tab, .mobile-tab');
+        allTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active state
+                allTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close mobile menu after selection
+                document.getElementById('mobileMenu').classList.remove('active');
+            });
+        });
+        
+        // Sticky header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.05)';
+            }
+        });
+        
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                // Simple validation
+                if (email.includes('@') && email.includes('.')) {
+                    // In production, you would send this to your email service
+                    const button = this.querySelector('button');
+                    const originalText = button.textContent;
+                    button.textContent = 'Subscribed!';
+                    button.style.background = 'var(--success)';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.background = '';
+                        this.reset();
+                    }, 2000);
+                }
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     </script>
 </body>
